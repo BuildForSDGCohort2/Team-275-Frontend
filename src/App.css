@@ -1,38 +1,666 @@
-.App {
-  text-align: center;
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background: radial-gradient(#e5e5e5, #fff, #e5e5e5);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbartop {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbartop form {
+    border: 1px solid red;
+    width: 30%;
 }
 
-.App-link {
-  color: #61dafb;
+.navbartop form .input-field {
+    width: 30%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.links {
+    color: black;
+}
+
+.sidenav-trigger {
+    font-size: 20px !important;
+    margin-left: 10px;
+    color: black;
+}
+
+.brand-logo {
+    margin-left: 20px !important;
+    font-size: 20px !important;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+h3 {
+    text-align: center;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+hr {
+    width: 20%;
+    border: 1px solid #519a8a;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/*--- Home Section ----*/
+.home {
+    background-image: url('./components/images/national-cancer-institute-NFvdKIhxYlU-unsplash.png');
+    background-size: cover;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home .welcome {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+
+/* Why Us Section*/
+.reasons {
+    transform: scale(1);
+    transition: transform 0.5s ease;
+    text-align: center;
+    margin: 20px 30px 0 0;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 7%;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.reasons:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 10px 20px 10px rgba(0, 0, 0, 0.253) !important;
+    border-radius: 10px;
+}
+
+/* Category Section */
+.category {
+    margin-bottom: 7%;
+}
+
+.category hr {
+    width: 10% !important;
+}
+
+.category-item .rating {
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.category-item .rating i {
+    margin-top: 6px;
+}
+
+.card:hover {
+    box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253) !important;
+}
+
+.card-body {
+    padding: 3rem 0 !important;
+}
+
+.card .card-image .card-title {
+    color: black;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.card-image {
+    transform: scale(1);
+    transition: transform 0.5s ease;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.card-image:hover {
+    transform: scale(1.1);
+}
+
+.rating {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.rating i {
+    font-size: 23px;
+}
+
+.rating-title {
+    margin-bottom: 20px;
+}
+
+.rating-title p i {
+    font-size: 17px;
+}
+
+.rating .price p {
+    font-size: 10px !important;
+}
+
+.rating .price i {
+    font-size: 17px;
+}
+
+.rating p {
+    margin-top: 1px !important;
+    margin-left: 5px !important;
+}
+
+/* Special Offers */
+.special-offers {
+    background-image: url('./components/images/cat.jpg');
+    background-size: cover;
+    height: 95vh;
+    width: 100%;
+    margin-bottom: 7%;
+}
+
+.special-offers hr {
+    width: 30% !important;
+}
+
+.deals-infor {
+    text-align: center;
+}
+
+.deals-infor p {
+    font-size: 20px;
+    margin: 0;
+}
+
+.deals-infor h2 {
+    font-size: 23px;
+    font-weight: normal;
+    margin: 20x;
+}
+
+.deals-infor h2 span {
+    font-size: 35px;
+    color: #519a8a;
+}
+
+.deals-infor div:last-child {
+    border:  1px solid #fff;
+    border-radius: 3px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-top: 3em;
+    padding: 2em;
+    text-align: center;
+}
+
+.deals-infor div:last-child p {
+    font-weight: 500;
+    color: white;
+    font-size: 30px;
+}
+
+.deals-infor div:last-child span {
+    color: white;
+    font-size: 30px;
+}
+
+/* Home Top Item */
+.top-category .category-item {
+    margin-bottom: 0 !important;
+}
+
+.top-category .category-action {
+    top: 81.7% !important;
+}
+
+/* Blog Section */
+.blog {
+    padding: 0 20px 30px 20px;
+    margin-top: 5%;
+} 
+
+.blog hr {
+    width: 10% !important;
+}
+
+.blog-item {
+    border: 0 !important;
+    width: 100%;
+    padding: 10px;
+}
+
+.blog-image {
+    height: 300px;
+}
+
+.blog-image img {
+    height: 100%;
+    width: 100%;
+}
+
+.blog-author {
+    display: flex;
+    flex-direction: row;
+}
+
+.blog-author p {
+    font-size: 18px;
+    padding: 0;
+}
+
+.blog-author i {
+    font-size: 18px !important;
+    padding: 0 !important;
+}
+
+.blog-author p span {
+    font-style: italic;
+    margin-left: 20px;
+}
+
+.blog-item .card-title {
+    font-size: 30px;
+}
+
+/* Category Signle Page */
+.category-header {
+    background-color: #424949;
+    border: 1px solid #424949;
+    height: 40vh;
+    width: 100%;
+    margin-bottom: 3%;
+    color: white;
+    text-align: center;
+    padding-top: 45px;
+}
+
+.category-header p {
+    font-size: 20px;
+}
+
+.category-main {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.category-sorting a {
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: normal;
+    color: black;
+}
+
+.category-selection {
+    height: auto;
+    overflow: hidden;
+}
+
+.category-item-list {
+    height: auto;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.category-item {
+    height: 490px;
+    margin: 0 0 20px 0;
+    overflow: hidden;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+
+.category-item:hover {
+    box-shadow: 5px 10px 20px 10px rgba(0, 0, 0, 0.253);
+}
+
+.category-item .category-image {
+    height: 300px;
+    position: relative;
+}
+
+#navi,
+.category-action {
+  background-color: #424949;
+  padding: 10px;
+  width: 279px;
+  position: absolute;
+  top: 82%;
+  left: 8%;
+}
+
+.category-action {
+  z-index: 10;
+}
+
+.category-item .category-image img {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.category-item {
+    text-align: center;
+}
+
+
+
+.category-action i {
+    color: white;
+}
+
+.category-action-after {
+    position: absolute;
+    background-color: #424949;
+    padding: 10px;
+    width: 279px;
+    top: 100.3%;
+    left: 27.8%;
+}
+
+.category-action-after i {
+    color: white;
+}
+
+.watch {
+    margin-right: 40%;
+}
+
+.category-infor {
+    padding-top: 10px;
+}
+
+.category-infor h1 {
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 7px;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.category-infor p {
+    font-size: 20px;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.category-amount p {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.category-amount span {
+    font-size: 30px;
+    text-transform: capitalize;
+    margin: 0;
+    font-weight: 600;
+}
+
+/*---  Sign up and in Sections   ---*/
+.background-img {
+    background-image: url('./components/images/micah-williams-lmFJOx7hPc4-unsplash.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-wrapper {
+    width: 75%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin: 40px;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 50px #555;
+}
+
+.form-wrapper form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-wrapper h1 {
+    font-size: 25px;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    font-weight: lighter;
+    margin-top: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.form-wrapper label {
+    font-size: 17px;
+    margin-bottom: 0.25em;
+    color: #fff;
+    font-weight: lighter;
+}
+
+.form-wrapper input {
+    padding: 10px 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #cfcfcf;
+}
+
+.form-wrapper input::placeholder {
+    font-size: 1em;
+    font-weight: lighter;
+    color: #cfcfcf;
+}
+
+.firstName,
+.email {
+    margin-right: 1%;
+}
+
+.firstName,
+.lastName,
+.email,
+.password,
+.password_again,
+.username,
+.login_password {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.firstName,
+.lastName,
+.email,
+.password {
+    width: 47%;
+}
+
+.lastName,
+.password {
+    margin-left: 18px;
+}
+
+.password_again,
+.username,
+.login_password {
+    width: 100%;
+}
+
+.createAccount {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.createAccount button {
+    background-color: #519a8a;
+    color: #fff;
+    border: 2px solid #519a8a;
+    width: 100%;
+    margin-top: 1em;
+    padding: 8px 0px;
+    font-size: 1em;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    margin-bottom: 0.25em;
+    border-radius: 10px;
+}
+
+.createAccount button:hover {
+    color: #519a8a;
+    background-color: #fff;
+    border: 2px solid #519a8a;
+}
+
+.createAccount small {
+    color: #cfcfcf;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+@media screen and (max-width: 280px) {
+
+    .reasons {
+        width: 84%;
+        margin: 15px;
+    }
+
+    .deals-infor div:last-child p {
+        font-size: 10px !important;
+    }
+
+    .deals-infor div:last-child {
+        padding: 2em !important;
+    }
+
+    .category-header {
+        height: 45vh !important;
+    }
+
+    .category-item {
+        height: 460px;
+        margin: 10px;
+    }
+
+    .top-category .category-action {
+        width: 195px;
+        top: 82.3% !important;
+        left: 8%;
+    }
+
+    .category-item-list .category-item {
+        margin: 10px !important;
+    }
+
+    .category-item-list .category-item .category-action {
+        width: 153px;
+        top: 82.5%;
+      }
+}
+
+@media screen and ( max-width: 320px ){
+
+    .deals-infor {
+        font-size: 2px !important;
+    }
+
+    .deals-infor div:last-child {
+        padding: 3em 1em;
+    }
+
+    .deals-infor div:first-child h1 {
+        font-size: 20px !important;
+    }
+
+    .deals-infor div:first-child p {
+        margin-bottom: 18px !important;
+    }
+
+    .deals-infor div:last-child p {
+        font-size: 16px !important;
+    }
+}
+
+@media screen and ( max-width: 360px ){
+    .deals-infor div:last-child p {
+        font-size: 23px !important;
+    }
+}
+
+@media screen and ( max-width: 375px ){
+    .deals-infor div:last-child p {
+        font-size: 23px !important;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .deals-infor {
+        margin-top: 20px !important;
+    }
+
+    .deals-infor div:last-child {
+        margin-left: 2em;
+        margin-right: 2em;
+        padding: 3em 1em;
+    }
+}
+
+@media screen and ( max-height: 450px ){
+    .special-offers {
+        padding-top: 5%;
+        height: 90vh;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .home {
+        height: 40vh;
+    }
+
+    .top-category .category-action {
+        width: 195px;
+        top: 82.3% !important;
+        left: 8%;
+        margin-bottom: 20px !important;
+    }
+
+    .category-header {
+        padding-top: 45px;
+    }
 }
