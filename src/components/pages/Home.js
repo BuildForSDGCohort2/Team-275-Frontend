@@ -144,7 +144,7 @@ const Home = () => {
                                     <div className="card">
                                         <div className="overflow">
                                             <div className="card-image">
-                                                <img src={require('../images/cat.jpg')} alt="pic here"/>
+                                                <img src={require('../images/D2.png')} alt="pic here"/>
                                                 <span className="card-title">Frank Leopard</span>
                                             </div>
                                         </div>
@@ -171,6 +171,9 @@ const Home = () => {
                                             <div className="rating">
                                                 <i className="small material-icons">local_atm</i>
                                                 <p>K23.00 - K45.00</p>
+                                            </div>
+                                            <div className="category-amount">
+                                                <a href="/item" className="waves-effect waves-light btn">Make An Appointment</a>
                                             </div>
                                         </div>
                                     </div>
@@ -180,7 +183,7 @@ const Home = () => {
                                <div className="card">
                                         <div className="overflow">
                                             <div className="card-image">
-                                                <img src={require('../images/cat.jpg')} alt="pic here"/>
+                                                <img src={require('../images/D2.png')} alt="pic here"/>
                                                 <span className="card-title">Frank Leopard</span>
                                             </div>
                                         </div>
@@ -207,6 +210,9 @@ const Home = () => {
                                             <div className="rating">
                                                 <i className="small material-icons">local_atm</i>
                                                 <p>K23.00 - K45.00</p>
+                                            </div>
+                                            <div className="category-amount">
+                                                <a href="/item" className="waves-effect waves-light btn">Make An Appointment</a>
                                             </div>
                                         </div>
                                     </div>
@@ -216,7 +222,7 @@ const Home = () => {
                                <div className="card">
                                         <div className="overflow">
                                             <div className="card-image">
-                                                <img src={require('../images/cat.jpg')} alt="pic here"/>
+                                                <img src={require('../images/D2.png')} alt="pic here"/>
                                                 <span className="card-title">Frank Leopard</span>
                                             </div>
                                         </div>
@@ -243,6 +249,9 @@ const Home = () => {
                                             <div className="rating">
                                                 <i className="small material-icons">local_atm</i>
                                                 <p>K23.00 - K45.00</p>
+                                            </div>
+                                            <div className="category-amount">
+                                                <a href="/item" className="waves-effect waves-light btn">Make An Appointment</a>
                                             </div>
                                         </div>
                                     </div>
@@ -266,7 +275,7 @@ const Home = () => {
                                <div className="col m4">
                                     <div className="category-item">
                                         <div className="category-image">
-                                            <img src={require('../images/cat.jpg')} className="responsive-img" alt="pic here"/>
+                                            <img src={require('../images/H4.png')} className="responsive-img" alt="pic here"/>
                                         </div>
                                         <div className="category-infor">
                                             <h1>Clinic Name</h1>
@@ -292,7 +301,7 @@ const Home = () => {
                                <div className="col m4">
                                <div className="category-item">
                                         <div className="category-image">
-                                            <img src={require('../images/cat.jpg')} className="responsive-img" alt="pic here"/>
+                                            <img src={require('../images/H3.png')} className="responsive-img" alt="pic here"/>
                                         </div>
                                         <div className="category-infor">
                                             <h1>Clinic Name</h1>
@@ -318,7 +327,7 @@ const Home = () => {
                                <div className="col m4">
                                <div className="category-item">
                                         <div className="category-image">
-                                            <img src={require('../images/cat.jpg')} className="responsive-img" alt="pic here"/>
+                                            <img src={require('../images/H4.png')} className="responsive-img" alt="pic here"/>
                                         </div>
                                         <div className="category-infor">
                                             <h1>Clinic Name</h1>
@@ -359,7 +368,7 @@ const Home = () => {
                                 <div className="col m4">
                                    <div className="blog-item">
                                        <div className="blog-image">
-                                           <img src={require('../images/cat.jpg')} className="responsive-img" alt="pic here"/>
+                                           <img src={require('../images/H2.png')} className="responsive-img" alt="pic here"/>
                                        </div>
                                        <div className="blog-author">
                                             <p><i className="small material-icons">date_range</i>May 4,2019 <span>By Admin</span> </p>
@@ -375,7 +384,7 @@ const Home = () => {
                                <div className="col m4">
                                    <div className="blog-item">
                                        <div className="blog-image">
-                                           <img src={require('../images/cat.jpg')} className="responsive-img" alt="pic here"/>
+                                           <img src={require('../images/H3.png')} className="responsive-img" alt="pic here"/>
                                        </div>
                                        <div className="blog-author">
                                             <p><i className="small material-icons">date_range</i>May 4,2019 <span>By Admin</span> </p>
@@ -391,7 +400,7 @@ const Home = () => {
                                <div className="col m4">
                                    <div className="blog-item">
                                        <div className="blog-image">
-                                           <img src={require('../images/cat.jpg')} className="responsive-img" alt="pic here"/>
+                                           <img src={require('../images/H4.png')} className="responsive-img" alt="pic here"/>
                                        </div>
                                        <div className="blog-author">
                                             <p><i className="small material-icons">date_range</i>May 4,2019 <span>By Admin</span> </p>

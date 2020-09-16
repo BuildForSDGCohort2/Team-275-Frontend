@@ -27,7 +27,7 @@ class Item extends Component {
                                     <div className="col m3">
                                         <div className="category-item">
                                             <div className="category-image">
-                                                <img src={require('../images/cat.jpg')} className="responsive-img" alt="pic here"/>
+                                                <img src={require('../images/D2.png')} className="responsive-img" alt="pic here"/>
                                                 <div className="category-action">
                                                     <a href="/" className="watch"><i className="small material-icons">remove_red_eye</i></a>
                                                     <a href="/"><i className="small material-icons text-right">favorite_border</i></a>
@@ -47,7 +47,7 @@ class Item extends Component {
                                     <div className="col m3">
                                         <div className="category-item">
                                             <div className="category-image">
-                                                <img src={require('../images/cat.jpg')} className="responsive-img" alt="pic here"/>
+                                                <img src={require('../images/D2.png')} className="responsive-img" alt="pic here"/>
                                                 <div className="category-action">
                                                     <a href="/" className="watch"><i className="small material-icons">remove_red_eye</i></a>
                                                     <a href="/"><i className="small material-icons text-right">favorite_border</i></a>
@@ -67,7 +67,7 @@ class Item extends Component {
                                     <div className="col m3">
                                         <div className="category-item">
                                             <div className="category-image">
-                                                <img src={require('../images/cat.jpg')} className="responsive-img" alt="pic here"/>
+                                                <img src={require('../images/D2.png')} className="responsive-img" alt="pic here"/>
                                                 <div className="category-action">
                                                     <a href="/" className="watch"><i className="small material-icons">remove_red_eye</i></a>
                                                     <a href="/"><i className="small material-icons text-right">favorite_border</i></a>
@@ -87,7 +87,7 @@ class Item extends Component {
                                     <div className="col m3">
                                         <div className="category-item">
                                             <div className="category-image">
-                                                <img src={require('../images/cat.jpg')} className="responsive-img" alt="pic here"/>
+                                                <img src={require('../images/D2.png')} className="responsive-img" alt="pic here"/>
                                                 <div className="category-action">
                                                     <a href="/" className="watch"><i className="small material-icons">remove_red_eye</i></a>
                                                     <a href="/"><i className="small material-icons text-right">favorite_border</i></a>

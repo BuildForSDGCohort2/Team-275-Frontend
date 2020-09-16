@@ -27,7 +27,7 @@ class Category extends Component {
                                         <div className="card">
                                             <div className="overflow">
                                                 <div className="card-image">
-                                                    <img src={require('../images/cat.jpg')} alt="pic here"/>
+                                                    <img src={require('../images/D2.png')} alt="pic here"/>
                                                     <span className="card-title">Category Name</span>
                                                 </div>
                                             </div>
