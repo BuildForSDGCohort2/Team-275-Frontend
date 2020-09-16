@@ -29,8 +29,8 @@ class Footer extends Component {
                         <div className="col l4 offset-l2 s12">
                             <h5 className="white-text">About</h5>
                             <ul>
-                                <li><a className="grey-text text-lighten-3" href="#!">Conact Us</a></li>
-                                <li><a className="grey-text text-lighten-3" href="#!">FAQ</a></li>
+                                <li><a className="grey-text text-lighten-3" href="/contact">Conact Us</a></li>
+                                <li><a className="grey-text text-lighten-3" href="/questions">FAQ</a></li>
                                 <li><a className="grey-text text-lighten-3" href="#!">Privacy Policy</a></li>
                                 <li><a className="grey-text text-lighten-3" href="#!">T's & C's</a></li>
                             </ul>
@@ -38,9 +38,10 @@ class Footer extends Component {
                         <div className="col l4 offset-l2 s12">
                             <h5 className="white-text">Service</h5>
                             <ul>
-                                <li><a className="grey-text text-lighten-3" href="#!">Medical Provider</a></li>
-                                <li><a className="grey-text text-lighten-3" href="#!">Login</a></li>
-                                <li><a className="grey-text text-lighten-3" href="#!">Blog</a></li>
+                                <li><a className="grey-text text-lighten-3" href="/providerSignin">Medical Provider? SignIn</a></li>
+                                <li><a className="grey-text text-lighten-3" href="/signin">Login</a></li>
+                                <li><a className="grey-text text-lighten-3" href="/signup">Sign Up</a></li>
+                                <li><a className="grey-text text-lighten-3" href="/news">Blog</a></li>
                             </ul>
                         </div>
                     </div>

@@ -7,8 +7,10 @@ import NavBar from './components/layout/Navbar';
 import Home from './components/pages/Home'
 import Provider from './components/pages/Provider'
 import Item from './components/pages/Item'
+import Contact from './components/pages/Contact'
 import News from './components/pages/News'
 import Appointment from './components/pages/Appointment'
+import providerSignIn from './components/providerAuth/SignIn'
 import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp'
 import Footer from './components/layout/Footer';
@@ -27,9 +29,11 @@ class App extends Component {
             <Switch>
               <Route exact path='/' component={Home} />
               <Route path='/provider' component={Provider}  />
+              <Route path='/contact' component={Contact}  />
               <Route path='/item' component={Item}  />
               <Route path='/news' component={News}  />
               <Route path='/appointment' component={Appointment}  />
+              <Route path='/providerSignin' component={providerSignIn}  />
               <Route path='/signin' component={SignIn}  />
               <Route path='/signup' component={SignUp}  />
             </Switch>

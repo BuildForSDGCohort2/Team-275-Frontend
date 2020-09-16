@@ -498,6 +498,17 @@ hr {
     justify-content: center;
 }
 
+.background-img-provider {
+    background-image: url('./components/images/micah-williams-lmFJOx7hPc4-unsplash.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .form-wrapper {
     width: 75%;
     background-color: transparent;
