@@ -11,6 +11,7 @@ import Contact from './components/pages/Contact'
 import News from './components/pages/News'
 import Appointment from './components/pages/Appointment'
 import providerSignIn from './components/providerAuth/SignIn'
+import providerSignUp from './components/providerAuth/SignUp'
 import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp'
 import Footer from './components/layout/Footer';
@@ -34,6 +35,7 @@ class App extends Component {
               <Route path='/news' component={News}  />
               <Route path='/appointment' component={Appointment}  />
               <Route path='/providerSignin' component={providerSignIn}  />
+              <Route path='/providerSignup' component={providerSignUp}  />
               <Route path='/signin' component={SignIn}  />
               <Route path='/signup' component={SignUp}  />
             </Switch>

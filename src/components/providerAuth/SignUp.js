@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-class SignUp extends Component {
+class providerSignUp extends Component {
     render() {
         return (
-            <section className="background-img">
+            <section className="background-img-provider">
                 <div className="container">
                     <div className="row">
                         <div className="col s12 m12 offset-m1">
@@ -14,48 +14,50 @@ class SignUp extends Component {
 
                                     <form>
                                         <div className="firstName">
-                                            <label htmlFor="firstName">First Name</label>
                                             <input
                                             type="text"
-                                            placeholder="Enter your name"
+                                            placeholder="Enter your first name*"
                                             name="firstName"/>
                                         </div>
 
                                         <div className="lastName">
-                                            <label htmlFor="lastName">Last Name</label>
                                             <input
                                             type="text"
-                                            placeholder="Enter your name"
+                                            placeholder="Enter your last name*"
                                             name="lastName"/>
                                         </div>
 
                                         <div className="email">
-                                            <label htmlFor="email">Email</label>
                                             <input
                                             type="email"
-                                            placeholder="Enter your name"
+                                            placeholder="Enter your email address*"
                                             name="email"/>
                                         </div>
 
                                         <div className="password">
-                                            <label htmlFor="phone">Phone</label>
                                             <input
                                             type="password"
-                                            placeholder="Enter your phone"
+                                            placeholder="Enter your phone number*"
                                             name="phone"/>
                                         </div>
 
                                         <div className="password_again">
-                                            <label htmlFor="password_again">Password</label>
                                             <input
                                             type="password"
-                                            placeholder="Enter your name"
+                                            placeholder="Enter your password*"
+                                            name="password_again"/>
+                                        </div>
+
+                                        <div className="password_again">
+                                            <input
+                                            type="password"
+                                            placeholder="Enter your password again*"
                                             name="password_again"/>
                                         </div>
 
                                         <div className="createAccount">
                                             <button type="submit">Create</button>
-                                            <small>Already have an account? <Link className="FormTitle__Link" to='/signin'>Sign In</Link></small>
+                                            <small>Already have an account? <Link className="FormTitle__Link" to='/providerSignin'>Sign In</Link></small>
                                         </div>
                                     </form>
                                 </div>
@@ -68,4 +70,4 @@ class SignUp extends Component {
     }
 }
 
-export default SignUp
+export default providerSignUp

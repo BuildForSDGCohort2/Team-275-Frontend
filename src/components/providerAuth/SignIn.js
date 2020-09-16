@@ -78,11 +78,10 @@ class providerSignIn extends Component {
 
                                     <form onValidate onSubmit={this.handleSubmit}>
                                         <div className="username">
-                                            <label htmlFor="username">Email or Username</label>
                                             <input
                                             type="text"
                                             className={formErrors.username.length > 0 ? "error" : null}
-                                            placeholder="Enter your email or username"
+                                            placeholder="Enter your email or username*"
                                             name="username"
                                             noValidate
                                             onChange={this.handleChange}/>
@@ -90,10 +89,9 @@ class providerSignIn extends Component {
                                         </div>
 
                                         <div className="login_password">
-                                            <label htmlFor="login_password">Password</label>
                                             <input
                                             type="password"
-                                            placeholder="Enter your password"
+                                            placeholder="Enter your password*"
                                             name="login_password"
                                             noValidate
                                             onChange={this.handleChange}/>
@@ -102,7 +100,7 @@ class providerSignIn extends Component {
 
                                         <div className="createAccount">
                                             <button onClick={() => this.login()}>Login</button>
-                                        <small>Don't have an account? <Link className="FormTitle__Link" to='/signup'>Sign Up</Link></small>
+                                        <small>Don't have an account? <Link className="FormTitle__Link" to='/providerSignup'>Sign Up</Link></small>
                                         </div>
                                     </form>
                                 </div>
