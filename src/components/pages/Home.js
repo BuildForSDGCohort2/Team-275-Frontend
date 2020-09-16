@@ -8,6 +8,15 @@ const Home = () => {
                     <div className="welcome container">
                         <div>
                             <h1>Welcome</h1>
+                            <div className="nav-wrapper">
+      <form>
+        <div className="input-field">
+          <input id="search" type="search" required />
+          <label className="label-icon" for="search"><i class="material-icons">search</i></label>
+          <i className="material-icons">close</i>
+        </div>
+      </form>
+    </div>
                         </div>
                     </div>
                 </section>
@@ -23,48 +32,79 @@ const Home = () => {
                             </div> 
 
                             <div className="row">
-                               <div className="col m3">
-                                    <div className="reasons">
-                                        <i className="medium material-icons">headset_mic</i>
-                                        <div className="card-content">
-                                            <h3>24/7 Support</h3>
-                                            <p>I am a very simple card. I am good at containing small bits of information.
-                                            I am convenient because I require little markup to use effectively.</p>
-                                        </div>
-                                    </div>
-                               </div>
+                               <div className="col s12 m6">
+                                   <div className="row">
+                                       <div className="col s12 m12 reason">
+                                           <div>
+                                                <i className="Large material-icons">access_time</i>
+                                           </div>
+                                           <div>
+                                               <h5>Flexible Hours</h5>
+                                               <p>Provide High-quality care from anywhere at anytime.</p>
+                                           </div>
+                                       </div>
+                                   </div>
 
-                               <div className="col m3">
-                                    <div className="reasons">
-                                        <i className="medium material-icons">cached</i>
-                                        <div className="card-content">
-                                            <h3>Return Policy</h3>
-                                            <p>I am a very simple card. I am good at containing small bits of information.
-                                            I am convenient because I require little markup to use effectively.</p>
-                                        </div>
-                                    </div>
-                               </div>
+                                   <div className="row">
+                                       <div className="col s12 m12 reason">
+                                           <div>
+                                                <i className="Medium material-icons">trending_up</i>
+                                           </div>
+                                           <div>
+                                               <h5>Training and Professional Growth</h5>
+                                               <p>Receive continued training as you work as a consultant on our platform.</p>
+                                           </div>
+                                       </div>
+                                   </div>
 
-                               <div className="col m3">
-                                    <div className="reasons">
-                                        <i className="medium material-icons">local_shipping</i>
-                                        <div className="card-content">
-                                            <h3>Free Delivery</h3>
-                                            <p>I am a very simple card. I am good at containing small bits of information.
-                                            I am convenient because I require little markup to use effectively.</p>
-                                        </div>
-                                    </div>
+                                   <div className="row">
+                                       <div className="col s12 m12 reason">
+                                           <div>
+                                                <i className="Medium material-icons">wc</i>
+                                           </div>
+                                           <div>
+                                               <h5>No Overhead, No Operations</h5>
+                                               <p>No more overcrowed visit to the clinic and overloads of work.</p>
+                                           </div>
+                                       </div>
+                                   </div>
                                </div>
+                               <div className="col s12 m6">
+                                    <div className="row">
+                                       <div className="col s12 m12 reason">
+                                           <div>
+                                                <i className="Medium material-icons">favorite_border</i>
+                                           </div>
+                                           <div>
+                                               <h5>Reliable Income</h5>
+                                               <p>Earn additional income doing what you love.</p>
+                                           </div>
+                                       </div>
+                                   </div>
 
-                               <div className="col m3">
-                                    <div className="reasons">
-                                        <i className="medium material-icons">query_builder</i>
-                                        <div className="card-content">
-                                            <h3>Delivery On Time</h3>
-                                            <p>I am a very simple card. I am good at containing small bits of information.
-                                            I am convenient because I require little markup to use effectively.</p>
-                                        </div>
-                                    </div>
+                                   <div className="row">
+                                        <div className="col s12 m12 reason">
+                                           <div>
+                                                <i className="Medium material-icons">people_outline</i>
+                                           </div>
+                                           <div>
+                                               <h5>Dynamic, Supportive Community</h5>
+                                               <p>Join a vibrant community of thousands of talanted clinicians and physicans.</p>
+                                           </div>
+                                       </div>
+                                   </div>
+
+                                   <div className="row">
+                                       <div className="col s12 m12 reason">
+                                           <div>
+                                                <i className="Medium material-icons">wc</i>
+                                           </div>
+                                           <div>
+                                               <h5>Freelancing</h5>
+                                               <p>Through the help of the platform you offer consultations.</p>
+                                           </div>
+                                       </div>
+                                   </div>
                                </div>
                             </div> 
                         </div>
@@ -287,7 +327,7 @@ const Home = () => {
                     </div>
                 </section>
                 
-            <section>
+                <section>
                     <div className="blog">
                         <div>
                            <div className="row">

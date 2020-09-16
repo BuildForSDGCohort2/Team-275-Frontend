@@ -153,6 +153,22 @@ hr {
     margin-bottom: 15px;
 }
 
+.reason {
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    margin: 20px;
+}
+
+.reason p, .reason h5 {
+    margin: 0;
+}
+
+.reason i {
+    font-size: 60px;
+    margin-right: 18px;
+}
+
 .rating i {
     font-size: 23px;
 }
