@@ -154,13 +154,18 @@ hr {
     width: 10% !important;
 }
 
-.category-item .rating {
+.category-item .rating, .category-item .rating-timer {
     justify-content: center;
     margin-top: 10px;
 }
 
+.category-item .rating-timer {
+    margin-bottom: 20px;
+}
+
 .category-item .rating i {
     margin-top: 6px;
+    color: #F1C40F;
 }
 
 .card:hover {
@@ -190,12 +195,19 @@ hr {
     transform: scale(1.1);
 }
 
-.rating {
+.card-content .rating-timer {
+    margin-bottom: 15px;
+}
+
+.rating, .rating-timer {
     display: flex;
     flex-direction: row;
     margin: 0;
     margin-bottom: 15px;
 }
+
+.rating i {
+    color: #F1C40F;}
 
 .reason {
     display: flex;
@@ -213,7 +225,7 @@ hr {
     margin-right: 18px;
 }
 
-.rating i {
+.rating i, .rating-timer i {
     font-size: 23px;
 }
 
@@ -233,7 +245,7 @@ hr {
     font-size: 17px;
 }
 
-.rating p {
+.rating p, .rating-timer p {
     margin-top: 1px !important;
     margin-left: 5px !important;
 }
@@ -469,6 +481,10 @@ hr {
     margin: 0;
 }
 
+.category-infor .rating-timer i {
+    margin-top: 5px;
+}
+
 .category-amount p {
     margin-top: 0;
     margin-bottom: 5px;
@@ -547,6 +563,143 @@ hr {
 
 .confrim-btn .btn {
     text-transform: capitalize;
+    color: #fff;
+}
+
+.payment-body .modal-content {
+    height: auto !important;
+    text-align: center;
+}
+
+.rating-timer {
+    margin: 0;
+}
+
+.rating-timer i {
+    color: #154360;
+}
+
+.modal-trigger {
+    color: black;
+}
+
+.modal {
+    height: auto;
+}
+
+.modal-content {
+    height: 600px;
+    padding: 30px;
+    border: none !important;
+}
+
+.modal-content h5 {
+    margin-bottom: 20px;
+}
+
+.payment-body .rating i {
+    color: #F1C40F;
+}
+
+.payment-body .modal-content i {
+    color: #52BE80;
+    margin-bottom: 0px;
+}
+
+.payment-body .modal-content h5 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.payment-body .modal-content p {
+    margin: 0;
+    font-size: 17px;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+.payment-body .modal-content p span {
+    font-weight: bold;
+}
+
+.payment-body .modal-content .btn {
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.rating-title i {
+    color: #52BE80;
+}
+
+.time-picker, .data-doctor {
+    display: flex;
+    flex-direction: row;
+}
+
+.data-doctor .left-side {
+    height: auto;
+    margin-right: 20px;
+}
+
+.data-doctor .left-side img {
+    height: 150px;
+}
+
+.data-doctor .right-side .rating {
+    font-size: 15px !important;
+    margin-bottom: 0;
+}
+
+.data-doctor .right-side h5 {
+    font-size: 20px;
+    margin-left: 4px;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.time-picker .SingleDatePickerInput__withBorder {
+    border: none !important;
+    margin-right: 20px;
+}
+
+.time-picker .btn {
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+
+.time-picker .input-field {
+    margin: 0;
+    margin-right: 20px;
+}
+
+.sender p, .payment-method p {
+    margin: 0;
+}
+
+.sender h1, .payment-method h1, .address h1 {
+    text-align: left;
+    font-size: 17px;
+    margin: 0;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.receiver {
+    padding-top: 30px;
+    margin-left: 20%;
+}
+
+.address {
+    margin-left: 20%;
+}
+
+.receiver span {
+    font-weight: bold;
+}
+
+.payment-method {
+    margin-bottom: 20px;
 }
 
 /*---  Sign up and in Sections   ---*/
@@ -730,61 +883,6 @@ hr {
     color: black;
     font-size: 15px;
     font-weight: lighter;
-}
-
-.modal-trigger {
-    color: black;
-}
-
-.modal {
-    height: auto;
-}
-
-.modal-content {
-    height: 600px;
-    padding: 30px;
-    border: none !important;
-}
-
-.modal-content h5 {
-    margin-bottom: 20px;
-}
-
-.time-picker, .data-doctor {
-    display: flex;
-    flex-direction: row;
-}
-
-.data-doctor .left-side {
-    height: auto;
-    margin-right: 20px;
-}
-
-.data-doctor .left-side img {
-    height: 150px;
-}
-
-.data-doctor .right-side .rating {
-    font-size: 15px !important;
-    margin-bottom: 0;
-}
-
-.data-doctor .right-side h5 {
-    font-size: 20px;
-    margin-left: 4px;
-    margin-bottom: 10px;
-    margin-top: 0;
-}
-
-.time-picker .SingleDatePickerInput__withBorder {
-    border: none !important;
-    margin-right: 20px;
-    background: transparent;
-}
-
-.time-picker .btn {
-    margin-top: 10px;
-    text-transform: capitalize;
 }
 
 .CalendarDay__selected_span {

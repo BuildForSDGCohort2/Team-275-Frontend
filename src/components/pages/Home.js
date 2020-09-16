@@ -153,22 +153,22 @@ const Home = () => {
                                                 <p>BBS, MD, DR - Ophthalmology, MCH - Ophthalmology. <i className="small material-icons">check_circle</i></p>
                                             </div>
                                             <div className="rating">
-                                                <i className="small material-icons">star_border</i>
-                                                <i className="small material-icons">star_border</i>
-                                                <i className="small material-icons">star_border</i>
-                                                <i className="small material-icons">star_border</i>
+                                                <i className="small material-icons">star</i>
+                                                <i className="small material-icons">star</i>
+                                                <i className="small material-icons">star</i>
+                                                <i className="small material-icons">star_half</i>
                                                 <i className="small material-icons">star_border</i>
                                                 <p>(4.5)</p>
                                             </div>
-                                            <div className="rating">
+                                            <div className="rating-timer">
                                                 <i className="small material-icons">timer</i>
                                                 <p>Avaliable Sat, 24 April</p>
                                             </div>
-                                            <div className="rating">
+                                            <div className="rating-timer">
                                                 <i className="small material-icons">location_on</i>
                                                 <p>Lagos, Nigeria</p>
                                             </div>
-                                            <div className="rating">
+                                            <div className="rating-timer">
                                                 <i className="small material-icons">local_atm</i>
                                                 <p>K23.00 - K45.00</p>
                                             </div>
@@ -192,22 +192,22 @@ const Home = () => {
                                                 <p>BBS, MD, DR - Ophthalmology, MCH - Ophthalmology. <i className="small material-icons">check_circle</i></p>
                                             </div>
                                             <div className="rating">
-                                                <i className="small material-icons">star_border</i>
-                                                <i className="small material-icons">star_border</i>
-                                                <i className="small material-icons">star_border</i>
-                                                <i className="small material-icons">star_border</i>
+                                                <i className="small material-icons">star</i>
+                                                <i className="small material-icons">star</i>
+                                                <i className="small material-icons">star</i>
+                                                <i className="small material-icons">star_half</i>
                                                 <i className="small material-icons">star_border</i>
                                                 <p>(4.5)</p>
                                             </div>
-                                            <div className="rating">
+                                            <div className="rating-timer">
                                                 <i className="small material-icons">timer</i>
                                                 <p>Avaliable Sat, 24 April</p>
                                             </div>
-                                            <div className="rating">
+                                            <div className="rating-timer">
                                                 <i className="small material-icons">location_on</i>
                                                 <p>Lagos, Nigeria</p>
                                             </div>
-                                            <div className="rating">
+                                            <div className="rating-timer">
                                                 <i className="small material-icons">local_atm</i>
                                                 <p>K23.00 - K45.00</p>
                                             </div>
@@ -231,22 +231,22 @@ const Home = () => {
                                                 <p>BBS, MD, DR - Ophthalmology, MCH - Ophthalmology. <i className="small material-icons">check_circle</i></p>
                                             </div>
                                             <div className="rating">
-                                                <i className="small material-icons">star_border</i>
-                                                <i className="small material-icons">star_border</i>
-                                                <i className="small material-icons">star_border</i>
-                                                <i className="small material-icons">star_border</i>
+                                                <i className="small material-icons">star</i>
+                                                <i className="small material-icons">star</i>
+                                                <i className="small material-icons">star</i>
+                                                <i className="small material-icons">star_half</i>
                                                 <i className="small material-icons">star_border</i>
                                                 <p>(4.5)</p>
                                             </div>
-                                            <div className="rating">
+                                            <div className="rating-timer">
                                                 <i className="small material-icons">timer</i>
                                                 <p>Avaliable Sat, 24 April</p>
                                             </div>
-                                            <div className="rating">
+                                            <div className="rating-timer">
                                                 <i className="small material-icons">location_on</i>
                                                 <p>Lagos, Nigeria</p>
                                             </div>
-                                            <div className="rating">
+                                            <div className="rating-timer">
                                                 <i className="small material-icons">local_atm</i>
                                                 <p>K23.00 - K45.00</p>
                                             </div>
@@ -280,14 +280,14 @@ const Home = () => {
                                         <div className="category-infor">
                                             <h1>Clinic Name</h1>
                                             <div className="rating text-center">
-                                                <i className="small material-icons">star_border</i>
-                                                <i className="small material-icons">star_border</i>
-                                                <i className="small material-icons">star_border</i>
-                                                <i className="small material-icons">star_border</i>
+                                                <i className="small material-icons">star</i>
+                                                <i className="small material-icons">star</i>
+                                                <i className="small material-icons">star</i>
+                                                <i className="small material-icons">star_half</i>
                                                 <i className="small material-icons">star_border</i>
                                                 <p>(4.5)</p>
                                             </div>
-                                            <div className="rating">
+                                            <div className="rating-timer">
                                                 <i className="small material-icons">location_on</i>
                                                 <p>Lagos, Nigeria</p>
                                             </div>
@@ -306,14 +306,14 @@ const Home = () => {
                                         <div className="category-infor">
                                             <h1>Clinic Name</h1>
                                             <div className="rating text-center">
-                                                <i className="small material-icons">star_border</i>
-                                                <i className="small material-icons">star_border</i>
-                                                <i className="small material-icons">star_border</i>
-                                                <i className="small material-icons">star_border</i>
+                                                <i className="small material-icons">star</i>
+                                                <i className="small material-icons">star</i>
+                                                <i className="small material-icons">star</i>
+                                                <i className="small material-icons">star_half</i>
                                                 <i className="small material-icons">star_border</i>
                                                 <p>(4.5)</p>
                                             </div>
-                                            <div className="rating">
+                                            <div className="rating-timer">
                                                 <i className="small material-icons">location_on</i>
                                                 <p>Lagos, Nigeria</p>
                                             </div>
@@ -332,14 +332,14 @@ const Home = () => {
                                         <div className="category-infor">
                                             <h1>Clinic Name</h1>
                                             <div className="rating text-center">
-                                                <i className="small material-icons">star_border</i>
-                                                <i className="small material-icons">star_border</i>
-                                                <i className="small material-icons">star_border</i>
-                                                <i className="small material-icons">star_border</i>
+                                                <i className="small material-icons">star</i>
+                                                <i className="small material-icons">star</i>
+                                                <i className="small material-icons">star</i>
+                                                <i className="small material-icons">star_half</i>
                                                 <i className="small material-icons">star_border</i>
                                                 <p>(4.5)</p>
                                             </div>
-                                            <div className="rating">
+                                            <div className="rating-timer">
                                                 <i className="small material-icons">location_on</i>
                                                 <p>Lagos, Nigeria</p>
                                             </div>

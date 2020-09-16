@@ -52,22 +52,22 @@ class NavBar extends Component {
                             <div className="right-side">
                                 <h5>Frank Leopard</h5>
                                 <div className="rating">
-                                    <i className="small material-icons">star_border</i>
-                                    <i className="small material-icons">star_border</i>
-                                    <i className="small material-icons">star_border</i>
-                                    <i className="small material-icons">star_border</i>
+                                    <i className="small material-icons">star</i>
+                                    <i className="small material-icons">star</i>
+                                    <i className="small material-icons">star</i>
+                                    <i className="small material-icons">star_half</i>
                                     <i className="small material-icons">star_border</i>
                                     <p>(4.5)</p>
                                 </div>
-                                <div className="rating">
+                                <div className="rating-timer">
                                     <i className="small material-icons">timer</i>
                                     <p>Avaliable Sat, 24 April</p>
                                 </div>
-                                <div className="rating">
+                                <div className="rating-timer">
                                     <i className="small material-icons">location_on</i>
                                     <p>Lagos, Nigeria</p>
                                 </div>
-                                <div className="rating">
+                                <div className="rating-timer">
                                     <i className="small material-icons">local_atm</i>
                                     <p>K23.00 - K45.00</p>
                                 </div>
@@ -81,6 +81,10 @@ class NavBar extends Component {
                                 onFocusChange={({ focused }) => this.setState({ focused })} // PropTypes.func.isRequired
                                 id="your_unique_id" // PropTypes.string.isRequired,
                             />
+                            <div className="input-field col s6">
+                                <input id="time_input" type="text" className="validate" />
+                                <label for="time_input">12:00PM - 13:00PM</label>
+                            </div>
                             <a href="/payment" className="waves-effect waves-light btn">Procced to pay</a>
                         </div>
                     </div>

@@ -1,9 +1,18 @@
 import React, { Component } from 'react'
 
 class Payment extends Component {
+
+    componentDidMount() {
+        const M = window.M;
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.modal1');
+            var instances = M.Modal.init(elems, {});
+        });
+    }
+
     render() {
         return (
-            <div>
+            <div className="payment-body">
                 <section className="payment grey darken-3">
                     <div>
                         <p>Home / Checkout</p>
@@ -63,7 +72,7 @@ class Payment extends Component {
                                         </label>
                                     </p>
                                     <div className="confrim-btn">
-                                        <a href="/signin" className="waves-effect waves-light btn">Confirm & Pay</a>
+                                        <a class="waves-effect waves-light btn modal-trigger" href="#modal">Confirm & Pay</a>
                                     </div>
                                 </from>
                             </div>
@@ -76,22 +85,22 @@ class Payment extends Component {
                                     <div className="right-side">
                                         <h5>Frank Leopard</h5>
                                         <div className="rating">
-                                            <i className="small material-icons">star_border</i>
-                                            <i className="small material-icons">star_border</i>
-                                            <i className="small material-icons">star_border</i>
-                                            <i className="small material-icons">star_border</i>
+                                            <i className="small material-icons">star</i>
+                                            <i className="small material-icons">star</i>
+                                            <i className="small material-icons">star</i>
+                                            <i className="small material-icons">star_half</i>
                                             <i className="small material-icons">star_border</i>
                                             <p>(4.5)</p>
                                         </div>
-                                        <div className="rating">
+                                        <div className="rating-timer">
                                             <i className="small material-icons">timer</i>
                                             <p>Avaliable Sat, 24 April</p>
                                         </div>
-                                        <div className="rating">
+                                        <div className="rating-timer">
                                             <i className="small material-icons">location_on</i>
                                             <p>Lagos, Nigeria</p>
                                         </div>
-                                        <div className="rating">
+                                        <div className="rating-timer">
                                             <i className="small material-icons">local_atm</i>
                                             <p>K23.00 - K45.00</p>
                                         </div>
@@ -124,6 +133,17 @@ class Payment extends Component {
                         </div>
                     </div>
                 </section>
+
+                <div id="modal" className="modal">
+                    <div className="modal-content">
+                        <i className="large material-icons">check_circle</i>
+                        <h5>Appointment booked successfully!!</h5>
+                        <p>Appointment book with <span>Frank Leopard</span> on <span>14, April 2020 12:00PM</span> to <span>13:00PM</span>.</p>
+                        <div className="confrim-btn">
+                            <a class="waves-effect waves-light btn" href="/receipts">View Receipt</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }
