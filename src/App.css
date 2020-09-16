@@ -97,7 +97,7 @@ hr {
 
 }
 
-.input-field {
+.nav-wrapper .input-field {
     display: flex;
     flex-direction: row;
 }
@@ -110,11 +110,10 @@ hr {
     border-radius: 10px 0px 0px 10px !important;
 }
 
-.input-field input {
+.nav-wrapper form .input-field input {
     margin-right: 20px !important;
     height: 30px !important;
     border: none !important;
-    padding: 10px;
     background-color: #fff !important;
     border-radius: 0px 10px 10px 0px !important;
 }
@@ -353,14 +352,12 @@ hr {
 
 /* Category Signle Page */
 .category-header {
-    background-color: #424949;
     border: 1px solid #424949;
-    height: 40vh;
+    height: 30vh;
     width: 100%;
     margin-bottom: 3%;
     color: white;
-    text-align: center;
-    padding-top: 45px;
+    text-align: left;
 }
 
 .category-header p {
@@ -432,8 +429,6 @@ hr {
     text-align: center;
 }
 
-
-
 .category-action i {
     color: white;
 }
@@ -484,6 +479,74 @@ hr {
     text-transform: capitalize;
     margin: 0;
     font-weight: 600;
+}
+
+/*---  Sign up and in Sections   ---*/
+.payment {
+    text-align: left;
+    border: 1px solid #424949;
+    height: auto;
+    width: 100%;
+    font-size: 20px;
+    color: #fff;
+    padding: 20px;
+}
+
+.payment h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.payment p {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.summary h5 {
+    font-size: 20px !important;
+    margin-left: 5px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.summary .data-doctor {
+    margin-left: 20px;
+}
+
+.payment-date, .payment-time, .payment-booking, .payment-total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+.payment-heading {
+    margin-left: 0 !important;
+}
+
+.payment-booking {
+    border-bottom: 1px solid #424949;
+    padding-bottom: 10px;
+}
+
+.payment-total {
+    font-weight: bold;
+}
+
+.summary form h5 {
+    margin-left: 0 !important;
+}
+
+.summary form .input-field input {
+    font-size: 20px;
+    background-color: transparent !important;
+}
+
+.confrim-btn .btn {
+    text-transform: capitalize;
 }
 
 /*---  Sign up and in Sections   ---*/
@@ -668,6 +731,82 @@ hr {
     font-size: 15px;
     font-weight: lighter;
 }
+
+.modal-trigger {
+    color: black;
+}
+
+.modal {
+    height: auto;
+}
+
+.modal-content {
+    height: 600px;
+    padding: 30px;
+    border: none !important;
+}
+
+.modal-content h5 {
+    margin-bottom: 20px;
+}
+
+.time-picker, .data-doctor {
+    display: flex;
+    flex-direction: row;
+}
+
+.data-doctor .left-side {
+    height: auto;
+    margin-right: 20px;
+}
+
+.data-doctor .left-side img {
+    height: 150px;
+}
+
+.data-doctor .right-side .rating {
+    font-size: 15px !important;
+    margin-bottom: 0;
+}
+
+.data-doctor .right-side h5 {
+    font-size: 20px;
+    margin-left: 4px;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.time-picker .SingleDatePickerInput__withBorder {
+    border: none !important;
+    margin-right: 20px;
+    background: transparent;
+}
+
+.time-picker .btn {
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+
+.CalendarDay__selected_span {
+    background: #82e0aa; 
+    color: white; 
+    border: 1px solid light-red;
+}
+   
+  .CalendarDay__selected {
+    background: dark-red;
+    color: white;
+  }
+   
+  .CalendarDay__selected:hover {
+    background: orange;
+    color: white;
+  }
+   
+  .CalendarDay__hovered_span:hover,
+  .CalendarDay__hovered_span {
+    background: brown;
+  }
 
 @media screen and (max-width: 280px) {
 

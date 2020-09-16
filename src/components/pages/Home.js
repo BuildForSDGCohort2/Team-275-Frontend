@@ -173,7 +173,7 @@ const Home = () => {
                                                 <p>K23.00 - K45.00</p>
                                             </div>
                                             <div className="category-amount">
-                                                <a href="/item" className="waves-effect waves-light btn">Make An Appointment</a>
+                                                <a href="/signin" className="waves-effect waves-light btn">Make An Appointment</a>
                                             </div>
                                         </div>
                                     </div>
@@ -212,7 +212,7 @@ const Home = () => {
                                                 <p>K23.00 - K45.00</p>
                                             </div>
                                             <div className="category-amount">
-                                                <a href="/item" className="waves-effect waves-light btn">Make An Appointment</a>
+                                                <a href="/signin" className="waves-effect waves-light btn">Make An Appointment</a>
                                             </div>
                                         </div>
                                     </div>
@@ -251,7 +251,7 @@ const Home = () => {
                                                 <p>K23.00 - K45.00</p>
                                             </div>
                                             <div className="category-amount">
-                                                <a href="/item" className="waves-effect waves-light btn">Make An Appointment</a>
+                                                <a href="/signin" className="waves-effect waves-light btn">Make An Appointment</a>
                                             </div>
                                         </div>
                                     </div>
