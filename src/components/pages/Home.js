@@ -7,21 +7,39 @@ const Home = () => {
             <section className="home" id="home">
                     <div className="welcome container">
                         <div>
-                            <h1>Welcome</h1>
+                            <h1>Search Doctors, Clinic, Pharmacy, Book your appoinyment.</h1>
+                            <p>Get access to qulified doctors and equipped clinics on our platform.</p>
                             <div className="nav-wrapper">
-      <form>
-        <div className="input-field">
-          <input id="search" type="search" required />
-          <label className="label-icon" for="search"><i class="material-icons">search</i></label>
-          <i className="material-icons">close</i>
-        </div>
-      </form>
-    </div>
+                                <form>
+                                    <div className="row">
+                                        <div className="col m12">
+                                            <div className="row">
+                                              <div className="input-field col s12">
+                                                <i className="material-icons">location_on</i>
+                                                <input type="text" placeholder="Enter Location" id="autocomplete-input" />
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="row">
+                                        <div className="col m12">
+                                            <div className="row entery">
+                                              <div className="input-field col s12">
+                                                <i className="material-icons">search</i>
+                                                <input type="text" placeholder="Enter doctor or clinic" id="autocomplete-input" />
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a className="waves-effect waves-light btn" href="/">Search</a>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </section>
 
-            <section>
+                <section>
                     <div className="whyUs">
                         <div className="container">
                            <div className="row">
@@ -85,7 +103,7 @@ const Home = () => {
                                    <div className="row">
                                         <div className="col s12 m12 reason">
                                            <div>
-                                                <i className="Medium material-icons">people_outline</i>
+                                               <i className="fas fa-users"></i>
                                            </div>
                                            <div>
                                                <h5>Dynamic, Supportive Community</h5>
@@ -97,7 +115,7 @@ const Home = () => {
                                    <div className="row">
                                        <div className="col s12 m12 reason">
                                            <div>
-                                                <i className="Medium material-icons">wc</i>
+                                               <i class="fas fa-user-md"></i>
                                            </div>
                                            <div>
                                                <h5>Freelancing</h5>
