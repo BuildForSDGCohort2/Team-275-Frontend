@@ -702,6 +702,14 @@ hr {
     margin-bottom: 20px;
 }
 
+.receipt-data .payment-details p {
+    font-weight: normal;
+}
+
+.receipt-data .payment-details p span {
+    font-weight: bold;
+}
+
 /*---  Sign up and in Sections   ---*/
 .background-img {
     background-image: url('./components/images/micah-williams-lmFJOx7hPc4-unsplash.png');

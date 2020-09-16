@@ -79,15 +79,15 @@ class Receipts extends Component {
                                     <div className="col s4 m4">
                                         <div className="payment-details">
                                             <div className="payment-date">
-                                                <p>Sub total:</p>
+                                                <p><span>Sub total:</span></p>
                                                 <p>$150</p>
                                             </div>
                                             <div className="payment-time">
-                                                <p>Discount: </p>
+                                                <p><span>Discount: </span></p>
                                                 <p>-5%</p>
                                             </div>
                                             <div className="payment-total">
-                                                <p>Total Amount: </p>
+                                                <p><span>Total Amount: </span></p>
                                                 <p>$140</p>
                                             </div>
                                         </div>
