@@ -11,6 +11,10 @@ body {
     color: white;
 }
 
+.rating {
+    font-style: italic;
+}
+
 .navbartop {
     display: flex;
     flex-direction: row;
@@ -502,7 +506,7 @@ hr {
     font-weight: 600;
 }
 
-/*---  Sign up and in Sections   ---*/
+/*---  Payment and Receipt Page   ---*/
 .payment {
     text-align: left;
     border: 1px solid #424949;
@@ -768,6 +772,104 @@ hr {
     background-color: #26a69a;
 }
 
+/*--- Profile Page ---*/
+.profile {
+    margin-bottom: 60px;
+}
+
+.profile-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+
+.profile-left-side img {
+    height: 140px !important;
+}
+
+.profile-left-side .data-doctor .right-side h5 i {
+    margin-top: 4px !important;
+}
+
+.profile-right-side .marketing-accounts {
+    margin-top: 10px;
+}
+
+.profile-right-side .marketing-accounts i {
+    font-size: 30px !important;
+    color: #154360;
+}
+
+.profile-right-side .results-btn .btn {
+    font-size: 15px !important;
+}
+
+.tabs {
+    background-color: transparent;
+}
+
+.tabs .indicator {
+    background-color: #2471A3;
+}
+
+.tabs .tab a {
+    color: #154360;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.tabs .tab a:hover, .tabs .tab a.active {
+    color: #2471A3;
+    background-color: transparent;
+}
+
+.tabs .tab a.active:focus {
+    background-color: transparent;
+}
+
+.about-me h3, .profile-service h3, .education h3 {
+    text-align: left;
+}
+
+.education {
+    margin-top: 30px;
+}
+
+.education ul {
+    width: 100%;
+}
+
+.education ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-bottom: 15px;
+}
+
+.education ul li .education-icon {
+    margin-right: 17px !important;
+}
+
+.education ul li .education-data h5 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.education ul li .education-data p {
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.education i {
+    color: #519a8a;
+    font-size: 20px;
+    margin-top: 4px;
+}
+
 /*---  Sign up and in Sections   ---*/
 .background-img {
     background-image: url('./components/images/micah-williams-lmFJOx7hPc4-unsplash.png');
@@ -1009,7 +1111,7 @@ hr {
     .category-item-list .category-item .category-action {
         width: 153px;
         top: 82.5%;
-      }
+    }
 }
 
 @media screen and ( max-width: 320px ){
@@ -1033,17 +1135,29 @@ hr {
     .deals-infor div:last-child p {
         font-size: 16px !important;
     }
+
+    .profile-right-side .results-btn .btn {
+        font-size: 10px !important;
+    }
 }
 
 @media screen and ( max-width: 360px ){
     .deals-infor div:last-child p {
         font-size: 23px !important;
     }
+
+    .profile-right-side .results-btn .btn {
+        font-size: 10px !important;
+    }
 }
 
 @media screen and ( max-width: 375px ){
     .deals-infor div:last-child p {
         font-size: 23px !important;
+    }
+
+    .profile-right-side .results-btn .btn {
+        font-size: 10px !important;
     }
 }
 

@@ -11,6 +11,7 @@ import Contact from './components/pages/Contact'
 import Receipts from './components/pages/Receipts'
 import Results from './components/pages/Results'
 import News from './components/pages/News'
+import Profile from './components/pages/Profile'
 import providerSignIn from './components/providerAuth/SignIn'
 import providerSignUp from './components/providerAuth/SignUp'
 import SignIn from './components/auth/SignIn'
@@ -36,6 +37,7 @@ class App extends Component {
               <Route path='/receipts' component={Receipts}  />
               <Route path='/results' component={Results}  />
               <Route path='/news' component={News}  />
+              <Route path='/profile' component={Profile} />
               <Route path='/providerSignin' component={providerSignIn}  />
               <Route path='/providerSignup' component={providerSignUp}  />
               <Route path='/signin' component={SignIn}  />

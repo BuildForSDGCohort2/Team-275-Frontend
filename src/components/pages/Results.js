@@ -78,7 +78,7 @@ class Results extends Component {
                                     <i className="small material-icons">star</i>
                                     <i className="small material-icons">star_half</i>
                                     <i className="small material-icons">star_border</i>
-                                    <p>(4.5)</p>
+                                    <p>(4.5) rating out of (5.0)</p>
                                 </div>
                                 <div className="rating-timer">
                                     <i className="small material-icons">timer</i>
@@ -114,7 +114,7 @@ class Results extends Component {
                                     <i className="small material-icons">star</i>
                                     <i className="small material-icons">star_half</i>
                                     <i className="small material-icons">star_border</i>
-                                    <p>(4.5)</p>
+                                    <p>(4.5) rating out of (5.0)</p>
                                 </div>
                                 <div className="rating-timer">
                                     <i className="small material-icons">timer</i>
@@ -150,7 +150,7 @@ class Results extends Component {
                                     <i className="small material-icons">star</i>
                                     <i className="small material-icons">star_half</i>
                                     <i className="small material-icons">star_border</i>
-                                    <p>(4.5)</p>
+                                    <p>(4.5) rating out of (5.0)</p>
                                 </div>
                                 <div className="rating-timer">
                                     <i className="small material-icons">timer</i>

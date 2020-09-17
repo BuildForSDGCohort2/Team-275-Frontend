@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link, NavLink} from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import SignedOutLinks from './SignedOutLinks'
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
@@ -57,7 +57,7 @@ class NavBar extends Component {
                                     <i className="small material-icons">star</i>
                                     <i className="small material-icons">star_half</i>
                                     <i className="small material-icons">star_border</i>
-                                    <p>(4.5)</p>
+                                    <p>(4.5) rating out of (5.0)</p>
                                 </div>
                                 <div className="rating-timer">
                                     <i className="small material-icons">timer</i>

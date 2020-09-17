@@ -158,7 +158,7 @@ const Home = () => {
                                                 <i className="small material-icons">star</i>
                                                 <i className="small material-icons">star_half</i>
                                                 <i className="small material-icons">star_border</i>
-                                                <p>(4.5)</p>
+                                                <p>(4.5) rating</p>
                                             </div>
                                             <div className="rating-timer">
                                                 <i className="small material-icons">timer</i>
@@ -197,7 +197,7 @@ const Home = () => {
                                                 <i className="small material-icons">star</i>
                                                 <i className="small material-icons">star_half</i>
                                                 <i className="small material-icons">star_border</i>
-                                                <p>(4.5)</p>
+                                                <p>(4.5) rating</p>
                                             </div>
                                             <div className="rating-timer">
                                                 <i className="small material-icons">timer</i>
@@ -236,7 +236,7 @@ const Home = () => {
                                                 <i className="small material-icons">star</i>
                                                 <i className="small material-icons">star_half</i>
                                                 <i className="small material-icons">star_border</i>
-                                                <p>(4.5)</p>
+                                                <p>(4.5) rating</p>
                                             </div>
                                             <div className="rating-timer">
                                                 <i className="small material-icons">timer</i>
@@ -285,7 +285,7 @@ const Home = () => {
                                                 <i className="small material-icons">star</i>
                                                 <i className="small material-icons">star_half</i>
                                                 <i className="small material-icons">star_border</i>
-                                                <p>(4.5)</p>
+                                                <p>(4.5) rating</p>
                                             </div>
                                             <div className="rating-timer">
                                                 <i className="small material-icons">location_on</i>
@@ -311,7 +311,7 @@ const Home = () => {
                                                 <i className="small material-icons">star</i>
                                                 <i className="small material-icons">star_half</i>
                                                 <i className="small material-icons">star_border</i>
-                                                <p>(4.5)</p>
+                                                <p>(4.5) rating</p>
                                             </div>
                                             <div className="rating-timer">
                                                 <i className="small material-icons">location_on</i>
@@ -337,7 +337,7 @@ const Home = () => {
                                                 <i className="small material-icons">star</i>
                                                 <i className="small material-icons">star_half</i>
                                                 <i className="small material-icons">star_border</i>
-                                                <p>(4.5)</p>
+                                                <p>(4.5) rating</p>
                                             </div>
                                             <div className="rating-timer">
                                                 <i className="small material-icons">location_on</i>

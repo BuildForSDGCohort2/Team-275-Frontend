@@ -1,0 +1,246 @@
+import React, { Component } from 'react'
+import M from "materialize-css";
+import "materialize-css/dist/css/materialize.min.css";
+
+class Profile extends Component {
+
+    componentDidMount() {
+        M.Tabs.init(this.Tabs);
+    }
+
+    render() {
+        return (
+            <div className="profile">
+                <section className="payment grey darken-3">
+                    <div>
+                        <p>Home / Doctor Profile</p>
+                        <h2>Doctor Profile</h2>
+                    </div>
+                </section>
+
+                <section>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col s12 m12">
+                                <div className="profile-body">
+                                    <div className="profile-left-side">
+                                        <div className="data-doctor">
+                                            <div className="left-side">
+                                                <img src={require('../images/D2.png')} alt="pic here"/>
+                                            </div>
+                                            <div className="right-side">
+                                                <h5>Frank Leopard <i className="small material-icons">check_circle</i></h5>
+                                                <div className="rating-title">
+                                                    <p>BBS, MD, DR - Ophthalmology, MCH - Ophthalmology.</p>
+                                                </div>
+                                                <div className="rating">
+                                                    <i className="small material-icons">star</i>
+                                                    <i className="small material-icons">star</i>
+                                                    <i className="small material-icons">star</i>
+                                                    <i className="small material-icons">star_half</i>
+                                                    <i className="small material-icons">star_border</i>
+                                                    <p>(4.5) rating out of (5.0)</p>
+                                                </div>
+                                                <div className="rating-timer">
+                                                    <i className="small material-icons">location_on</i>
+                                                    <p>Lagos, Nigeria</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="profile-right-side">
+                                        <div className="data-doctor">
+                                            <div className="right-side">
+                                                <div className="rating-timer">
+                                                    <i className="small material-icons">timer</i>
+                                                    <p>Avaliable Sat, 24 April</p>
+                                                </div>
+                                                <div className="rating-timer">
+                                                    <i className="small material-icons">local_atm</i>
+                                                    <p>K23.00 - K45.00</p>
+                                                </div>
+                                                <div className="rating-timer">
+                                                    <i className="small material-icons">thumb_up</i>
+                                                    <p>90% response time</p>
+                                                </div>
+                                                <div className="rating-timer">
+                                                    <i className="small material-icons">chat</i>
+                                                    <p>20 live sessions</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="marketing-accounts">
+                                            <a href="/chat"><i className="small material-icons">call</i></a>
+                                            <a href="/chat"><i className="small material-icons">chat</i></a>
+                                            <a href="/chat"><i className="small material-icons">videocam</i></a>
+                                        </div>
+
+                                        <div className="results-btn">
+                                            <a className="waves-effect waves-light btn modal-trigger" href="#modal1">Book An Appoinment</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col s12 m12">
+                                <div className="profile-tabs">
+                                    <ul
+                                    ref={Tabs => {
+                                        this.Tabs = Tabs;
+                                    }}
+                                    id="tabs-swipe-demo"
+                                    className="tabs"
+                                    >
+                                        <li className="tab col s3">
+                                            <a href="#test-swipe-1">
+                                                Overview
+                                            </a>
+                                        </li>
+                                        <li className="tab col s3">
+                                            <a href="#test-swipe-2">
+                                                Location
+                                            </a>
+                                        </li>
+                                        <li className="tab col s3">
+                                            <a href="#test-swipe-3">
+                                                Reviews
+                                            </a>
+                                        </li>
+                                        <li className="tab col s3">
+                                            <a href="#test-swipe-4">
+                                                Business Hours
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    
+                                    <div id="test-swipe-1">
+                                        <section className="about-me">
+                                            <h3>About Me</h3>
+                                            <p>I am a very simple card. I am good at containing small bits of information. 
+                                                I am convenient because I require little markup to use effectively.</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit illo fuga commodi aspernatur ducimus? Rerum placeat eveniet sint vitae, 
+                                                consectetur debitis doloremque recusandae nostrum, nobis neque voluptate ducimus, porro distinctio.</p>
+                                        </section>
+
+                                        <section className="education">
+                                            <h3>Education</h3>
+                                            <ul>
+                                                <li>
+                                                    <div className="education-icon">
+                                                        <i className="small material-icons">check_circle</i>
+                                                    </div>
+                                                    <div className="education-data">
+                                                        <h5>Unveristy of Lagos</h5>
+                                                        <p>BDS</p>
+                                                        <p>1845 - 1860</p>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+                                                    <div className="education-icon">
+                                                        <i className="small material-icons">check_circle</i>
+                                                    </div>
+                                                    <div className="education-data">
+                                                        <h5>Unveristy of Lagos</h5>
+                                                        <p>MDS</p>
+                                                        <p>1845 - 1860</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </section>
+
+                                        <section className="education">
+                                            <h3>Work Experience</h3>
+                                            <ul>
+                                                <li>
+                                                    <div className="education-icon">
+                                                        <i className="small material-icons">check_circle</i>
+                                                    </div>
+                                                    <div className="education-data">
+                                                        <h5>Favourite Family Clinic</h5>
+                                                        <p>2016 - 2018</p>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+                                                    <div className="education-icon">
+                                                        <i className="small material-icons">check_circle</i>
+                                                    </div>
+                                                    <div className="education-data">
+                                                        <h5>Mum's Clinic</h5>
+                                                        <p>2018 - present</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </section>
+
+                                        <section className="education">
+                                            <h3>Awards</h3><ul>
+                                                <li>
+                                                    <div className="education-icon">
+                                                        <i className="small material-icons">check_circle</i>
+                                                    </div>
+                                                    <div className="education-data">
+                                                        <h5>Best Stuff of The Year</h5>
+                                                        <p>September, 2018</p>
+                                                        <p>I am a very simple card. I am good at containing small bits of information. 
+                                                           I am convenient because I require little markup to use effectively.</p>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+                                                    <div className="education-icon">
+                                                        <i className="small material-icons">check_circle</i>
+                                                    </div>
+                                                    <div className="education-data">
+                                                        <h5>Humanitiran Award</h5>
+                                                        <p>October, 2018</p>
+                                                        <p>I am a very simple card. I am good at containing small bits of information. 
+                                                           I am convenient because I require little markup to use effectively.</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </section>
+
+                                        <section className="profile-service">
+                                            <h3>Serivces</h3>
+                                            <ul>
+                                                <li>Service 1</li>
+                                                <li>Service 2</li>
+                                                <li>Service 3</li>
+                                                <li>Service 4</li>
+                                                <li>Service 5</li>
+                                            </ul>
+                                        </section>
+                                    </div>
+
+                                    <div id="test-swipe-2">
+                                        Test 2
+                                    </div>
+
+                                    <div id="test-swipe-3">
+                                        Test 3
+                                    </div>
+                                    
+                                    <div id="test-swipe-4">
+                                        Test 3
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        );
+    }
+}
+
+export default Profile
