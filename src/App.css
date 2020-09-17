@@ -871,7 +871,86 @@ hr {
 }
 
 .maps-here {
+    padding-top: 40px;
+}
+
+.maps-here h3 {
+    text-align: left;
+    font-weight: bold;
+}
+
+.time-ava {
+    margin-top: 30px;
+}
+
+.time-ava span {
+    font-weight: bold;
+}
+
+.test-swipe-3 {
     margin-top: 20px;
+}
+
+.review-heading {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.review-heading i {
+    color: #F1C40F;
+}
+
+.review-icons {
+    text-align: right;
+    width: 80%;
+}
+
+.rating-title p {
+    margin-left: 3px;
+}
+
+.test-swipe-3 .data-doctor .left-side img {
+    height: 95px;
+}
+
+.review-btn{
+    text-align: center;
+}
+
+.review-btn a {
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.test-swipe-3 form h3 {
+    text-align: left;
+}
+
+.test-swipe-3 .rating {
+    margin-bottom: 0;
+}
+
+.test-swipe-3 form textarea {
+    padding: 10px;
+    resize: none;
+    height: 100px;
+}
+
+.test-swipe-3 form .confrim-btn {
+    margin-top: 20px;
+}
+
+.test-swipe-4 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.test-swipe-4 h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
 }
 
 /*---  Sign up and in Sections   ---*/

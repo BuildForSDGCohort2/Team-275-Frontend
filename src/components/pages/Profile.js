@@ -1,125 +1,15 @@
 import React, { Component } from 'react'
 import M from "materialize-css";
 import "materialize-css/dist/css/materialize.min.css";
-import {
-    InfoWindow,
-    withScriptjs,
-    withGoogleMap,
-    GoogleMap,
-    Marker,
-    } from "react-google-maps";
-import Geocode from 'react-geocode'
 
-Geocode.setApiKey("AIzaSyA6GaoWqV54ahjxuPkXiiZpX22iCvoWbXk")
+
 class Profile extends Component {
       
     componentDidMount() {
         M.Tabs.init(this.Tabs);
     }
 
-    state = {
-        address: "",
-        city: "",
-        area: "",
-        state: "",
-        zoom: 15,
-        height: 400,
-        mapPosition: {
-            lat: 0,
-            lng: 0,
-        },
-        markerPosition: {
-            lat: 0,
-            lng: 0,
-        }
-    }
-
-    getCity = (addressArray) => {
-        let city = '';
-        for (let index = 0; index < addressArray.length; index++) {
-            if (addressArray[index]. types[0] && 'adminstrative_area_level_2' === addressArray[index].types[0]) {
-                city = addressArray[index].long_name;
-                return city;
-            }
-        }
-    }
-
-    getArea = (addressArray) => {
-        let area = '';
-        for (let index = 0; index < addressArray.length; index++) {
-            if (addressArray[index].types[0]) {
-                for (let j = 0; j < addressArray.length; j++) {
-                    if ('sublocality_level_1' === addressArray[index].types[j] || 'locality' === addressArray[index].types[j]) {
-                        area = addressArray[index].long_name;
-                        return area;
-                    }
-                }
-            }
-        }
-    }
-
-    getState = (addressArray) => {
-        let state = '';
-        for (let index = 0; index < addressArray.length; index++) {
-            for (let index = 0; index < addressArray.length; index++) {
-                if (addressArray[index].types[0] && 'administrative_area_level_1' === addressArray[index].types[0]) {
-                    state = addressArray[index].long_name;
-                    return state
-                }
-            }
-        }
-    }
-    
-
-    //moving the marker and getting the location
-    onMarkerDragEnd = (event) => {
-        let newLat = event.latLng.lat();
-        let newLng = event.latLng.lng();
-
-        Geocode.fromLatLng(newLat, newLng)
-        .then(response => {
-            
-            console.log('response', response)
-            const address = response.results[0].formatted_address,
-                  addressArray = response.results[0].address_components,
-                  city = this.getCity(addressArray),
-                  area = this.getArea(addressArray),
-                  state = this.getState(addressArray);
-
-                  this.setState({
-                      address: (address) ? address : "",
-                      area: (area) ? area : "",
-                      city: (city) ? city : "",
-                      state: (state) ? state : "",
-                      markerPosition : {
-                          lat: newLat,
-                          lng: newLng
-                      },
-                      mapPosition : {
-                        lat: newLat,
-                        lng: newLng
-                    },
-                  })
-        })
-    }
-
     render() {
-        const MapWithAMarker = withScriptjs(withGoogleMap(props =>
-            <GoogleMap
-              defaultZoom={8}
-              defaultCenter={{ lat: -34.397, lng: 150.644 }}
-            >
-              <Marker
-                draggable={true}
-                onDragEnd={this.onMarkerDragEnd}
-                position={{ lat: -34.397, lng: 150.644 }}
-              >
-                  <InfoWindow>
-                      <h1>hello</h1>
-                  </InfoWindow>
-              </Marker>
-            </GoogleMap>
-        ));
 
         return (
             <div className="profile">
@@ -335,20 +225,227 @@ class Profile extends Component {
                                     </div>
 
                                     <div id="test-swipe-2" className="maps-here">
-                                    <MapWithAMarker
-                                        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6GaoWqV54ahjxuPkXiiZpX22iCvoWbXk&v=3.exp&libraries=geometry,drawing,places"
-                                        loadingElement={<div style={{ height: `100%` }} />}
-                                        containerElement={<div style={{ height: `400px` }} />}
-                                        mapElement={<div style={{ height: `100%` }} />}
-                                    />
+                                        <div className="row">
+                                            <div className="col s5 m5">
+                                                <div className="right-side">
+                                                    <h5>Optic Clinic</h5>
+                                                    <div className="rating-title">
+                                                        <p>BBS, MD, DR - Ophthalmology, MCH - Ophthalmology.</p>
+                                                    </div>
+                                                    <div className="rating">
+                                                        <i className="small material-icons">star</i>
+                                                        <i className="small material-icons">star</i>
+                                                        <i className="small material-icons">star</i>
+                                                        <i className="small material-icons">star_half</i>
+                                                        <i className="small material-icons">star_border</i>
+                                                        <p>(4.5) rating out of (5.0)</p>
+                                                    </div>
+                                                    <div className="rating-timer">
+                                                        <i className="small material-icons">location_on</i>
+                                                        <p>Lagos, Nigeria</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col s4 m4">
+                                                <h3>Mon - Sat</h3>
+                                                <p>10:00AM - 2:00AM</p>
+                                                <p>4:00PM - 9:00PM</p>
+
+                                                <h3>Sun</h3>
+                                                <p>10:00AM - 2:00AM</p>
+                                            </div>
+                                            <div className="col s3 m3">
+                                                <p className="time-ava"><span>Price: </span>$150</p>
+                                            </div>
+                                        </div>
+
+                                        <div className="row">
+                                            <div className="col s5 m5">
+                                                <div className="right-side">
+                                                    <h5>Mum's Health Clinic</h5>
+                                                    <div className="rating-title">
+                                                        <p>BBS, MD, DR - Ophthalmology, MCH - Ophthalmology.</p>
+                                                    </div>
+                                                    <div className="rating">
+                                                        <i className="small material-icons">star</i>
+                                                        <i className="small material-icons">star</i>
+                                                        <i className="small material-icons">star</i>
+                                                        <i className="small material-icons">star_half</i>
+                                                        <i className="small material-icons">star_border</i>
+                                                        <p>(4.5) rating out of (5.0)</p>
+                                                    </div>
+                                                    <div className="rating-timer">
+                                                        <i className="small material-icons">location_on</i>
+                                                        <p>Lagos, Nigeria</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col s4 m4">
+                                                <h3>Mon - Sat</h3>
+                                                <p>10:00AM - 2:00AM</p>
+                                                <p>4:00PM - 9:00PM</p>
+
+                                                <h3>Sun</h3>
+                                                <p>10:00AM - 2:00AM</p>
+                                            </div>
+                                            <div className="col s3 m3">
+                                                <p className="time-ava"><span>Price: </span>$150</p>
+                                            </div>
+                                        </div>
+
                                     </div>
 
-                                    <div id="test-swipe-3">
-                                        Test 3
+                                    <div id="test-swipe-3" className="test-swipe-3">
+                                        <div className="row">
+                                            <div className="data-doctor">
+                                                <div className="left-side">
+                                                    <img src={require('../images/P.png')} alt="pic here"/>
+                                                </div>
+                                                <div className="right-side">
+                                                    <div className="review-heading">
+                                                        <h5>Jane Banda</h5>
+                                                        <div className="review-icons">
+                                                            <i className="small material-icons">star</i>
+                                                            <i className="small material-icons">star</i>
+                                                            <i className="small material-icons">star</i>
+                                                            <i className="small material-icons">star_half</i>
+                                                            <i className="small material-icons">star_border</i>
+                                                        </div>
+                                                    </div>
+                                                    <div className="rating-title">
+                                                        <p>3 days ago.</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit illo fuga commodi aspernatur ducimus? Rerum placeat eveniet sint vitae, 
+                                                           consectetur debitis doloremque recusandae nostrum, nobis neque voluptate ducimus, porro distinctio.</p>
+                                                    </div>
+                                                    <div className="rating-timer">
+                                                        <i className="small material-icons">reply</i>
+                                                        <p>Reply</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="row">
+                                            <div className="data-doctor">
+                                                <div className="left-side">
+                                                    <img src={require('../images/P.png')} alt="pic here"/>
+                                                </div>
+                                                <div className="right-side">
+                                                    <div className="review-heading">
+                                                        <h5>Jane Banda</h5>
+                                                        <div className="review-icons">
+                                                            <i className="small material-icons">star</i>
+                                                            <i className="small material-icons">star</i>
+                                                            <i className="small material-icons">star</i>
+                                                            <i className="small material-icons">star_half</i>
+                                                            <i className="small material-icons">star_border</i>
+                                                        </div>
+                                                    </div>
+                                                    <div className="rating-title">
+                                                        <p>3 days ago.</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit illo fuga commodi aspernatur ducimus? Rerum placeat eveniet sint vitae, 
+                                                           consectetur debitis doloremque recusandae nostrum, nobis neque voluptate ducimus, porro distinctio.</p>
+                                                    </div>
+                                                    <div className="rating-timer">
+                                                        <i className="small material-icons">reply</i>
+                                                        <p>Reply</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="row">
+                                            <div className="data-doctor">
+                                                <div className="left-side">
+                                                    <img src={require('../images/P.png')} alt="pic here"/>
+                                                </div>
+                                                <div className="right-side">
+                                                    <div className="review-heading">
+                                                        <h5>Jane Banda</h5>
+                                                        <div className="review-icons">
+                                                            <i className="small material-icons">star</i>
+                                                            <i className="small material-icons">star</i>
+                                                            <i className="small material-icons">star</i>
+                                                            <i className="small material-icons">star_half</i>
+                                                            <i className="small material-icons">star_border</i>
+                                                        </div>
+                                                    </div>
+                                                    <div className="rating-title">
+                                                        <p>3 days ago.</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit illo fuga commodi aspernatur ducimus? Rerum placeat eveniet sint vitae, 
+                                                           consectetur debitis doloremque recusandae nostrum, nobis neque voluptate ducimus, porro distinctio.</p>
+                                                    </div>
+                                                    <div className="rating-timer">
+                                                        <i className="small material-icons">reply</i>
+                                                        <p>Reply</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div className="review-btn">
+                                            <a href="/item" className="waves-effect waves-light btn">Show all feedbacks(100)</a>
+                                        </div>
+
+                                        <form action="#">
+                                            <h3>Write your review</h3>
+                                            <div className="rating">
+                                                <a href="#!"><i className="small material-icons">star_border</i></a>
+                                                <a href="#!"><i className="small material-icons">star_border</i></a>
+                                                <a href="#!"><i className="small material-icons">star_border</i></a>
+                                                <a href="#!"><i className="small material-icons">star_border</i></a>
+                                                <a href="#!"><i className="small material-icons">star_border</i></a>
+                                            </div>
+
+                                            <div class="row">
+                                                <div className="input-field col s12">
+                                                    <input id="holder_name" type="text" className="validate" />
+                                                    <label for="holder_name">Reviewer's Name</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div className="input-field col s12">
+                                                    <textarea id="body" placeholder="Message" type="text" className="validate" />
+                                                </div>
+                                            </div>
+
+                                            <p>
+                                                <label>
+                                                    <input type="checkbox" />
+                                                    <span>I read and accepted all the T's of the Online Health Therapy Platform.</span>
+                                                </label>
+                                            </p>
+                                            <div className="confrim-btn">
+                                                <a class="waves-effect waves-light btn modal-trigger" href="#modal">Submit</a>
+                                            </div>
+                                        </form>
                                     </div>
 
-                                    <div id="test-swipe-4">
-                                        Test 3
+                                    <div id="test-swipe-4" className="test-swipe-4">
+                                        <div className="row">
+                                            <div className="col s6 m6">
+                                                <h1>Today</h1>
+                                                <p>24 April 2013</p>
+                                                <p>Monday</p>
+                                                <p>Tuesday</p>
+                                                <p>Wednesday</p>
+                                                <p>Thursday</p>
+                                                <p>Friday</p>
+                                                <p>Saturday</p>
+                                                <p>Sunday</p>
+                                            </div>
+                                            <div className="col s6 m6">
+                                                <p>Open Noow</p>
+                                                <p>7:00AM - 9:00PM</p>
+                                                <p>7:00AM - 9:00PM</p>
+                                                <p>7:00AM - 9:00PM</p>
+                                                <p>7:00AM - 9:00PM</p>
+                                                <p>7:00AM - 9:00PM</p>
+                                                <p>7:00AM - 9:00PM</p>
+                                                <p>Closed</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
