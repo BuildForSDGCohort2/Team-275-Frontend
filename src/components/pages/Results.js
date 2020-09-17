@@ -27,6 +27,32 @@ class Results extends Component {
                                     <span>Female</span>
                                 </label>
                             </p>
+                            <h4 className="spec">Location</h4>
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>Nigeria</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>Zambia</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>South Africa</span>
+                                </label>
+                            </p>
+                            <h4 className="spec">Clinics</h4>
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>Dental</span>
+                                </label>
+                            </p>
                             <h4 className="spec">Type of Specialist</h4>
                             <p>
                                 <label>
