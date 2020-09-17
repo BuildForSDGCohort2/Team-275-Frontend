@@ -870,6 +870,10 @@ hr {
     margin-top: 4px;
 }
 
+.maps-here {
+    margin-top: 20px;
+}
+
 /*---  Sign up and in Sections   ---*/
 .background-img {
     background-image: url('./components/images/micah-williams-lmFJOx7hPc4-unsplash.png');

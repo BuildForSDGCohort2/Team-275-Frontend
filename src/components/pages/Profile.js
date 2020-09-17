@@ -1,14 +1,126 @@
 import React, { Component } from 'react'
 import M from "materialize-css";
 import "materialize-css/dist/css/materialize.min.css";
+import {
+    InfoWindow,
+    withScriptjs,
+    withGoogleMap,
+    GoogleMap,
+    Marker,
+    } from "react-google-maps";
+import Geocode from 'react-geocode'
 
+Geocode.setApiKey("AIzaSyA6GaoWqV54ahjxuPkXiiZpX22iCvoWbXk")
 class Profile extends Component {
-
+      
     componentDidMount() {
         M.Tabs.init(this.Tabs);
     }
 
+    state = {
+        address: "",
+        city: "",
+        area: "",
+        state: "",
+        zoom: 15,
+        height: 400,
+        mapPosition: {
+            lat: 0,
+            lng: 0,
+        },
+        markerPosition: {
+            lat: 0,
+            lng: 0,
+        }
+    }
+
+    getCity = (addressArray) => {
+        let city = '';
+        for (let index = 0; index < addressArray.length; index++) {
+            if (addressArray[index]. types[0] && 'adminstrative_area_level_2' === addressArray[index].types[0]) {
+                city = addressArray[index].long_name;
+                return city;
+            }
+        }
+    }
+
+    getArea = (addressArray) => {
+        let area = '';
+        for (let index = 0; index < addressArray.length; index++) {
+            if (addressArray[index].types[0]) {
+                for (let j = 0; j < addressArray.length; j++) {
+                    if ('sublocality_level_1' === addressArray[index].types[j] || 'locality' === addressArray[index].types[j]) {
+                        area = addressArray[index].long_name;
+                        return area;
+                    }
+                }
+            }
+        }
+    }
+
+    getState = (addressArray) => {
+        let state = '';
+        for (let index = 0; index < addressArray.length; index++) {
+            for (let index = 0; index < addressArray.length; index++) {
+                if (addressArray[index].types[0] && 'administrative_area_level_1' === addressArray[index].types[0]) {
+                    state = addressArray[index].long_name;
+                    return state
+                }
+            }
+        }
+    }
+    
+
+    //moving the marker and getting the location
+    onMarkerDragEnd = (event) => {
+        let newLat = event.latLng.lat();
+        let newLng = event.latLng.lng();
+
+        Geocode.fromLatLng(newLat, newLng)
+        .then(response => {
+            
+            console.log('response', response)
+            const address = response.results[0].formatted_address,
+                  addressArray = response.results[0].address_components,
+                  city = this.getCity(addressArray),
+                  area = this.getArea(addressArray),
+                  state = this.getState(addressArray);
+
+                  this.setState({
+                      address: (address) ? address : "",
+                      area: (area) ? area : "",
+                      city: (city) ? city : "",
+                      state: (state) ? state : "",
+                      markerPosition : {
+                          lat: newLat,
+                          lng: newLng
+                      },
+                      mapPosition : {
+                        lat: newLat,
+                        lng: newLng
+                    },
+                  })
+        })
+    }
+
     render() {
+        const MapWithAMarker = withScriptjs(withGoogleMap(props =>
+            <GoogleMap
+              defaultZoom={8}
+              defaultCenter={{ lat: -34.397, lng: 150.644 }}
+            >
+              <Marker
+                draggable={true}
+                onDragEnd={this.onMarkerDragEnd}
+                position={{ lat: -34.397, lng: 150.644 }}
+              >
+                  <InfoWindow>
+                      <h1>hello</h1>
+                  </InfoWindow>
+              </Marker>
+            </GoogleMap>
+        ));
+
         return (
             <div className="profile">
                 <section className="payment grey darken-3">
@@ -222,14 +334,19 @@ class Profile extends Component {
                                         </section>
                                     </div>
 
-                                    <div id="test-swipe-2">
-                                        Test 2
+                                    <div id="test-swipe-2" className="maps-here">
+                                    <MapWithAMarker
+                                        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6GaoWqV54ahjxuPkXiiZpX22iCvoWbXk&v=3.exp&libraries=geometry,drawing,places"
+                                        loadingElement={<div style={{ height: `100%` }} />}
+                                        containerElement={<div style={{ height: `400px` }} />}
+                                        mapElement={<div style={{ height: `100%` }} />}
+                                    />
                                     </div>
 
                                     <div id="test-swipe-3">
                                         Test 3
                                     </div>
-                                    
+
                                     <div id="test-swipe-4">
                                         Test 3
                                     </div>
