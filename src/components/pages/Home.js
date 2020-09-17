@@ -16,7 +16,7 @@ const Home = () => {
                                             <div className="row">
                                               <div className="input-field col s12">
                                                 <i className="material-icons">location_on</i>
-                                                <input type="text" placeholder="Enter Location" id="autocomplete-input" />
+                                                <input type="text" placeholder="Enter Location" id="location" />
                                               </div>
                                             </div>
                                         </div>
@@ -27,7 +27,7 @@ const Home = () => {
                                             <div className="row entery">
                                               <div className="input-field col s12">
                                                 <i className="material-icons">search</i>
-                                                <input type="text" placeholder="Enter doctor or clinic" id="autocomplete-input" />
+                                                <input type="text" placeholder="Enter doctor or clinic" id="input_data" />
                                               </div>
                                             </div>
                                         </div>
@@ -115,7 +115,7 @@ const Home = () => {
                                    <div className="row">
                                        <div className="col s12 m12 reason">
                                            <div>
-                                               <i class="fas fa-user-md"></i>
+                                               <i className="fas fa-user-md"></i>
                                            </div>
                                            <div>
                                                <h5>Freelancing</h5>
@@ -133,7 +133,7 @@ const Home = () => {
                     <div className="category">
                         <div className="container">
                            <div className="row">
-                               <div className="col m12 m4">
+                               <div className="col s12 m12">
                                     <h1>Top Doctors</h1>
                                     <hr></hr>
                                </div>
@@ -265,7 +265,7 @@ const Home = () => {
                     <div className="top-category">
                         <div className="container">
                            <div className="row">
-                               <div className="col m12 m4">
+                               <div className="col s12 m2">
                                     <h1>Clinics</h1>
                                     <hr></hr>
                                </div>

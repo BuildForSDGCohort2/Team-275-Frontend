@@ -7,6 +7,10 @@ body {
     background: radial-gradient(#e5e5e5, #fff, #e5e5e5);
 }
 
+.results-btn a {
+    color: white;
+}
+
 .navbartop {
     display: flex;
     flex-direction: row;
@@ -306,7 +310,8 @@ hr {
 
 /* Home Top Item */
 .top-category .category-item {
-    margin-bottom: 0 !important;
+    width: 100% !important;
+    margin-bottom: 10px;
 }
 
 .top-category .category-action {

@@ -8,17 +8,17 @@ class Footer extends Component {
                     <div className="row">
                         <div className="col l6 s12 sub">
                             <div className="marketing-accounts">
-                                <i class="fab fa-facebook-square"></i>
-                                <i class="fab fa-twitter"></i>
-                                <i class="fab fa-instagram"></i>
+                                <i className="fab fa-facebook-square"></i>
+                                <i className="fab fa-twitter"></i>
+                                <i className="fab fa-instagram"></i>
                             </div>
                             <h5 className="white-text">Subscribe To Our Newsletter</h5>
                             <form className="footer-form">
                                 <div className="row">
                                     <div className="col m12">
-                                        <div class="row">
+                                        <div className="row">
                                             <div className="input-field col s12">
-                                                <input type="text" placeholder="Enter Email Address" id="autocomplete-input" />
+                                                <input type="text" placeholder="Enter Email Address" id="autocomplete-input1" />
                                             </div>
                                             <a className="waves-effect waves-light btn" href="/">Subscribe</a>
                                         </div>

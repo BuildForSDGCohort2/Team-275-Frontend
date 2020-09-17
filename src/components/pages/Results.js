@@ -94,7 +94,7 @@ class Results extends Component {
                                 </div>
                                 <div className="results-btn">
                                     <a href="/profile" className="waves-effect waves-dark btn">Profile</a>
-                                    <a href="/signin" className="waves-effect waves-light btn">Book An Appointment</a>
+                                    <a className="waves-effect waves-light btn modal-trigger" href="#modal1">Book An Appoinment</a>
                                 </div>
                             </div>
                         </div>
@@ -130,7 +130,7 @@ class Results extends Component {
                                 </div>
                                 <div className="results-btn">
                                     <a href="/profile" className="waves-effect waves-dark btn">Profile</a>
-                                    <a href="/signin" className="waves-effect waves-light btn">Book An Appointment</a>
+                                    <a className="waves-effect waves-light btn modal-trigger" href="#modal1">Book An Appoinment</a>
                                 </div>
                             </div>
                         </div>
@@ -166,19 +166,19 @@ class Results extends Component {
                                 </div>
                                 <div className="results-btn">
                                     <a href="/profile" className="waves-effect waves-dark btn">Profile</a>
-                                    <a href="/signin" className="waves-effect waves-light btn">Book An Appointment</a>
+                                    <a className="waves-effect waves-light btn modal-trigger" href="#modal1">Book An Appoinment</a>
                                 </div>
                             </div>
                         </div>
 
-                        <ul class="pagination">
-                            <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-                            <li class="active"><a href="#!">1</a></li>
-                            <li class="waves-effect"><a href="#!">2</a></li>
-                            <li class="waves-effect"><a href="#!">3</a></li>
-                            <li class="waves-effect"><a href="#!">4</a></li>
-                            <li class="waves-effect"><a href="#!">5</a></li>
-                            <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                        <ul className="pagination">
+                            <li className="disabled"><a href="#!"><i className="material-icons">chevron_left</i></a></li>
+                            <li className="active"><a href="#!">1</a></li>
+                            <li className="waves-effect"><a href="#!">2</a></li>
+                            <li className="waves-effect"><a href="#!">3</a></li>
+                            <li className="waves-effect"><a href="#!">4</a></li>
+                            <li className="waves-effect"><a href="#!">5</a></li>
+                            <li className="waves-effect"><a href="#!"><i className="material-icons">chevron_right</i></a></li>
                         </ul>
                     </div>
                 </section>

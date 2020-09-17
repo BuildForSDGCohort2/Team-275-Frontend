@@ -3,7 +3,7 @@ import { Link, NavLink} from 'react-router-dom'
 import SignedOutLinks from './SignedOutLinks'
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
-import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
+import { SingleDatePicker } from 'react-dates';
 
 class NavBar extends Component {
 
@@ -36,7 +36,7 @@ class NavBar extends Component {
                     </div>
                 </nav>
                 <ul id="slide-out" className="sidenav">
-                    <li><NavLink to='/' className="links"><a className="modal-trigger" href="#modal1">Book An Appoinment</a></NavLink></li>
+                    <li><a className="modal-trigger" href="#modal1">Book An Appoinment</a></li>
                     <li><NavLink to='/news' className="links">Blog</NavLink></li>
                     <li><NavLink to='/provider' className="links">Provider SignIn</NavLink></li>
                     <li><NavLink to='/signup' className="links">Sign In or Create Account</NavLink></li>
@@ -83,7 +83,7 @@ class NavBar extends Component {
                             />
                             <div className="input-field col s6">
                                 <input id="time_input" type="text" className="validate" />
-                                <label for="time_input">12:00PM - 13:00PM</label>
+                                <label htmlFor="time_input">12:00PM - 13:00PM</label>
                             </div>
                             <a href="/payment" className="waves-effect waves-light btn">Procced to pay</a>
                         </div>
