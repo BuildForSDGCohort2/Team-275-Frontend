@@ -32,7 +32,7 @@ const Home = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <a className="waves-effect waves-light btn" href="/">Search</a>
+                                    <a className="waves-effect waves-light btn" href="/results">Search</a>
                                 </form>
                             </div>
                         </div>

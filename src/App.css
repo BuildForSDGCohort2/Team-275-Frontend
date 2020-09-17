@@ -710,6 +710,59 @@ hr {
     font-weight: bold;
 }
 
+
+
+.results-body {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.results-left-flilter {
+    width: 30%;
+    padding: 20px;
+    padding-left: 40px;
+}
+
+.results-left-flilter h4 {
+    font-size: 20px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.right-side h5 i {
+    font-size: 17px;
+    color: #52BE80;
+}
+
+.spec {
+    margin-top: 50px !important;
+}
+
+.results-right-display {
+    width: auto;
+    height: auto;
+    padding-top: 20px;
+}
+
+.results-btn .btn {
+    margin-right: 20px;
+    text-transform: capitalize;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.pagination li.active {
+    background-color: #26a69a;
+}
+
 /*---  Sign up and in Sections   ---*/
 .background-img {
     background-image: url('./components/images/micah-williams-lmFJOx7hPc4-unsplash.png');

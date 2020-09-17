@@ -9,6 +9,7 @@ import Provider from './components/pages/Provider'
 import Payment from './components/pages/Payment'
 import Contact from './components/pages/Contact'
 import Receipts from './components/pages/Receipts'
+import Results from './components/pages/Results'
 import News from './components/pages/News'
 import providerSignIn from './components/providerAuth/SignIn'
 import providerSignUp from './components/providerAuth/SignUp'
@@ -33,6 +34,7 @@ class App extends Component {
               <Route path='/contact' component={Contact}  />
               <Route path='/payment' component={Payment}  />
               <Route path='/receipts' component={Receipts}  />
+              <Route path='/results' component={Results}  />
               <Route path='/news' component={News}  />
               <Route path='/providerSignin' component={providerSignIn}  />
               <Route path='/providerSignup' component={providerSignUp}  />
