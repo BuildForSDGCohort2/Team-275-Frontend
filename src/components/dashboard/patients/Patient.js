@@ -45,13 +45,6 @@ class Customer extends Component {
                                     </li>
                                     <li>
                                         <div className="rating-timer">
-                                            <i className="small material-icons">receipt</i>
-                                            <a href='/userDashboard'>Receipts</a>
-                                            <h6 className="notification-receipts">7</h6>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div className="rating-timer">
                                             <i className="small material-icons">favorite</i>
                                             <a href='/userDashboard'>Favorite</a>
                                             <h6 className="notification-favorite">7</h6>
@@ -485,20 +478,100 @@ class Customer extends Component {
                                         <table className="striped border-bottom">
                                             <thead>
                                                 <tr>
-                                                    <th>Created By</th>
-                                                    <th>Created On</th>
-                                                    <th>ID</th>
+                                                    <th>Receipt ID</th>
+                                                    <th>Paid On</th>
+                                                    <th>Paid To</th>
+                                                    <th>Amount</th>
                                                 </tr>
                                             </thead>
 
                                             <tbody>
                                                 <tr>
+                                                    <td>RT5665</td>
+                                                    <td>13, May 2018</td>
                                                     <td className="doctor-infor-created">
                                                         <img src={require('../../images/D2.png')} alt="pic here"/>
-                                                        <p>Bob James</p>
+                                                        <p>Dr. Frank Leopard</p>
                                                     </td>
+                                                    <td>$150</td>
+                                                    <td className="table-actions">
+                                                        <a href="#!"><i className="material-icons">print</i></a>
+                                                        <a href="#!"><i className="material-icons">visibility</i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>RT5665</td>
                                                     <td>13, May 2018</td>
-                                                    <td>P2344</td>
+                                                    <td className="doctor-infor-created">
+                                                        <img src={require('../../images/D2.png')} alt="pic here"/>
+                                                        <p>Dr. Frank Leopard</p>
+                                                    </td>
+                                                    <td>$150</td>
+                                                    <td className="table-actions">
+                                                        <a href="#!"><i className="material-icons">print</i></a>
+                                                        <a href="#!"><i className="material-icons">visibility</i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>RT5665</td>
+                                                    <td>13, May 2018</td>
+                                                    <td className="doctor-infor-created">
+                                                        <img src={require('../../images/D2.png')} alt="pic here"/>
+                                                        <p>Dr. Frank Leopard</p>
+                                                    </td>
+                                                    <td>$150</td>
+                                                    <td className="table-actions">
+                                                        <a href="#!"><i className="material-icons">print</i></a>
+                                                        <a href="#!"><i className="material-icons">visibility</i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>RT5665</td>
+                                                    <td>13, May 2018</td>
+                                                    <td className="doctor-infor-created">
+                                                        <img src={require('../../images/D2.png')} alt="pic here"/>
+                                                        <p>Dr. Frank Leopard</p>
+                                                    </td>
+                                                    <td>$150</td>
+                                                    <td className="table-actions">
+                                                        <a href="#!"><i className="material-icons">print</i></a>
+                                                        <a href="#!"><i className="material-icons">visibility</i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>RT5665</td>
+                                                    <td>13, May 2018</td>
+                                                    <td className="doctor-infor-created">
+                                                        <img src={require('../../images/D2.png')} alt="pic here"/>
+                                                        <p>Dr. Frank Leopard</p>
+                                                    </td>
+                                                    <td>$150</td>
+                                                    <td className="table-actions">
+                                                        <a href="#!"><i className="material-icons">print</i></a>
+                                                        <a href="#!"><i className="material-icons">visibility</i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>RT5665</td>
+                                                    <td>13, May 2018</td>
+                                                    <td className="doctor-infor-created">
+                                                        <img src={require('../../images/D2.png')} alt="pic here"/>
+                                                        <p>Dr. Frank Leopard</p>
+                                                    </td>
+                                                    <td>$150</td>
+                                                    <td className="table-actions">
+                                                        <a href="#!"><i className="material-icons">print</i></a>
+                                                        <a href="#!"><i className="material-icons">visibility</i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>RT5665</td>
+                                                    <td>13, May 2018</td>
+                                                    <td className="doctor-infor-created">
+                                                        <img src={require('../../images/D2.png')} alt="pic here"/>
+                                                        <p>Dr. Frank Leopard</p>
+                                                    </td>
+                                                    <td>$150</td>
                                                     <td className="table-actions">
                                                         <a href="#!"><i className="material-icons">print</i></a>
                                                         <a href="#!"><i className="material-icons">visibility</i></a>
