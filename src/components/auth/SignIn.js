@@ -99,7 +99,7 @@ class SignIn extends Component {
                                         </div>
 
                                         <div className="createAccount">
-                                            <button onClick={() => this.login()}>Login</button>
+                                            <button onClick={() => this.login()} to='/userDashboard'>Login</button>
                                         <small>Don't have an account? <Link className="FormTitle__Link" to='/signup'>Sign Up</Link></small>
                                         </div>
                                     </form>

@@ -1157,6 +1157,118 @@ hr {
     background: brown;
   }
 
+/*-- Doctor Dashboard --*/
+.dashboard-content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.patient-table h3 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+table {
+    margin-top: 20px;
+}
+
+table tbody tr .doctor-infor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+table tbody tr .doctor-infor p {
+    margin-top: 29px;
+}
+
+table tbody tr td img {
+    height: 80px;
+}
+
+.table-actions i {
+    margin-top: 10px;
+    padding-right: 10px;
+    color: #154360;
+}
+
+.dashboard-links {
+    width: 30%;
+    padding: 20px;
+}
+
+.dashboard-links .user-details {
+    text-align: center;
+    justify-content: center;
+}
+
+.dashboard-links .dashboard-link {
+    margin-top: 20px;
+}
+
+.dashboard-links .dashboard-link ul li {
+    margin-bottom: 15px;
+}
+
+.dashboard-links .dashboard-link ul li i {
+    font-size: 20px;
+    margin-top: 6px;
+    margin-right: 8px;
+}
+
+.dashboard-links .dashboard-link ul li a {
+    font-size: 20px;
+    color: black;
+}
+
+.dashboard-links .dashboard-link ul li h6 {
+    margin-top: 8px;
+    margin-left: 26%;
+    font-size: 13px;
+    text-align: center;
+    padding: 2px;
+    height: 19px;
+    width: 19px;
+    color: white;
+    border-radius: 100%;
+    background-color: #154360;
+    border: 1px solid #154360;
+}
+
+.notification-appoint {
+    margin-left: 10% !important;
+}
+
+.notification-time {
+    margin-left: 25% !important;
+}
+
+.notification-chats {
+    margin-left: 31.6% !important;
+}
+
+.notification-review {
+    margin-left: 26% !important;
+}
+
+.notification-payments {
+    margin-left: 22% !important;
+}
+
+.notification-receipts {
+    margin-left: 25% !important;
+}
+
+.notification-favorite {
+    margin-left: 26% !important;
+}
+
+.dashboard-main-content {
+    width: 70%;
+    padding: 20px;
+}
+
 @media screen and (max-width: 280px) {
 
     .reasons {
