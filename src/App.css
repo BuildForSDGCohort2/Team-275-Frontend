@@ -1183,6 +1183,16 @@ table tbody tr .doctor-infor p {
     margin-top: 29px;
 }
 
+table tbody tr .doctor-infor-created {
+    display: flex;
+    flex-direction: row;
+}
+
+table tbody tr .doctor-infor-created p {
+    margin-top: 29px;
+    margin-left: 10px;
+}
+
 table tbody tr td img {
     height: 80px;
 }

@@ -114,12 +114,12 @@ class Customer extends Component {
                                             </a>
                                         </li>
                                         <li className="tab col s3">
-                                            <a href="#test-swipe-2">
+                                            <a href="#test-swipe-3">
                                                 Medical Records
                                             </a>
                                         </li>
                                         <li className="tab col s3">
-                                            <a href="#test-swipe-2">
+                                            <a href="#test-swipe-4">
                                                 Bills
                                             </a>
                                         </li>
@@ -267,86 +267,246 @@ class Customer extends Component {
                                             </table>
                                         </div>
 
-                                        <div id="test-swipe-2">
-                                            <table className="striped border-bottom">
-                                                <thead>
-                                                  <tr>
-                                                      <th>ID</th>
-                                                      <th>Patient Name</th>
-                                                      <th>Schedule Date</th>
-                                                      <th>Purpose</th>
-                                                      <th>Amount</th>
-                                                  </tr>
-                                                </thead>
+                                    <div id="test-swipe-2">
+                                        <table className="striped border-bottom">
+                                            <thead>
+                                                <tr>
+                                                    <th>Created By</th>
+                                                    <th>Created On</th>
+                                                    <th>ID</th>
+                                                </tr>
+                                            </thead>
 
-                                                <tbody>
-                                                  <tr>
-                                                    <td>1096</td>
-                                                    <td>Bob James</td>
-                                                    <td>13, May 2018</td>
-                                                    <td>General</td>
-                                                    <td>$100</td>
-                                                    <td className="table-actions">
-                                                        <a href="#!"><i className="material-icons">check</i></a>
-                                                        <a href="#!"><i className="material-icons">visibility</i></a>
-                                                        <a href="#!"><i className="material-icons">redo</i></a>
+                                            <tbody>
+                                                <tr>
+                                                    <td className="doctor-infor-created">
+                                                        <img src={require('../../images/D2.png')} alt="pic here"/>
+                                                        <p>Bob James</p>
                                                     </td>
-                                                  </tr>
+                                                    <td>13, May 2018</td>
+                                                    <td>P2344</td>
+                                                    <td className="table-actions">
+                                                        <a href="#!"><i className="material-icons">print</i></a>
+                                                        <a href="#!"><i className="material-icons">visibility</i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td className="doctor-infor-created">
+                                                        <img src={require('../../images/D2.png')} alt="pic here"/>
+                                                        <p>Bob James</p>
+                                                    </td>
+                                                    <td>13, May 2018</td>
+                                                    <td>P2344</td>
+                                                    <td className="table-actions">
+                                                        <a href="#!"><i className="material-icons">print</i></a>
+                                                        <a href="#!"><i className="material-icons">visibility</i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td className="doctor-infor-created">
+                                                        <img src={require('../../images/D2.png')} alt="pic here"/>
+                                                        <p>Bob James</p>
+                                                    </td>
+                                                    <td>13, May 2018</td>
+                                                    <td>P2344</td>
+                                                    <td className="table-actions">
+                                                        <a href="#!"><i className="material-icons">print</i></a>
+                                                        <a href="#!"><i className="material-icons">visibility</i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td className="doctor-infor-created">
+                                                        <img src={require('../../images/D2.png')} alt="pic here"/>
+                                                        <p>Bob James</p>
+                                                    </td>
+                                                    <td>13, May 2018</td>
+                                                    <td>P2344</td>
+                                                    <td className="table-actions">
+                                                        <a href="#!"><i className="material-icons">print</i></a>
+                                                        <a href="#!"><i className="material-icons">visibility</i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td className="doctor-infor-created">
+                                                        <img src={require('../../images/D2.png')} alt="pic here"/>
+                                                        <p>Bob James</p>
+                                                    </td>
+                                                    <td>13, May 2018</td>
+                                                    <td>P2344</td>
+                                                    <td className="table-actions">
+                                                        <a href="#!"><i className="material-icons">print</i></a>
+                                                        <a href="#!"><i className="material-icons">visibility</i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td className="doctor-infor-created">
+                                                        <img src={require('../../images/D2.png')} alt="pic here"/>
+                                                        <p>Bob James</p>
+                                                    </td>
+                                                    <td>13, May 2018</td>
+                                                    <td>P2344</td>
+                                                    <td className="table-actions">
+                                                        <a href="#!"><i className="material-icons">print</i></a>
+                                                        <a href="#!"><i className="material-icons">visibility</i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td className="doctor-infor-created">
+                                                        <img src={require('../../images/D2.png')} alt="pic here"/>
+                                                        <p>Bob James</p>
+                                                    </td>
+                                                    <td>13, May 2018</td>
+                                                    <td>P2344</td>
+                                                    <td className="table-actions">
+                                                        <a href="#!"><i className="material-icons">print</i></a>
+                                                        <a href="#!"><i className="material-icons">visibility</i></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    
+                                    <div id="test-swipe-3">
+                                        <table className="striped border-bottom">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Created By</th>
+                                                    <th>Date</th>
+                                                    <th>Description</th>
+                                                    <th>Prescription ID</th>
+                                                </tr>
+                                            </thead>
 
-                                                  <tr>
-                                                    <td>1096</td>
-                                                    <td>Bob James</td>
-                                                    <td>13, May 2018</td>
-                                                    <td>General</td>
-                                                    <td>$100</td>
-                                                    <td className="table-actions">
-                                                        <a href="#!"><i className="material-icons">check</i></a>
-                                                        <a href="#!"><i className="material-icons">visibility</i></a>
-                                                        <a href="#!"><i className="material-icons">redo</i></a>
+                                            <tbody>
+                                                <tr>
+                                                    <td>OH - 0001</td>
+                                                    <td className="doctor-infor-created">
+                                                        <img src={require('../../images/D2.png')} alt="pic here"/>
+                                                        <p>Bob James</p>
                                                     </td>
-                                                  </tr>
+                                                    <td>13, May 2018</td>
+                                                    <td>General Check up.</td>
+                                                    <td className="centered">P2344</td>
+                                                    <td className="table-actions">
+                                                        <a href="#!"><i className="material-icons">print</i></a>
+                                                        <a href="#!"><i className="material-icons">visibility</i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>OH - 0001</td>
+                                                    <td className="doctor-infor-created">
+                                                        <img src={require('../../images/D2.png')} alt="pic here"/>
+                                                        <p>Bob James</p>
+                                                    </td>
+                                                    <td>13, May 2018</td>
+                                                    <td>General Check up.</td>
+                                                    <td className="centered">P2344</td>
+                                                    <td className="table-actions">
+                                                        <a href="#!"><i className="material-icons">print</i></a>
+                                                        <a href="#!"><i className="material-icons">visibility</i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>OH - 0001</td>
+                                                    <td className="doctor-infor-created">
+                                                        <img src={require('../../images/D2.png')} alt="pic here"/>
+                                                        <p>Bob James</p>
+                                                    </td>
+                                                    <td>13, May 2018</td>
+                                                    <td>General Check up.</td>
+                                                    <td className="centered">P2344</td>
+                                                    <td className="table-actions">
+                                                        <a href="#!"><i className="material-icons">print</i></a>
+                                                        <a href="#!"><i className="material-icons">visibility</i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>OH - 0001</td>
+                                                    <td className="doctor-infor-created">
+                                                        <img src={require('../../images/D2.png')} alt="pic here"/>
+                                                        <p>Bob James</p>
+                                                    </td>
+                                                    <td>13, May 2018</td>
+                                                    <td>General Check up.</td>
+                                                    <td className="centered">P2344</td>
+                                                    <td className="table-actions">
+                                                        <a href="#!"><i className="material-icons">print</i></a>
+                                                        <a href="#!"><i className="material-icons">visibility</i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>OH - 0001</td>
+                                                    <td className="doctor-infor-created">
+                                                        <img src={require('../../images/D2.png')} alt="pic here"/>
+                                                        <p>Bob James</p>
+                                                    </td>
+                                                    <td>13, May 2018</td>
+                                                    <td>General Check up.</td>
+                                                    <td className="centered">P2344</td>
+                                                    <td className="table-actions">
+                                                        <a href="#!"><i className="material-icons">print</i></a>
+                                                        <a href="#!"><i className="material-icons">visibility</i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>OH - 0001</td>
+                                                    <td className="doctor-infor-created">
+                                                        <img src={require('../../images/D2.png')} alt="pic here"/>
+                                                        <p>Bob James</p>
+                                                    </td>
+                                                    <td>13, May 2018</td>
+                                                    <td>General Check up.</td>
+                                                    <td className="centered">P2344</td>
+                                                    <td className="table-actions">
+                                                        <a href="#!"><i className="material-icons">print</i></a>
+                                                        <a href="#!"><i className="material-icons">visibility</i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>OH - 0001</td>
+                                                    <td className="doctor-infor-created">
+                                                        <img src={require('../../images/D2.png')} alt="pic here"/>
+                                                        <p>Bob James</p>
+                                                    </td>
+                                                    <td>13, May 2018</td>
+                                                    <td>General Check up.</td>
+                                                    <td className="centered">P2344</td>
+                                                    <td className="table-actions">
+                                                        <a href="#!"><i className="material-icons">print</i></a>
+                                                        <a href="#!"><i className="material-icons">visibility</i></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
 
-                                                  <tr>
-                                                    <td>1096</td>
-                                                    <td>Bob James</td>
-                                                    <td>13, May 2018</td>
-                                                    <td>General</td>
-                                                    <td>$100</td>
-                                                    <td className="table-actions">
-                                                        <a href="#!"><i className="material-icons">check</i></a>
-                                                        <a href="#!"><i className="material-icons">visibility</i></a>
-                                                        <a href="#!"><i className="material-icons">redo</i></a>
-                                                    </td>
-                                                  </tr>
+                                    <div id="test-swipe-4">
+                                        <table className="striped border-bottom">
+                                            <thead>
+                                                <tr>
+                                                    <th>Created By</th>
+                                                    <th>Created On</th>
+                                                    <th>ID</th>
+                                                </tr>
+                                            </thead>
 
-                                                  <tr>
-                                                    <td>1096</td>
-                                                    <td>Bob James</td>
-                                                    <td>13, May 2018</td>
-                                                    <td>General</td>
-                                                    <td>$100</td>
-                                                    <td className="table-actions">
-                                                        <a href="#!"><i className="material-icons">check</i></a>
-                                                        <a href="#!"><i className="material-icons">visibility</i></a>
-                                                        <a href="#!"><i className="material-icons">redo</i></a>
+                                            <tbody>
+                                                <tr>
+                                                    <td className="doctor-infor-created">
+                                                        <img src={require('../../images/D2.png')} alt="pic here"/>
+                                                        <p>Bob James</p>
                                                     </td>
-                                                  </tr>
-
-                                                  <tr>
-                                                    <td>1096</td>
-                                                    <td>Bob James</td>
                                                     <td>13, May 2018</td>
-                                                    <td>General</td>
-                                                    <td>$100</td>
+                                                    <td>P2344</td>
                                                     <td className="table-actions">
-                                                        <a href="#!"><i className="material-icons">check</i></a>
+                                                        <a href="#!"><i className="material-icons">print</i></a>
                                                         <a href="#!"><i className="material-icons">visibility</i></a>
-                                                        <a href="#!"><i className="material-icons">redo</i></a>
                                                     </td>
-                                                  </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
