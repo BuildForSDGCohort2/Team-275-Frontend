@@ -59,13 +59,6 @@ class Customer extends Component {
                                     </li>
                                     <li>
                                         <div className="rating-timer">
-                                            <i className="small material-icons">comment</i>
-                                            <a href='/userDashboard'>Reviews</a>
-                                            <h6 className="notification-review">7</h6>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div className="rating-timer">
                                             <i className="small material-icons">share</i>
                                             <a href='/userDashboard'>Share</a>
                                         </div>
