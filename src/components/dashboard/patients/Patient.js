@@ -154,6 +154,115 @@ class Customer extends Component {
                                                         <a href="#!"><i className="material-icons">visibility</i></a>
                                                     </td>
                                                   </tr>
+
+                                                  <tr>
+                                                    <td className="doctor-infor">
+                                                        <img src={require('../../images/D2.png')} alt="pic here"/>
+                                                        <p>Bob James</p>
+                                                    </td>
+                                                    <td>13, May 2018</td>
+                                                    <td>14, May 2018</td>
+                                                    <td>13, May 2018</td>
+                                                    <td>$100</td>
+                                                    <td>Confirmed</td>
+                                                    <td className="table-actions">
+                                                        <a href="#!"><i className="material-icons">print</i></a>
+                                                        <a href="#!"><i className="material-icons">visibility</i></a>
+                                                    </td>
+                                                  </tr>
+
+                                                  <tr>
+                                                    <td className="doctor-infor">
+                                                        <img src={require('../../images/D2.png')} alt="pic here"/>
+                                                        <p>Bob James</p>
+                                                    </td>
+                                                    <td>13, May 2018</td>
+                                                    <td>14, May 2018</td>
+                                                    <td>13, May 2018</td>
+                                                    <td>$100</td>
+                                                    <td>Confirmed</td>
+                                                    <td className="table-actions">
+                                                        <a href="#!"><i className="material-icons">print</i></a>
+                                                        <a href="#!"><i className="material-icons">visibility</i></a>
+                                                    </td>
+                                                  </tr>
+
+                                                  <tr>
+                                                    <td className="doctor-infor">
+                                                        <img src={require('../../images/D2.png')} alt="pic here"/>
+                                                        <p>Bob James</p>
+                                                    </td>
+                                                    <td>13, May 2018</td>
+                                                    <td>14, May 2018</td>
+                                                    <td>13, May 2018</td>
+                                                    <td>$100</td>
+                                                    <td>Confirmed</td>
+                                                    <td className="table-actions">
+                                                        <a href="#!"><i className="material-icons">print</i></a>
+                                                        <a href="#!"><i className="material-icons">visibility</i></a>
+                                                    </td>
+                                                  </tr>
+
+                                                  <tr>
+                                                    <td className="doctor-infor">
+                                                        <img src={require('../../images/D2.png')} alt="pic here"/>
+                                                        <p>Bob James</p>
+                                                    </td>
+                                                    <td>13, May 2018</td>
+                                                    <td>14, May 2018</td>
+                                                    <td>13, May 2018</td>
+                                                    <td>$100</td>
+                                                    <td>Confirmed</td>
+                                                    <td className="table-actions">
+                                                        <a href="#!"><i className="material-icons">print</i></a>
+                                                        <a href="#!"><i className="material-icons">visibility</i></a>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td className="doctor-infor">
+                                                        <img src={require('../../images/D2.png')} alt="pic here"/>
+                                                        <p>Bob James</p>
+                                                    </td>
+                                                    <td>13, May 2018</td>
+                                                    <td>14, May 2018</td>
+                                                    <td>13, May 2018</td>
+                                                    <td>$100</td>
+                                                    <td>Confirmed</td>
+                                                    <td className="table-actions">
+                                                        <a href="#!"><i className="material-icons">print</i></a>
+                                                        <a href="#!"><i className="material-icons">visibility</i></a>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td className="doctor-infor">
+                                                        <img src={require('../../images/D2.png')} alt="pic here"/>
+                                                        <p>Bob James</p>
+                                                    </td>
+                                                    <td>13, May 2018</td>
+                                                    <td>14, May 2018</td>
+                                                    <td>13, May 2018</td>
+                                                    <td>$100</td>
+                                                    <td>Confirmed</td>
+                                                    <td className="table-actions">
+                                                        <a href="#!"><i className="material-icons">print</i></a>
+                                                        <a href="#!"><i className="material-icons">visibility</i></a>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td className="doctor-infor">
+                                                        <img src={require('../../images/D2.png')} alt="pic here"/>
+                                                        <p>Bob James</p>
+                                                    </td>
+                                                    <td>13, May 2018</td>
+                                                    <td>14, May 2018</td>
+                                                    <td>13, May 2018</td>
+                                                    <td>$100</td>
+                                                    <td>Confirmed</td>
+                                                    <td className="table-actions">
+                                                        <a href="#!"><i className="material-icons">print</i></a>
+                                                        <a href="#!"><i className="material-icons">visibility</i></a>
+                                                    </td>
+                                                  </tr>
                                                 </tbody>
                                             </table>
                                         </div>
