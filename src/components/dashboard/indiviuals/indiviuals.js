@@ -61,49 +61,49 @@ class Doctor extends Component {
                                     <li>
                                         <div className="rating-timer">
                                             <i className="small material-icons">dashboard</i>
-                                            <a href='/userDashboard'>Dashboard</a>
+                                            <a href='/doctorDashboard'>Dashboard</a>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="rating-timer">
                                             <i className="small material-icons">assignment</i>
-                                            <a href='/userDashboard'>Appointments</a>
+                                            <a href='/doctorAppoinments'>Appointments</a>
                                             <h6 className="notification-appoint">7</h6>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="rating-timer">
                                             <i className="small material-icons">people</i>
-                                            <a href='/userDashboard'>Patients</a>
-                                            <h6>7</h6>
+                                            <a href='/doctorPatients'>Patients</a>
+                                            <h6 className="notification-patients">7</h6>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="rating-timer">
                                             <i className="small material-icons">today</i>
-                                            <a href='/userDashboard'>Schudes</a>
-                                            <h6 className="notification-time">7</h6>
+                                            <a href='/doctorSchedule'>Schedules</a>
+                                            <h6 className="notification-schedules">7</h6>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="rating-timer">
                                             <i className="small material-icons">account_balance_wallet</i>
-                                            <a href='/userDashboard'>Payments</a>
-                                            <h6 className="notification-payments">7</h6>
+                                            <a href='/doctorPayments'>Payments</a>
+                                            <h6 className="notification-doctor-payments">7</h6>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="rating-timer">
                                             <i className="small material-icons">chat</i>
                                             <a href='/userDashboard'>Chats</a>
-                                            <h6 className="notification-chats">7</h6>
+                                            <h6 className="notification-doctor-chats">7</h6>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="rating-timer">
                                             <i className="small material-icons">comment</i>
                                             <a href='/userDashboard'>Reviews</a>
-                                            <h6 className="notification-review">7</h6>
+                                            <h6 className="notification-doctor-review">7</h6>
                                         </div>
                                     </li>
                                     <li>

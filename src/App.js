@@ -12,8 +12,13 @@ import Receipts from './components/pages/Receipts'
 import Results from './components/pages/Results'
 import News from './components/pages/News'
 import Patient from './components/dashboard/patients/Patient'
+import PatientResults from './components/pages/PatientResults'
 import Profile from './components/pages/Profile'
 import Doctor from './components/dashboard/indiviuals/indiviuals'
+import DoctorAppointment from './components/pages/DoctorAppointment'
+import DoctorPatients from './components/pages/DoctorPatients'
+import DoctorSchedule from './components/pages/DoctorSchedule'
+import DoctorPayments from './components/pages/DoctorPayments'
 import providerSignIn from './components/providerAuth/SignIn'
 import providerSignUp from './components/providerAuth/SignUp'
 import SignIn from './components/auth/SignIn'
@@ -40,7 +45,12 @@ class App extends Component {
               <Route path='/results' component={Results}  />
               <Route path='/news' component={News}  />
               <Route path='/userDashboard' component={Patient}  />
+              <Route path='/userResults' component={PatientResults} />
               <Route path='/doctorDashboard' component={Doctor}  />
+              <Route path='/doctorAppoinments' component={DoctorAppointment} />
+              <Route path='/doctorPatients' component={DoctorPatients} />
+              <Route path='/doctorSchedule' component={DoctorSchedule} />
+              <Route path='/doctorPayments' component={DoctorPayments} />
               <Route path='/profile' component={Profile} />
               <Route path='/providerSignin' component={providerSignIn}  />
               <Route path='/providerSignup' component={providerSignUp}  />

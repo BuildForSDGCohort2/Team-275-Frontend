@@ -592,11 +592,7 @@ hr {
     color: black;
 }
 
-.modal {
-    height: auto;
-}
-
-.modal-content {
+.navbar .modal-content {
     height: 600px;
     padding: 30px;
     border: none !important;
@@ -1255,11 +1251,31 @@ table tbody tr td img {
 }
 
 .notification-chats {
-    margin-left: 31.6% !important;
+    margin-left: 37% !important;
+}
+
+.notification-doctor-chats {
+    margin-left: 37% !important;
 }
 
 .notification-review {
     margin-left: 26% !important;
+}
+
+.notification-doctor-review {
+    margin-left: 29% !important;
+}
+
+.notification-patients {
+    margin-left: 30.4% !important;
+}
+
+.notification-schedules {
+    margin-left: 23% !important;
+}
+
+.notification-doctor-payments {
+    margin-left: 24% !important;
 }
 
 .notification-payments {
@@ -1271,12 +1287,91 @@ table tbody tr td img {
 }
 
 .notification-favorite {
-    margin-left: 26% !important;
+    margin-left: 30% !important;
 }
 
 .dashboard-main-content {
     width: 70%;
     padding: 20px;
+}
+
+/*-- Doctor's Appointment page --*/
+.dashboard-main-content .data-doctor h5 {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+
+/*-- Doctor's Patient page --*/
+.patients {
+    text-align: left;
+    border: 1px solid #424949;
+    height: auto;
+    width: 100%;
+    font-size: 20px;
+    color: #fff;
+    padding: 20px;
+}
+
+.patients h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.patients p {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.dashboard-main-content {
+    width: 100%;
+}
+
+.dashboard-main-content .patient-item {
+    width: 100%;
+}
+
+.dashboard-main-content .patient-item p span {
+    font-weight: bold;
+}
+
+.contact-details {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.contact-details .rating-timer {
+    margin-right: 20px;
+}
+
+.dashboard-main-content .patient-item .btn {
+    margin-top: 10px;
+}
+
+/*-- Doctor's Schedule Page --*/
+.dashboard-main-content .time-slot h1 {
+    text-align: left;
+    font-size: 20px;
+    text-transform: capitalize;
+    margin: 0;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.dashboard-content form {
+    margin-bottom: 40px;
+}
+
+.dashboard-content form .btn {
+    margin-left: 8px;
+}
+
+.schedule-item {
+    margin-top: 30px;
 }
 
 @media screen and (max-width: 280px) {
@@ -1301,6 +1396,10 @@ table tbody tr td img {
     .category-item {
         height: 460px;
         margin: 10px;
+    }
+
+    .top-category h1 {
+        text-align: center !important;
     }
 
     .top-category .category-action {
