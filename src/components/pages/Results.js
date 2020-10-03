@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 
 class Results extends Component {
+
     render() {
+
         return (
             <div className="payment-body">
                 <section className="payment grey darken-3">
@@ -81,13 +83,17 @@ class Results extends Component {
                                     <p>(4.5) rating out of (5.0)</p>
                                 </div>
                                 <div className="rating-timer">
+                                    <i className="small material-icons">chat</i>
+                                    <p>chichi@gmail.com</p>
+                                </div>
+                                <div className="rating-timer">
                                     <i className="small material-icons">timer</i>
                                     <p>Avaliable Sat, 24 April</p>
                                 </div>
                                 <div className="rating-timer">
                                     <i className="small material-icons">location_on</i>
                                     <p>Lagos, Nigeria</p>
-                                </div>
+                                </div> 
                                 <div className="rating-timer">
                                     <i className="small material-icons">local_atm</i>
                                     <p>K23.00 - K45.00</p>
@@ -115,6 +121,10 @@ class Results extends Component {
                                     <i className="small material-icons">star_half</i>
                                     <i className="small material-icons">star_border</i>
                                     <p>(4.5) rating out of (5.0)</p>
+                                </div>
+                                <div className="rating-timer">
+                                    <i className="small material-icons">chat</i>
+                                    <p>lulu@gmail.com</p>
                                 </div>
                                 <div className="rating-timer">
                                     <i className="small material-icons">timer</i>

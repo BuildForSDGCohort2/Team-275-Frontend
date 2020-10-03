@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import "materialize-css/dist/css/materialize.min.css";
 import M from "materialize-css";
+import fire from '../../util/firebase'
 
 class Customer extends Component {
 
+    
     componentDidMount() {
         M.Tabs.init(this.Tabs);
     }
@@ -13,6 +15,7 @@ class Customer extends Component {
             <div>
                 <section className="payment grey darken-3">
                     <div>
+                        <button onClick={() => fire.auth().signOut()}>Sign out</button>
                         <h2>Dashboard</h2>
                     </div>
                 </section>

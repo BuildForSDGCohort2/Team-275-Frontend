@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import fire from '../util/firebase';
 
 const emailRegex = RegExp(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
 
@@ -15,19 +16,15 @@ const formValid = formErrors => {
 
 class SignIn extends Component {
 
-    login() {
-        console.warn("state", this.state);
-    }
-
     constructor(props) {
         super(props);
 
         this.state = {
             username: null,
-            login_password: null, 
+            password: null, 
             formErrors: {
                 username: "",
-                login_password: ""
+                password: ""
             }
         };
     }
@@ -36,11 +33,6 @@ class SignIn extends Component {
         e.preventDefault();
 
         if (formValid(this.state.formErrors)) {
-            console.log(
-                `Email: ${this.state.username}
-                 Password: ${this.state.login_password}
-                `
-            )
         } else {
             console.error('Form invalid');
         }
@@ -56,7 +48,7 @@ class SignIn extends Component {
                 formErrors.username = emailRegex.test(value) ? "" : "Invalid email address";
                 break;
             case 'login_password': 
-                formErrors.login_password = value.length < 6 ? "minimum 6 characters required!" : "";
+                formErrors.password = value.length < 3 ? "minimum 3 characters required!" : "";
                 break;
             default:
                 break;
@@ -68,6 +60,7 @@ class SignIn extends Component {
         const { formErrors } = this.state;
 
         return (
+            <div>
             <section className="background-img">
                 <div className="container">
                     <div className="row">
@@ -76,14 +69,13 @@ class SignIn extends Component {
                                 <div className="form-wrapper">
                                     <h1>Create your account</h1>
 
-                                    <form onValidate onSubmit={this.handleSubmit}>
+                                    <form onSubmit={this.handleSubmit}>
                                         <div className="username">
                                             <input
                                             type="text"
                                             className={formErrors.username.length > 0 ? "error" : null}
                                             placeholder="Enter your email or username*"
                                             name="username"
-                                            noValidate
                                             onChange={this.handleChange}/>
                                             {formErrors.username.length > 0 && (<span className="errorMessage">{formErrors.username}</span>)}
                                         </div>
@@ -92,14 +84,13 @@ class SignIn extends Component {
                                             <input
                                             type="password"
                                             placeholder="Enter your password*"
-                                            name="login_password"
-                                            noValidate
+                                            name="password"
                                             onChange={this.handleChange}/>
-                                            {formErrors.login_password.length > 0 && (<span className="errorMessage">{formErrors.login_password}</span>)}
+                                            {formErrors.password.length > 0 && (<span className="errorMessage">{formErrors.password}</span>)}
                                         </div>
 
                                         <div className="createAccount">
-                                            <button onClick={() => this.login()} to='/userDashboard'>Login</button>
+                                            <button onClick={this.login} to='/userDashboard'>Login</button>
                                         <small>Don't have an account? <Link className="FormTitle__Link" to='/signup'>Sign Up</Link></small>
                                         </div>
                                     </form>
@@ -109,6 +100,7 @@ class SignIn extends Component {
                     </div>
                 </div>
             </section>
+            </div>
         );
     }
 }

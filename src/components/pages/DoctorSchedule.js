@@ -66,7 +66,7 @@ class DoctorSchedule extends Component {
                                     <li>
                                         <div className="rating-timer">
                                             <i className="small material-icons">chat</i>
-                                            <a href='/userDashboard'>Chats</a>
+                                            <a href='/doctorChats'>Chats</a>
                                             <h6 className="notification-doctor-chats">7</h6>
                                         </div>
                                     </li>
@@ -129,6 +129,7 @@ class DoctorSchedule extends Component {
                                         </div>
                                     </div>
                                     <a href="/profile" className="waves-effect waves-dark btn">Add</a>
+                                    <a href="/profile" className="waves-effect waves-dark btn">Update</a>
                                 </form>
                             </div>
                             <div className="profile-tabs">
@@ -192,6 +193,7 @@ class DoctorSchedule extends Component {
                                                 <p><span>Time Slots:</span> 8:00AM - 10:00AM</p>
                                                 <div className="results-btn">
                                                     <a className="waves-effect waves-light btn modal-trigger" href="#userEditClinic">Edit</a>
+                                                    <a className="waves-effect waves-light btn modal-trigger" href="#userEditClinic">Detele</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -212,6 +214,7 @@ class DoctorSchedule extends Component {
                                                 <p><span>Time Slots:</span> 8:00AM - 10:00AM</p>
                                                 <div className="results-btn">
                                                     <a className="waves-effect waves-light btn modal-trigger" href="#userEditClinic">Edit</a>
+                                                    <a className="waves-effect waves-light btn modal-trigger" href="#userEditClinic">Detele</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -234,6 +237,7 @@ class DoctorSchedule extends Component {
                                                 <p><span>Time Slots:</span> 8:00AM - 10:00AM</p>
                                                 <div className="results-btn">
                                                     <a className="waves-effect waves-light btn modal-trigger" href="#userEditClinic">Edit</a>
+                                                    <a className="waves-effect waves-light btn modal-trigger" href="#userEditClinic">Detele</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -256,6 +260,7 @@ class DoctorSchedule extends Component {
                                                 <p><span>Time Slots:</span> 8:00AM - 10:00AM</p>
                                                 <div className="results-btn">
                                                     <a className="waves-effect waves-light btn modal-trigger" href="#userEditClinic">Edit</a>
+                                                    <a className="waves-effect waves-light btn modal-trigger" href="#userEditClinic">Detele</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -278,6 +283,7 @@ class DoctorSchedule extends Component {
                                                 <p><span>Time Slots:</span> 8:00AM - 10:00AM</p>
                                                 <div className="results-btn">
                                                     <a className="waves-effect waves-light btn modal-trigger" href="#userEditClinic">Edit</a>
+                                                    <a className="waves-effect waves-light btn modal-trigger" href="#userEditClinic">Detele</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -300,6 +306,7 @@ class DoctorSchedule extends Component {
                                                 <p><span>Time Slots:</span> 8:00AM - 10:00AM</p>
                                                 <div className="results-btn">
                                                     <a className="waves-effect waves-light btn modal-trigger" href="#userEditClinic">Edit</a>
+                                                    <a className="waves-effect waves-light btn modal-trigger" href="#userEditClinic">Detele</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -322,6 +329,7 @@ class DoctorSchedule extends Component {
                                                 <p><span>Time Slots:</span> 8:00AM - 10:00AM</p>
                                                 <div className="results-btn">
                                                     <a className="waves-effect waves-light btn modal-trigger" href="#userEditClinic">Edit</a>
+                                                    <a className="waves-effect waves-light btn modal-trigger" href="#userEditClinic">Detele</a>
                                                 </div>
                                             </div>
                                         </div>

@@ -69,7 +69,7 @@ class DoctorPayments extends Component {
                                     <li>
                                         <div className="rating-timer">
                                             <i className="small material-icons">chat</i>
-                                            <a href='/userDashboard'>Chats</a>
+                                            <a href='/doctorChats'>Chats</a>
                                             <h6 className="notification-doctor-chats">7</h6>
                                         </div>
                                     </li>
