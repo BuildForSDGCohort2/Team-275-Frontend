@@ -17,9 +17,11 @@ import DoctorAppointment from './componets/pages/DoctorAppointment';
 import DoctorPatients from './componets/pages/DoctorPatients';
 import DoctorSchedule from './componets/pages/DoctorSchedule';
 import DoctorPayments from './componets/pages/DoctorPayments';
+import DoctorProfile from './componets/pages/DoctorProfile';
+import DoctorSettings from './componets/pages/DoctorSettings';
+import PatientScheduleCreate from './componets/pages/PatientScheduleCreate';
 import PatientResults from './componets/pages/PatientResults';
 import Profile from './componets/pages/Profile';
-import Auth from './componets/mainAuth/auth';
 
 const Routes = () => (
     <Switch>
@@ -33,16 +35,19 @@ const Routes = () => (
         <Route path='/contact' component={Contact}  />
         <Route path='/payment' component={Payment}  />
         <Route path='/receipts' component={Receipts}  />
-        <Route path='/results' component={Results}  />
+        <Route path='/results/:data_id' component={Results}  />
         <Route path='/userDashboard/:user_id' component={Patient}  />
         <Route path='/userResults' component={PatientResults} />
-        <Route path='/profile/:profile_id' component={Profile} />
+        <Route path='/profile/:user_id' component={Profile} />
         <Route path='/doctorDashboard/:user_id' component={Doctor}  />
-        <Route path='/results' component={Results}  />
-        <Route path='/doctorAppoinments' component={DoctorAppointment} />
-        <Route path='/doctorPatients' component={DoctorPatients} />
-        <Route path='/doctorSchedule' component={Auth(DoctorSchedule)} />
-        <Route path='/doctorPayments' component={DoctorPayments} />
+        <Route path='/results/:data_id' component={Results}  />
+        <Route path='/scheduleCreate' component={PatientScheduleCreate} />
+        <Route path='/doctorAppoinments/:user_id' component={DoctorAppointment} />
+        <Route path='/doctorPatients/:user_id' component={DoctorPatients} />
+        <Route path='/doctorSchedule/:user_id' component={DoctorSchedule} />
+        <Route path='/doctorPayments/:user_id' component={DoctorPayments} />
+        <Route path='/doctorProfile/:user_id' component={DoctorProfile} />
+        <Route path='/doctorSettings/:user_id' component={DoctorSettings} />
     </Switch>
 )
 

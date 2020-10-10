@@ -4,8 +4,8 @@ import * as firebase from 'firebase';
 
 class Customer extends Component {
     state = {
-            id: []
-        }
+        id: []
+    }
 
     componentDidMount() {
         M.Tabs.init(this.Tabs);
@@ -14,13 +14,14 @@ class Customer extends Component {
 
         const getDoctors = firebase.database().ref("Consultants");
 
-        getDoctors.orderByChild("email").limitToFirst(1).startAt(id).on("child_added", (snapshot) => {
+        getDoctors.orderByChild("email").limitToFirst(1).startAt(id).on("value", (snapshot) => {
             const doctors = snapshot.val();
             let doctorArray = [];
             
             for (let id in doctors) {
                 doctorArray.push({
-                    email: doctors[id].email
+                    email: doctors[id].email,
+                    dayAvailable: doctors[id].dayAvailable
                 });
             }
             this.setState({id: doctorArray});
@@ -34,12 +35,12 @@ class Customer extends Component {
                 <section className="payment grey darken-3">
                     <div>
                         <h2>Dashboard</h2>
-                        {this.state.id.map(doc => 
+                        {this.state.id.map(doc => (
                             <div key={doc.id}>
                                 
-                            <p>{doc.id}</p>
+                            <p>{doc.dayAvailable}</p>
                             </div>
-                        )}
+                        ))}
                     </div>
                 </section>
                 <section>

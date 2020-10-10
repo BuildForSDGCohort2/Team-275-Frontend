@@ -1,27 +1,40 @@
-import React, { useEffect, useState } from 'react';
+import React, { Component } from 'react';
 import * as firebase from 'firebase';
 import { Link } from 'react-router-dom';
 
-const Results =() => {
+class Results extends Component {
+    state = {
+        id: []
+    }
 
-    const [doctorsList, setDoctorList] = useState();
-
-    useEffect(() => {
+    componentDidMount() {
+        
+        let id = this.props.match.params.data_id;
+        console.log(id);
         const getDoctors = firebase.database().ref("Consultants");
 
-        getDoctors.orderByKey().on('value', (snapshot) => {
+        getDoctors.orderByChild("clinic").startAt(id).on('value', (snapshot) => {
             const doctors = snapshot.val();
             
             let doctorArray = [];
             
             for (let id in doctors) {
-                doctorArray.push(doctors[id]);
+                doctorArray.push({
+                    profilePic: doctors[id].profilePic,
+                    email: doctors[id].email,
+                    fullName: doctors[id].fullName,
+                    location: doctors[id].location,
+                    department: doctors[id].department,
+                    price: doctors[id].price,
+                    liveSessions: doctors[id].liveSessions,
+                    dayAvailable: doctors[id].dayAvailable
+                });
             }
-            setDoctorList(doctorArray);
+            this.setState({id: doctorArray});
         });
-    }, []);
+    }
 
-    //render() {
+    render() {
 
         return (
             <React.Fragment>
@@ -85,20 +98,7 @@ const Results =() => {
                         </form>
                     </div>
                     <div className="results-right-display" name="doctorsList">
-                        <div>
-                            <form>
-                                <div className="row">
-                                    <div className="input-field col s12">
-                                        <input id="holder_name" 
-                                               type="text" 
-                                               name="inputFliterData"
-                                               className="validate"/>
-                                        <label htmlFor="holder_name">Search name, location and clinic name...</label>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        {doctorsList ? doctorsList.map((doc) => (
+                        {this.state.id.map((doc) => (
                         <div className="data-doctor" key={doc.id}>
                             <div className="left-side">
                                 <img src={doc.profilePic} alt="pic here"/>
@@ -137,7 +137,7 @@ const Results =() => {
                                     <a href="/signin" className="waves-effect waves-dark btn">Book An Appointment</a>
                                 </div>
                             </div>
-                        </div>)) : ''}
+                        </div>))}
 
                         
                         <ul className="pagination">
@@ -154,7 +154,7 @@ const Results =() => {
             </div>
             </React.Fragment>
         );
-    //}
+    }
 }
 
 export default Results

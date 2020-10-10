@@ -1,35 +1,47 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import M from "materialize-css";
 import "materialize-css/dist/css/materialize.min.css";
-import Reviews from '../subItems/profileReviews';
 import * as firebase from 'firebase';
+import ReviewCreate from '../subItems/ReviewsCreate';
+import Reviews from '../subItems/profileReviews';
+import { Link } from 'react-router-dom';
 
 
 class Profile extends Component {
+
     state = {
-        id: null
+        id: []
     }
 
     componentDidMount() {
         M.Tabs.init(this.Tabs);
 
-        let id = this.props.match.params.profile_id;
+        let id = this.props.match.params.user_id;
 
         const getDoctors = firebase.database().ref("Consultants");
 
-        getDoctors.orderByChild("email").limitToFirst(1).startAt(id).on("child_added", (snap) => {
-            //console.log(snap.val());
-            const doctors = snap.val();
+        getDoctors.orderByChild("email").limitToFirst(1).startAt(id).on("value", (snapshot) => {
+            const doctorsProfile = snapshot.val();
             let doctorArray = [];
             
-            for (let id in doctors) {
-                doctorArray.push(doctors[id]);
+            for (let id in doctorsProfile) {
+                doctorArray.push({
+                    profilePic: doctorsProfile[id].profilePic,
+                    email: doctorsProfile[id].email,
+                    fullName: doctorsProfile[id].fullName,
+                    location: doctorsProfile[id].location,
+                    department: doctorsProfile[id].department,
+                    price: doctorsProfile[id].price,
+                    liveSessions: doctorsProfile[id].liveSessions,
+                    dayAvailable: doctorsProfile[id].dayAvailable
+                });
             }
-            console.log(doctorArray);
+            this.setState({id: doctorArray});
         });
     }
 
     render() {
+
         return (
             <div className="profile">
                 <section className="payment grey darken-3">
@@ -40,19 +52,20 @@ class Profile extends Component {
                 </section>
 
                 <section>
-                    <div className="container">
+                   {this.state.id.map(doc => (
+                    <div className="container" key={doc.id}>
                         <div className="row">
                             <div className="col s12 m12">
                                 <div className="profile-body">
                                     <div className="profile-left-side">
                                         <div className="data-doctor">
                                             <div className="left-side">
-                                                <img src={require('../images/D2.png')} alt="pic here"/>
+                                                <img src={doc.profilePic} alt="pic here"/>
                                             </div>
                                             <div className="right-side">
-                                                <h5>Frank Leopard <i className="small material-icons">check_circle</i></h5>
+                                                <h5>{doc.fullName} <i className="small material-icons">check_circle</i></h5>
                                                 <div className="rating-title">
-                                                    <p>BBS, MD, DR - Ophthalmology, MCH - Ophthalmology.{this.state.id}</p>
+                                                    <p>{doc.department}</p>
                                                 </div>
                                                 <div className="rating">
                                                     <i className="small material-icons">star</i>
@@ -64,7 +77,11 @@ class Profile extends Component {
                                                 </div>
                                                 <div className="rating-timer">
                                                     <i className="small material-icons">location_on</i>
-                                                    <p>Lagos, Nigeria</p>
+                                                    <p>{doc.location}</p>
+                                                </div>
+                                                <div className="rating-timer">
+                                                    <i className="small material-icons">email</i>
+                                                    <p>{doc.email}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -75,11 +92,11 @@ class Profile extends Component {
                                             <div className="right-side">
                                                 <div className="rating-timer">
                                                     <i className="small material-icons">timer</i>
-                                                    <p>Avaliable Sat, 24 April</p>
+                                                    <p>{doc.dayAvailable}</p>
                                                 </div>
                                                 <div className="rating-timer">
                                                     <i className="small material-icons">local_atm</i>
-                                                    <p>K23.00 - K45.00</p>
+                                                    <p>{doc.price}</p>
                                                 </div>
                                                 <div className="rating-timer">
                                                     <i className="small material-icons">thumb_up</i>
@@ -87,25 +104,26 @@ class Profile extends Component {
                                                 </div>
                                                 <div className="rating-timer">
                                                     <i className="small material-icons">chat</i>
-                                                    <p>20 live sessions</p>
+                                                    <p>{doc.liveSessions} live sessions</p>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div className="marketing-accounts">
-                                            <a href="/chat"><i className="small material-icons">call</i></a>
-                                            <a href="/chat"><i className="small material-icons">chat</i></a>
-                                            <a href="/chat"><i className="small material-icons">videocam</i></a>
+                                            <Link to={'/chat/' + doc.email}><i className="small material-icons">call</i></Link>
+                                            <Link to={'/chat/' + doc.email}><i className="small material-icons">chat</i></Link>
+                                            <Link to={'/chat/' + doc.email}><i className="small material-icons">videocam</i></Link>
                                         </div>
 
                                         <div className="results-btn">
-                                            <a className="waves-effect waves-light btn modal-trigger" href="#modal1">Book An Appoinment</a>
+                                            <a className="waves-effect waves-light btn modal-trigger" href="/login">Book An Appoinment</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    ))}
                 </section>
 
                 <section>
@@ -315,43 +333,10 @@ class Profile extends Component {
                                     </div>
 
                                     <div id="test-swipe-3" className="test-swipe-3">
-
                                         <Reviews />
 
                                         <div className="row">
-                                            <form action="#">
-                                                <h3>Write your review</h3>
-                                                <div className="rating">
-                                                    <a href="#!"><i className="small material-icons">star_border</i></a>
-                                                    <a href="#!"><i className="small material-icons">star_border</i></a>
-                                                    <a href="#!"><i className="small material-icons">star_border</i></a>
-                                                    <a href="#!"><i className="small material-icons">star_border</i></a>
-                                                    <a href="#!"><i className="small material-icons">star_border</i></a>
-                                                </div>
-
-                                                <div className="row">
-                                                    <div className="input-field col s12">
-                                                        <input id="holder_name" type="text" className="validate" />
-                                                        <label htmlFor="holder_name">Reviewer's Name</label>
-                                                    </div>
-                                                </div>
-
-                                                <div className="row">
-                                                    <div className="input-field col s12">
-                                                        <textarea id="body" placeholder="Message" type="text" className="validate" />
-                                                    </div>
-                                                </div>
-
-                                                <p>
-                                                    <label>
-                                                        <input type="checkbox" />
-                                                            <span>I read and accepted all the T's of the Online Health Therapy Platform.</span>
-                                                    </label>
-                                                </p>
-                                                <div className="confrim-btn">
-                                                    <a className="waves-effect waves-light btn modal-trigger" href="#modal">Submit</a>
-                                                </div>
-                                            </form>
+                                            <ReviewCreate />
                                         </div>
                                     </div>
 

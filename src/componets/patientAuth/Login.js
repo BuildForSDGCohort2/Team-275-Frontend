@@ -46,7 +46,6 @@ const Login = (props) => {
                                             type="text"
                                             placeholder="Enter your email*"
                                             name="email"
-                                            user={email}
                                             onChange={(e) => setEmail(e.target.value)} />
                                         </div>
 

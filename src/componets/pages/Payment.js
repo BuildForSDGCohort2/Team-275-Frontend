@@ -1,6 +1,35 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+// Import the Library
+import Rave from 'react-flutterwave-rave';
 
 class Payment extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+          key: "FLWPUBK-1d0e06abd822af8c480d24ca71df8a20-X", // RavePay PUBLIC KEY
+          phone: "0000000000000",
+          amount: 50,
+          firstname: "Oluwole",
+          lastname: "Adebiyi",
+          email: "test@test.com",
+          doctor_name: "franck banda",
+          payment_number: 3,
+        }
+        this.callback = this.callback.bind(this);
+        this.close = this.close.bind(this);
+    }
+     
+     
+    callback = (response) => {
+        
+        console.log(response);  
+    }
+     
+     
+    close = () => {
+        console.log("Payment closed");
+    }
 
     componentDidMount() {
         const M = window.M;
@@ -23,60 +52,7 @@ class Payment extends Component {
                 <section className="summary">
                     <div className="container">
                         <div className="row">
-                            <div className="col s7 m7">
-                                <h5 className="payment-heading">Payment Method</h5>
-                                <from action="#">
-                                    <p>
-                                        <label>
-                                            <input type="checkbox" />
-                                            <span>Credit Card</span>
-                                        </label>
-                                    </p>
-                                    
-                                    <div class="row">
-                                        <div className="input-field col s6">
-                                            <input id="holder_name" type="text" className="validate" />
-                                            <label for="holder_name">Holder's Name</label>
-                                        </div>
-                                        <div className="input-field col s6">
-                                            <input id="card_name" type="text" className="validate" />
-                                            <label for="card_name">Card Number</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div className="input-field col s4">
-                                            <input id="expiry_month" type="text" className="validate" />
-                                            <label for="expiry_month">Expiry Month</label>
-                                        </div>
-                                        <div className="input-field col s4">
-                                            <input id="expiry_year" type="text" className="validate" />
-                                            <label for="expiry_year">Expiry Year</label>
-                                        </div>
-                                        <div className="input-field col s4">
-                                            <input id="CVV" type="text" className="validate" />
-                                            <label for="CVV">CVV</label>
-                                        </div>
-                                    </div>
-
-                                    <p>
-                                        <label>
-                                            <input type="checkbox" />
-                                            <span>Paypal</span>
-                                        </label>
-                                    </p>
-                                    <p>
-                                        <label>
-                                            <input type="checkbox" />
-                                            <span>I read and accepted all the T's of the Online Health Therapy Platform.</span>
-                                        </label>
-                                    </p>
-                                    <div className="confrim-btn">
-                                        <a class="waves-effect waves-light btn modal-trigger" href="#modal">Confirm & Pay</a>
-                                    </div>
-                                </from>
-                            </div>
-                            <div className="col s5 m5">
+                            <div className="col s12 m12">
                                 <h5>Booking Summary</h5>
                                 <div className="data-doctor">
                                     <div className="left-side">
@@ -128,6 +104,30 @@ class Payment extends Component {
                                         <p>Total</p>
                                         <p>$150</p>
                                     </div>
+                                    
+                                    <p>
+                                        <label>
+                                            <input type="checkbox" />
+                                            <span>I read and accepted all the T's of the Online Health Therapy Platform.</span>
+                                        </label>
+                                    </p>
+
+                                    <Rave
+                                        pay_button_text="Procced to payment"
+                                        type="button"
+                                        class="waves-effect waves-light btn"
+                                        metadata={[
+                                          { metaname: 'PaymentID', metavalue: this.state.payment_number },
+                                          { metaname: 'Doctor', metavalue: this.state.doctor_name }
+                                        ]}
+                                        payment_method="card"
+                                        customer_email={this.state.email}
+                                        customer_phone={this.state.phone}
+                                        amount={"" + this.state.amount * this.state.payment_number + ""}
+                                        ravePubKey={this.state.key}
+                                        callback={this.callback}
+                                        onclose={this.close}
+                                    />
                                 </div>
                             </div>
                         </div>

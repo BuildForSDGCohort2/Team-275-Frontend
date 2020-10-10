@@ -2,9 +2,10 @@ import React from 'react';
 import MainConsultants from '../subItems/mainConsultants';
 import MainClinics from '../subItems/mainClinic';
 import MainBlogs from '../subItems/mainBlogs';
+import { Link } from 'react-router-dom';
 
 const Main = () => {
-
+    const user = "Mum's Care Clinic";
     return(
         <React.Fragment>
             <div className="Home">
@@ -20,23 +21,14 @@ const Main = () => {
                                             <div className="row">
                                               <div className="input-field col s12">
                                                 <i className="material-icons">location_on</i>
-                                                <input type="text" placeholder="Enter Location" id="location" />
+                                                <input type="text" placeholder="Enter Location" name="location" />
                                               </div>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div className="row">
-                                        <div className="col m12">
-                                            <div className="row entery">
-                                              <div className="input-field col s12">
-                                                <i className="material-icons">search</i>
-                                                <input type="text" placeholder="Enter doctor or clinic" id="input_data" />
-                                              </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <a className="waves-effect waves-light btn" href="/results">Search</a>
+                                    <button className="waves-effect waves-light btn">
+                                        <Link to={'/results/' + user}>Appointments</Link>
+                                    </button>
                                 </form>
                             </div>
                         </div>

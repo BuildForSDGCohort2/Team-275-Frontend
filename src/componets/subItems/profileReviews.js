@@ -5,9 +5,9 @@ const Reviews = () => {
     const [doctorsList, setDoctorList] = useState();
 
     useEffect(() => {
-        const getDoctors = firebase.database().ref("DoctorReviews");
+        const getDoctors = firebase.database().ref("DoctorReview");
 
-        getDoctors.limitToFirst(3).on('value', (snapshot) => {
+        getDoctors.orderByChild("dotoctorName").startAt("mwansa chungu").on('value', (snapshot) => {
             const doctors = snapshot.val();
             let doctorArray = [];
             
@@ -25,11 +25,11 @@ const Reviews = () => {
                 {doctorsList ? doctorsList.map((doc) => (
                     <div className="data-doctor">
                         <div className="left-side">
-                            <img src={doc.profilePic} alt="pic here"/>
+                            <img src={require('../images/P.png')} alt="pic here"/>
                         </div>
                         <div className="right-side">
                             <div className="review-heading">
-                                <h5>Jane Banda</h5>
+                                <h5>{doc.createdBy}</h5>
                                 <div className="review-icons">
                                     <i className="small material-icons">star</i>
                                     <i className="small material-icons">star</i>
@@ -39,11 +39,10 @@ const Reviews = () => {
                                 </div>
                             </div>
                             <div className="rating-title">
-                                <p>3 days ago.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit illo fuga commodi aspernatur ducimus? Rerum placeat eveniet sint vitae, 
-                                   consectetur debitis doloremque recusandae nostrum, nobis neque voluptate ducimus, porro distinctio.</p>
+                                <p>{doc.date}</p>
+                                <p>{doc.content}</p>
                             </div>
-                            <div className="rating-timer">
+                            <div className="rating-timer" hidden>
                                 <i className="small material-icons">reply</i>
                                 <p>Reply</p>
                             </div>
@@ -51,9 +50,6 @@ const Reviews = () => {
                     </div>
                 )) : ''}
             </div> 
-            <div className="review-btn">
-                <a href="/item" className="waves-effect waves-light btn">Show all feedbacks(100)</a>
-            </div>
         </React.Fragment>
     );
 }

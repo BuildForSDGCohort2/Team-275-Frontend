@@ -1,17 +1,65 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import * as firebase from 'firebase';
+import { Link } from 'react-router-dom';
 
 class DoctorPayments extends Component {
 
+    state = {
+        id: [],
+        appointments: []
+    }
+
     componentDidMount() {
-        const M = window.M;
-        document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('.modal');
-            var instances = M.Modal.init(elems, {});
+        //M.Tabs.init(this.Tabs);
+
+        let id = this.props.match.params.user_id;
+
+        const getDoctors = firebase.database().ref("Consultants");
+
+        getDoctors.orderByChild("email").limitToFirst(1).startAt(id).on("value", (snapshot) => {
+            const doctorsProfile = snapshot.val();
+            let doctorArray = [];
+            
+            for (let id in doctorsProfile) {
+                doctorArray.push({
+                    profilePic: doctorsProfile[id].profilePic,
+                    email: doctorsProfile[id].email,
+                    fullName: doctorsProfile[id].fullName,
+                    location: doctorsProfile[id].location,
+                    department: doctorsProfile[id].department,
+                    price: doctorsProfile[id].price,
+                    liveSessions: doctorsProfile[id].liveSessions,
+                    dayAvailable: doctorsProfile[id].dayAvailable
+                });
+            }
+            this.setState({id: doctorArray});
+        });
+
+        const getAppointments = firebase.database().ref("Payments");
+
+        getAppointments.orderByChild("assignedDoctorEmail").startAt(id).on("value", (snapshot) => {
+            const doctorsAppointment = snapshot.val();
+            let appointmentsArray = [];
+            
+            for (let id in doctorsAppointment) {
+                appointmentsArray.push({
+                    patientPic: doctorsAppointment[id].patientPic,
+                    patientFirstName: doctorsAppointment[id].patientFirstName,
+                    patientLastName: doctorsAppointment[id].patientLastName,
+                    cardID: doctorsAppointment[id].cardID,
+                    age: doctorsAppointment[id].age,
+                    gander: doctorsAppointment[id].gander,
+                    bloodGroup: doctorsAppointment[id].bloodGroup,
+                    patientPhone: doctorsAppointment[id].patientPhone,
+                    patientEmail: doctorsAppointment[id].patientEmail
+                });
+            }
+            this.setState({appointments: appointmentsArray});
         });
     }
 
     render() {
-        return(
+        return (
             <div>
                 <section className="patients grey darken-3">
                     <div>
@@ -21,12 +69,13 @@ class DoctorPayments extends Component {
                 </section>
                 <section>
                     <div className="dashboard-content">
-                        <div className="dashboard-links">
+                    {this.state.id.map(doc => (
+                        <div className="dashboard-links" key={doc.id}>
                             <div className="user-details">
                                 <div className="left-side">
-                                    <img src={require('../images/D2.png')} alt="pic here"/>
-                                    <h5>Frank Leopard</h5>
-                                    <p>BBS, MD, DR - Ophthalmology, MCH - Ophthalmology</p>
+                                    <img src={doc.profilePic} alt="pic here"/>
+                                    <h5>{doc.fullName}</h5>
+                                    <p>{doc.department}</p>
                                 </div>
                             </div>
 
@@ -35,48 +84,48 @@ class DoctorPayments extends Component {
                                     <li>
                                         <div className="rating-timer">
                                             <i className="small material-icons">dashboard</i>
-                                            <a href='/doctorDashboard'>Dashboard</a>
+                                            <Link to={'/doctorDashboard/' + doc.email}>Dashboard</Link>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="rating-timer">
                                             <i className="small material-icons">assignment</i>
-                                            <a href='/doctorAppoinments'>Appointments</a>
+                                            <Link to={'/doctorAppoinments/' + doc.fullName}>Appointments</Link>
                                             <h6 className="notification-appoint">7</h6>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="rating-timer">
                                             <i className="small material-icons">people</i>
-                                            <a href='/doctorPatients'>Patients</a>
+                                            <Link to={'/doctorPatients/' + doc.email}>Patients</Link>
                                             <h6 className="notification-patients">7</h6>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="rating-timer">
                                             <i className="small material-icons">today</i>
-                                            <a href='/doctorSchedule'>Schedules</a>
+                                            <Link to={'/doctorSchedule/' + doc.email}>Schedules</Link>
                                             <h6 className="notification-schedules">7</h6>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="rating-timer">
                                             <i className="small material-icons">account_balance_wallet</i>
-                                            <a href='/doctorPayments'>Payments</a>
+                                            <Link to={'/doctorPayments/' + doc.fullName}>Payments</Link>
                                             <h6 className="notification-doctor-payments">7</h6>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="rating-timer">
                                             <i className="small material-icons">chat</i>
-                                            <a href='/doctorChats'>Chats</a>
+                                            <Link to={'/doctorChats/' + doc.fullName}>Chats</Link>
                                             <h6 className="notification-doctor-chats">7</h6>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="rating-timer">
                                             <i className="small material-icons">comment</i>
-                                            <a href='/userDashboard'>Reviews</a>
+                                            <Link to={'/doctorProfile/' + doc.fullName}>Reviews</Link>
                                             <h6 className="notification-doctor-review">7</h6>
                                         </div>
                                     </li>
@@ -89,12 +138,12 @@ class DoctorPayments extends Component {
                                     <li>
                                         <div className="rating-timer">
                                             <i className="small material-icons">settings</i>
-                                            <a href='/userDashboard'>Settings</a>
+                                            <Link to={'/doctorSettings/' + doc.email}>Settings</Link>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
-                        </div>
+                        </div>))}
 
                         <div className="dashboard-main-content">
                             <table className="striped border-bottom">

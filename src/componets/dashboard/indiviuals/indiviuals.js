@@ -2,22 +2,62 @@ import React, { Component } from 'react'
 import { Line } from 'react-chartjs-2'
 import "materialize-css/dist/css/materialize.min.css";
 import M from "materialize-css";
+import * as firebase from 'firebase';
+import { Link } from 'react-router-dom';
 
 class Doctor extends Component {
     state = {
-        email: null
+        id: [],
+        appointments: []
     }
 
     componentDidMount() {
         M.Tabs.init(this.Tabs);
 
-        let email = this.props.match.params.user_id;
-        this.setState({
-            email: email
-        })
+        let id = this.props.match.params.user_id;
+
+        const getDoctors = firebase.database().ref("Consultants");
+
+        getDoctors.orderByChild("email").limitToFirst(1).startAt(id).on("value", (snapshot) => {
+            const doctorsProfile = snapshot.val();
+            let doctorArray = [];
+            
+            for (let id in doctorsProfile) {
+                doctorArray.push({
+                    profilePic: doctorsProfile[id].profilePic,
+                    email: doctorsProfile[id].email,
+                    fullName: doctorsProfile[id].fullName,
+                    location: doctorsProfile[id].location,
+                    department: doctorsProfile[id].department,
+                    price: doctorsProfile[id].price,
+                    liveSessions: doctorsProfile[id].liveSessions,
+                    dayAvailable: doctorsProfile[id].dayAvailable
+                });
+            }
+            this.setState({id: doctorArray});
+        });
+
+        const getAppointments = firebase.database().ref("DoctorAppointments");
+
+        getAppointments.orderByChild("doctorEmail").startAt(id).on("value", (snapshot) => {
+            const doctorsAppointment = snapshot.val();
+            let appointmentsArray = [];
+            
+            for (let id in doctorsAppointment) {
+                appointmentsArray.push({
+                    profilePic: doctorsAppointment[id].profilePic,
+                    name: doctorsAppointment[id].name,
+                    scheduledDate: doctorsAppointment[id].scheduledDate,
+                    purpose: doctorsAppointment[id].purpose,
+                    status: doctorsAppointment[id].status,
+                    amount: doctorsAppointment[id].amount
+                });
+            }
+            this.setState({appointments: appointmentsArray});
+        });
     }
 
-    constructor(props) {
+    /*constructor(props) {
         super(props);
 
         this.state = {
@@ -43,7 +83,7 @@ class Doctor extends Component {
                 ]
             }
         }
-    }
+    }*/
 
     render() {
         return (
@@ -55,12 +95,13 @@ class Doctor extends Component {
                 </section>
                 <section>
                     <div className="dashboard-content">
-                        <div className="dashboard-links">
+                        {this.state.id.map(doc => (
+                        <div className="dashboard-links" key={doc.id}>
                             <div className="user-details">
                                 <div className="left-side">
-                                    <img src={require('../../images/D2.png')} alt="pic here"/>
-                                    <h5>Frank Leopard</h5>
-                                    <p>BBS, MD, DR - Ophthalmology, MCH - Ophthalmology {this.state.email}</p>
+                                    <img src={doc.profilePic} alt="pic here"/>
+                                    <h5>{doc.fullName}</h5>
+                                    <p>{doc.department}</p>
                                 </div>
                             </div>
 
@@ -69,69 +110,69 @@ class Doctor extends Component {
                                     <li>
                                         <div className="rating-timer">
                                             <i className="small material-icons">dashboard</i>
-                                            <a href='/doctorDashboard/:user_id'>Dashboard</a>
+                                            <Link to={'/doctorDashboard/' + doc.email}>Dashboard</Link>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="rating-timer">
                                             <i className="small material-icons">assignment</i>
-                                            <a href='/doctorAppoinments/:user_id'>Appointments</a>
+                                            <Link to={'/doctorAppoinments/' + doc.fullName}>Appointments</Link>
                                             <h6 className="notification-appoint">7</h6>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="rating-timer">
                                             <i className="small material-icons">people</i>
-                                            <a href='/doctorPatients'>Patients</a>
+                                            <Link to={'/doctorPatients/' + doc.email}>Patients</Link>
                                             <h6 className="notification-patients">7</h6>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="rating-timer">
                                             <i className="small material-icons">today</i>
-                                            <a href='/doctorSchedule'>Schedules</a>
+                                            <Link to={'/doctorSchedule/' + doc.email}>Schedules</Link>
                                             <h6 className="notification-schedules">7</h6>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="rating-timer">
                                             <i className="small material-icons">account_balance_wallet</i>
-                                            <a href='/doctorPayments'>Payments</a>
+                                            <Link to={'/doctorPayments/' + doc.fullName}>Payments</Link>
                                             <h6 className="notification-doctor-payments">7</h6>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="rating-timer">
                                             <i className="small material-icons">chat</i>
-                                            <a href='/doctorChats'>Chats</a>
+                                            <Link to={'/doctorChats/' + doc.fullName}>Chats</Link>
                                             <h6 className="notification-doctor-chats">7</h6>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="rating-timer">
                                             <i className="small material-icons">comment</i>
-                                            <a href='/userDashboard'>Reviews</a>
+                                            <Link to={'/doctorProfile/' + doc.fullName}>Reviews</Link>
                                             <h6 className="notification-doctor-review">7</h6>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="rating-timer">
                                             <i className="small material-icons">share</i>
-                                            <a href='/userDashboard'>Share</a>
+                                            <a href='#'>Share</a>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="rating-timer">
                                             <i className="small material-icons">settings</i>
-                                            <a href='/userDashboard'>Settings</a>
+                                            <Link to={'/doctorSettings/' + doc.email}>Settings</Link>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
-                        </div>
+                        </div>))}
 
                         <div className="dashboard-main-content">
-                            <div className="row">
+                            <div className="row" hidden>
                                 <div className="col s12 m12">
                                     <div style={{ position: "relative", height: 300, width: 600 }} className="chart-data">
                                         <Line 
@@ -159,171 +200,34 @@ class Doctor extends Component {
                                                 Upcoming
                                             </a>
                                         </li>
-                                        <li className="tab col s3">
-                                            <a href="#test-swipe-2">
-                                                Today
-                                            </a>
-                                        </li>
                                     </ul>
 
                                         <div id="test-swipe-1">
                                             <table className="striped border-bottom">
                                                 <thead>
                                                   <tr>
-                                                      <th>ID</th>
                                                       <th>Patient Name</th>
                                                       <th>Schedule Date</th>
                                                       <th>Purpose</th>
                                                       <th>Amount</th>
+                                                      <th>Status</th>
                                                   </tr>
                                                 </thead>
 
                                                 <tbody>
+                                                {this.state.appointments.map(doc => (
                                                   <tr>
-                                                    <td>1096</td>
-                                                    <td>Bob James</td>
-                                                    <td>13, May 2018</td>
-                                                    <td>General</td>
-                                                    <td>$100</td>
+                                                    <td>{doc.name}</td>
+                                                    <td>{doc.scheduledDate}</td>
+                                                    <td>{doc.purpose}</td>
+                                                    <td>{doc.amount}</td>
+                                                    <td>{doc.status}</td>
                                                     <td className="table-actions">
                                                         <a href="#!"><i className="material-icons">check</i></a>
                                                         <a href="#!"><i className="material-icons">visibility</i></a>
                                                         <a href="#!"><i className="material-icons">redo</i></a>
                                                     </td>
-                                                  </tr>
-
-                                                  <tr>
-                                                    <td>1096</td>
-                                                    <td>Bob James</td>
-                                                    <td>13, May 2018</td>
-                                                    <td>General</td>
-                                                    <td>$100</td>
-                                                    <td className="table-actions">
-                                                        <a href="#!"><i className="material-icons">check</i></a>
-                                                        <a href="#!"><i className="material-icons">visibility</i></a>
-                                                        <a href="#!"><i className="material-icons">redo</i></a>
-                                                    </td>
-                                                  </tr>
-
-                                                  <tr>
-                                                    <td>1096</td>
-                                                    <td>Bob James</td>
-                                                    <td>13, May 2018</td>
-                                                    <td>General</td>
-                                                    <td>$100</td>
-                                                    <td className="table-actions">
-                                                        <a href="#!"><i className="material-icons">check</i></a>
-                                                        <a href="#!"><i className="material-icons">visibility</i></a>
-                                                        <a href="#!"><i className="material-icons">redo</i></a>
-                                                    </td>
-                                                  </tr>
-
-                                                  <tr>
-                                                    <td>1096</td>
-                                                    <td>Bob James</td>
-                                                    <td>13, May 2018</td>
-                                                    <td>General</td>
-                                                    <td>$100</td>
-                                                    <td className="table-actions">
-                                                        <a href="#!"><i className="material-icons">check</i></a>
-                                                        <a href="#!"><i className="material-icons">visibility</i></a>
-                                                        <a href="#!"><i className="material-icons">redo</i></a>
-                                                    </td>
-                                                  </tr>
-
-                                                  <tr>
-                                                    <td>1096</td>
-                                                    <td>Bob James</td>
-                                                    <td>13, May 2018</td>
-                                                    <td>General</td>
-                                                    <td>$100</td>
-                                                    <td className="table-actions">
-                                                        <a href="#!"><i className="material-icons">check</i></a>
-                                                        <a href="#!"><i className="material-icons">visibility</i></a>
-                                                        <a href="#!"><i className="material-icons">redo</i></a>
-                                                    </td>
-                                                  </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-
-                                        <div id="test-swipe-2">
-                                            <table className="striped border-bottom">
-                                                <thead>
-                                                  <tr>
-                                                      <th>ID</th>
-                                                      <th>Patient Name</th>
-                                                      <th>Schedule Date</th>
-                                                      <th>Purpose</th>
-                                                      <th>Amount</th>
-                                                  </tr>
-                                                </thead>
-
-                                                <tbody>
-                                                  <tr>
-                                                    <td>1096</td>
-                                                    <td>Bob James</td>
-                                                    <td>13, May 2018</td>
-                                                    <td>General</td>
-                                                    <td>$100</td>
-                                                    <td className="table-actions">
-                                                        <a href="#!"><i className="material-icons">check</i></a>
-                                                        <a href="#!"><i className="material-icons">visibility</i></a>
-                                                        <a href="#!"><i className="material-icons">redo</i></a>
-                                                    </td>
-                                                  </tr>
-
-                                                  <tr>
-                                                    <td>1096</td>
-                                                    <td>Bob James</td>
-                                                    <td>13, May 2018</td>
-                                                    <td>General</td>
-                                                    <td>$100</td>
-                                                    <td className="table-actions">
-                                                        <a href="#!"><i className="material-icons">check</i></a>
-                                                        <a href="#!"><i className="material-icons">visibility</i></a>
-                                                        <a href="#!"><i className="material-icons">redo</i></a>
-                                                    </td>
-                                                  </tr>
-
-                                                  <tr>
-                                                    <td>1096</td>
-                                                    <td>Bob James</td>
-                                                    <td>13, May 2018</td>
-                                                    <td>General</td>
-                                                    <td>$100</td>
-                                                    <td className="table-actions">
-                                                        <a href="#!"><i className="material-icons">check</i></a>
-                                                        <a href="#!"><i className="material-icons">visibility</i></a>
-                                                        <a href="#!"><i className="material-icons">redo</i></a>
-                                                    </td>
-                                                  </tr>
-
-                                                  <tr>
-                                                    <td>1096</td>
-                                                    <td>Bob James</td>
-                                                    <td>13, May 2018</td>
-                                                    <td>General</td>
-                                                    <td>$100</td>
-                                                    <td className="table-actions">
-                                                        <a href="#!"><i className="material-icons">check</i></a>
-                                                        <a href="#!"><i className="material-icons">visibility</i></a>
-                                                        <a href="#!"><i className="material-icons">redo</i></a>
-                                                    </td>
-                                                  </tr>
-
-                                                  <tr>
-                                                    <td>1096</td>
-                                                    <td>Bob James</td>
-                                                    <td>13, May 2018</td>
-                                                    <td>General</td>
-                                                    <td>$100</td>
-                                                    <td className="table-actions">
-                                                        <a href="#!"><i className="material-icons">check</i></a>
-                                                        <a href="#!"><i className="material-icons">visibility</i></a>
-                                                        <a href="#!"><i className="material-icons">redo</i></a>
-                                                    </td>
-                                                  </tr>
+                                                  </tr>))}
                                                 </tbody>
                                             </table>
                                         </div>
