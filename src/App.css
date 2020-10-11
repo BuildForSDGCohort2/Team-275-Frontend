@@ -1,38 +1,1537 @@
-.App {
-  text-align: center;
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.results-btn a {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.rating {
+  font-style: italic;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.links {
+  color: black;
+  font-size: 20px;
+}
+
+.sidenav-trigger {
+  font-size: 20px !important;
+  margin-left: 10px;
+  color: black;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 30px !important;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+h3 {
+  text-align: center;
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+hr {
+  width: 20%;
+  border: 1px solid #519a8a;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+nav .nav-wrapper {
+  color: black !important;
+}
+
+/*--- Home Section ----*/
+.home {
+  background-image: url('./componets/images/national-cancer-institute-NFvdKIhxYlU-unsplash.png');
+  background-size: cover;
+  height: auto;
+  padding-top: 10%;
+  padding-bottom: 20%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home .welcome {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.welcome h1, .welcome p {
+  color: #fff;
+}
+
+.welcome p {
+  text-align: center !important;
+  margin-bottom: 30px !important;
+}
+
+.nav-wrapper form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.nav-wrapper .input-field {
+  display: flex;
+  flex-direction: row;
+}
+
+.input-field i {
+  background-color: #fff;
+  padding: 4px;
+  font-size: 23px;
+  height: 30px;
+  border-radius: 10px 0px 0px 10px !important;
+}
+
+.nav-wrapper form .input-field input {
+  margin-right: 20px !important;
+  height: 30px !important;
+  border: none !important;
+  background-color: #fff !important;
+  border-radius: 0px 10px 10px 0px !important;
+}
+
+.nav-wrapper .btn {
+  margin-top: 12px;
+  border-radius: 10px;
+  text-transform: capitalize;
+}
+
+/* Why Us Section*/
+.whyUs h1, .category h1, .top-category h1, .blog h1 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center !important;
+}
+
+.reasons {
+  transform: scale(1);
+  transition: transform 0.5s ease;
+  text-align: center;
+  margin: 20px 30px 0 0;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 7%;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.reasons:hover {
+  transform: scale(1.1);
+  box-shadow: 5px 10px 20px 10px rgba(0, 0, 0, 0.253) !important;
+  border-radius: 10px;
+}
+
+/* Category Section */
+.category {
+  margin-bottom: 7%;
+}
+
+.category hr {
+  width: 10% !important;
+}
+
+.category-item .rating, .category-item .rating-timer {
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.category-item .rating-timer {
+  margin-bottom: 20px;
+}
+
+.category-item .rating i {
+  margin-top: 6px;
+  color: #F1C40F;
+}
+
+.card:hover {
+  box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253) !important;
+}
+
+.card-body {
+  padding: 3rem 0 !important;
+}
+
+.card .card-image span {
+  color: black !important;
+}
+
+.card .card-image .card-title {
+  color: black;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.card-image {
+  transform: scale(1);
+  height: 16rem;
+  transition: transform 0.5s ease;
+}
+
+.card-image img {
+  height: 100%;
+  width: 100%;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.card-image:hover {
+  transform: scale(1.1);
+}
+
+.card-content .rating-timer {
+  margin-bottom: 15px;
+}
+
+.rating, .rating-timer {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.rating i {
+  color: #F1C40F;}
+
+.reason {
+  display: flex;
+  flex-direction: row;
+  font-size: 18px;
+  margin: 20px;
+}
+
+.reason p, .reason h5 {
+  margin: 0;
+}
+
+.reason i {
+  font-size: 60px;
+  margin-right: 18px;
+}
+
+.rating i, .rating-timer i {
+  font-size: 23px;
+}
+
+.rating-title {
+  margin-bottom: 20px;
+}
+
+.rating-title p i {
+  font-size: 17px;
+}
+
+.rating .price p {
+  font-size: 10px !important;
+}
+
+.rating .price i {
+  font-size: 17px;
+}
+
+.rating p, .rating-timer p {
+  margin-top: 1px !important;
+  margin-left: 5px !important;
+}
+
+/* Special Offers */
+.special-offers {
+  background-image: url('./componets/images/cat.jpg');
+  background-size: cover;
+  height: 95vh;
+  width: 100%;
+  margin-bottom: 7%;
+}
+
+.special-offers hr {
+  width: 30% !important;
+}
+
+.deals-infor {
+  text-align: center;
+}
+
+.deals-infor p {
+  font-size: 20px;
+  margin: 0;
+}
+
+.deals-infor h2 {
+  font-size: 23px;
+  font-weight: normal;
+  margin: 20x;
+}
+
+.deals-infor h2 span {
+  font-size: 35px;
+  color: #519a8a;
+}
+
+.deals-infor div:last-child {
+  border:  1px solid #fff;
+  border-radius: 3px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-top: 3em;
+  padding: 2em;
+  text-align: center;
+}
+
+.deals-infor div:last-child p {
+  font-weight: 500;
+  color: white;
+  font-size: 30px;
+}
+
+.deals-infor div:last-child span {
+  color: white;
+  font-size: 30px;
+}
+
+/* Home Top Item */
+.top-category h1 {
+  font-size: 30px;
+}
+
+.top-category .category-item {
+  width: 100% !important;
+  margin-bottom: 10px;
+}
+
+.top-category .category-action {
+  top: 81.7% !important;
+}
+
+/* Blog Section */
+.blog {
+  padding: 0 20px 30px 20px;
+  margin-top: 5%;
+} 
+
+.blog hr {
+  width: 10% !important;
+}
+
+.blog-item {
+  border: 0 !important;
+  width: 100%;
+  padding: 10px;
+}
+
+.blog-image {
+  height: 300px;
+}
+
+.blog-image img {
+  height: 100%;
+  width: 100%;
+}
+
+.blog-author {
+  display: flex;
+  flex-direction: row;
+}
+
+.blog-author p {
+  font-size: 18px;
+  padding: 0;
+}
+
+.blog-author i {
+  font-size: 18px !important;
+  padding: 0 !important;
+}
+
+.blog-author p span {
+  font-style: italic;
+  margin-left: 40px;
+}
+
+.blog-item .card-title {
+  font-size: 30px;
+}
+
+/* Category Signle Page */
+.category-header {
+  border: 1px solid #424949;
+  height: 30vh;
+  width: 100%;
+  margin-bottom: 3%;
+  color: white;
+  text-align: left;
+}
+
+.category-header p {
+  font-size: 20px;
+}
+
+.category-main {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.category-sorting a {
+  margin-right: 20px;
+  font-size: 20px;
+  font-weight: normal;
+  color: black;
+}
+
+.category-selection {
+  height: auto;
+  overflow: hidden;
+}
+
+.category-item-list {
+  height: auto;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.category-item {
+  height: 490px;
+  margin: 0 0 20px 0;
+  overflow: hidden;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+
+.category-item:hover {
+  box-shadow: 5px 10px 20px 10px rgba(0, 0, 0, 0.253);
+}
+
+.category-item .category-image {
+  height: 300px;
+  position: relative;
+}
+
+#navi,
+.category-action {
+background-color: #424949;
+padding: 10px;
+width: 279px;
+position: absolute;
+top: 82%;
+left: 8%;
+}
+
+.category-action {
+z-index: 10;
+}
+
+.category-item .category-image img {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.category-item {
+  text-align: center;
+}
+
+.category-action i {
+  color: white;
+}
+
+.category-action-after {
+  position: absolute;
+  background-color: #424949;
+  padding: 10px;
+  width: 279px;
+  top: 100.3%;
+  left: 27.8%;
+}
+
+.category-action-after i {
+  color: white;
+}
+
+.watch {
+  margin-right: 40%;
+}
+
+.category-infor {
+  padding-top: 10px;
+}
+
+.category-infor h1 {
+  margin: 0 !important;
+  margin-top: 5px !important;
+  margin-bottom: 7px !important;
+  font-size: 15px !important;
+  font-weight: normal !important;
+  text-transform: uppercase !important;
+}
+
+.category-infor p {
+  font-size: 20px;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.category-infor .rating-timer i {
+  margin-top: 5px;
+}
+
+.category-amount p {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.category-amount span {
+  font-size: 30px;
+  text-transform: capitalize;
+  margin: 0;
+  font-weight: 600;
+}
+
+/*---  Payment and Receipt Page   ---*/
+.payment {
+  text-align: left;
+  border: 1px solid #424949;
+  height: auto;
+  width: 100%;
+  font-size: 20px;
+  color: #fff;
+  padding: 20px;
+}
+
+.payment h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.payment p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.summary h5 {
+  font-size: 20px !important;
+  margin-left: 5px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.summary .data-doctor {
+  margin-left: 20px;
+}
+
+.payment-date, .payment-time, .payment-booking, .payment-total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+
+.payment-heading {
+  margin-left: 0 !important;
+}
+
+.payment-booking {
+  border-bottom: 1px solid #424949;
+  padding-bottom: 10px;
+}
+
+.payment-total {
+  font-weight: bold;
+}
+
+.summary form h5 {
+  margin-left: 0 !important;
+}
+
+.summary form .input-field input {
+  font-size: 20px;
+  background-color: transparent !important;
+}
+
+.confrim-btn .btn {
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.payment-body .modal-content {
+  height: auto !important;
+  text-align: center;
+}
+
+.rating-timer {
+  margin: 0;
+}
+
+.rating-timer i {
+  color: #154360;
+}
+
+.modal-trigger {
+  color: black;
+}
+
+.navbar .modal-content {
+  height: 600px;
+  padding: 30px;
+  border: none !important;
+}
+
+.modal-content h5 {
+  margin-bottom: 20px;
+}
+
+.payment-body .rating i {
+  color: #F1C40F;
+}
+
+.payment-body .modal-content i {
+  color: #52BE80;
+  margin-bottom: 0px;
+}
+
+.payment-body .modal-content h5 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.payment-body .modal-content p {
+  margin: 0;
+  font-size: 17px;
+  margin: 10px;
+  margin-bottom: 20px;
+}
+
+.payment-body .modal-content p span {
+  font-weight: bold;
+}
+
+.payment-body .modal-content .btn {
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.rating-title i {
+  color: #52BE80;
+}
+
+.time-picker, .data-doctor {
+  display: flex;
+  flex-direction: row;
+}
+
+.data-doctor .left-side {
+  height: auto;
+  margin-right: 20px;
+}
+
+.data-doctor .left-side img {
+  height: 150px;
+}
+
+.data-doctor .right-side .rating {
+  font-size: 15px !important;
+  margin-bottom: 0;
+}
+
+.data-doctor .right-side h5 {
+  font-size: 20px;
+  margin-left: 4px;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.time-picker .SingleDatePickerInput__withBorder {
+  border: none !important;
+  margin-right: 20px;
+}
+
+.time-picker .btn {
+  margin-top: 10px;
+  text-transform: capitalize;
+}
+
+.time-picker .input-field {
+  margin: 0;
+  margin-right: 20px;
+}
+
+.sender p, .payment-method p {
+  margin: 0;
+}
+
+.sender h1, .payment-method h1, .address h1 {
+  text-align: left;
+  font-size: 17px;
+  margin: 0;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.receiver {
+  padding-top: 30px;
+  margin-left: 20%;
+}
+
+.address {
+  margin-left: 20%;
+}
+
+.receiver span {
+  font-weight: bold;
+}
+
+.payment-method {
+  margin-bottom: 20px;
+}
+
+.receipt-data .payment-details p {
+  font-weight: normal;
+}
+
+.receipt-data .payment-details p span {
+  font-weight: bold;
+}
+
+.results-body {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.results-left-flilter {
+  width: auto;
+  padding: 20px;
+  margin-right: 20px;
+  padding-left: 40px;
+}
+
+.results-left-flilter h4 {
+  font-size: 20px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.right-side h5 i {
+  font-size: 17px;
+  color: #52BE80;
+}
+
+.spec {
+  margin-top: 50px !important;
+}
+
+.results-right-display {
+  width: auto;
+  height: auto;
+}
+
+.results-btn .btn {
+  margin-right: 20px;
+  text-transform: capitalize;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.pagination {
+  text-align: center !important;
+  margin-top: 20px !important;
+  margin-bottom: 30px !important;
+}
+
+.pagination li.active {
+  background-color: #26a69a !important;
+}
+
+/*--- Profile Page ---*/
+.profile {
+  margin-bottom: 60px;
+}
+
+.profile-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 40px;
+}
+
+.profile-left-side img {
+  height: 140px !important;
+}
+
+.profile-left-side .data-doctor .right-side h5 i {
+  margin-top: 4px !important;
+}
+
+.profile-right-side .marketing-accounts {
+  margin-top: 10px;
+}
+
+.profile-right-side .marketing-accounts i {
+  font-size: 30px !important;
+  color: #154360;
+}
+
+.profile-right-side .results-btn .btn {
+  font-size: 15px !important;
+}
+
+.tabs {
+  background-color: transparent !important;
+}
+
+.tabs .indicator {
+  background-color: #2471A3 !important;
+}
+
+.tabs .tab a {
+  color: #154360 !important;
+  font-size: 20px !important;
+  font-weight: bold !important;
+  text-transform: capitalize !important;
+}
+
+.tabs .tab a:hover, .tabs .tab a.active {
+  color: #2471A3 !important;
+  background-color: transparent !important;
+}
+
+.tabs .tab a.active:focus {
+  background-color: transparent !important;
+}
+
+.about-me h3, .profile-service h3, .education h3 {
+  text-align: left !important;
+  font-size: 30px;
+}
+
+.education {
+  margin-top: 30px;
+}
+
+.education ul {
+  width: 100%;
+}
+
+.education ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin-bottom: 15px;
+}
+
+.education ul li .education-icon {
+  margin-right: 17px !important;
+}
+
+.education ul li .education-data h5 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.education ul li .education-data p {
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.education i {
+  color: #519a8a;
+  font-size: 20px;
+  margin-top: 4px;
+}
+
+.maps-here {
+  padding-top: 40px;
+}
+
+.maps-here h3 {
+  text-align: left;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.time-ava {
+  margin-top: 30px;
+}
+
+.time-ava span {
+  font-weight: bold;
+}
+
+.test-swipe-3 {
+  margin-top: 20px;
+}
+
+.right-side {
+  width: 100%;
+}
+
+.review-heading {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.review-heading h5 {
+  margin-right: 20px;
+}
+
+.review-heading i {
+  color: #F1C40F;
+}
+
+.profile-tabs h1 {
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.profile-tabs p {
+  margin-left: 10px;
+}
+
+.profile-tabs .results-btn a {
+  margin-left: 10px;
+}
+
+.profile-tabs .left-side img {
+  margin-top: 15px;
+}
+
+.profile-tabs .right-side h5 {
+  margin-left: 7px;
+}
+
+.review-icons {
+  text-align: right;
+}
+
+.rating-title p {
+  margin-left: 3px;
+}
+
+.test-swipe-3 .data-doctor .left-side img {
+  height: 95px;
+}
+
+.review-btn{
+  text-align: center;
+}
+
+.review-btn a {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.test-swipe-3 form h3 {
+  text-align: left;
+}
+
+.test-swipe-3 .rating {
+  margin-bottom: 0;
+}
+
+.test-swipe-3 form textarea {
+  padding: 10px;
+  resize: none;
+  height: 100px;
+}
+
+.test-swipe-3 form .confrim-btn {
+  margin-top: 20px;
+}
+
+.test-swipe-4 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.test-swipe-4 h1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/*---  Sign up and in Sections   ---*/
+.background-img {
+  background-image: url('./componets/images/micah-williams-lmFJOx7hPc4-unsplash.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.background-img-provider {
+  background-image: url('./componets/images/online-marketing-hIgeoQjS_iE-unsplash.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.background-img-provider .form-wrapper h1 {
+  color: black;
+}
+
+.background-img-provider .form-wrapper label {
+  color: black;
+}
+
+.background-img-provider .form-wrapper input::placeholder {
+  color: black;
+  font-weight: normal;
+}
+
+.background-img-provider .form-wrapper input {
+  border-bottom: 1px solid black;
+}
+
+.background-img-provider .createAccount small {
+  color: black;
+}
+
+.form-wrapper {
+  width: 75%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  margin: 40px;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 50px #555;
+}
+
+.form-wrapper form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-wrapper h1 {
+  font-size: 25px;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  font-weight: bold;
+  margin-top: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.form-wrapper label {
+  font-size: 17px;
+  margin-bottom: 0.25em;
+  color: #fff;
+  font-weight: lighter;
+}
+
+.form-wrapper input {
+  padding: 10px 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #cfcfcf;
+}
+
+.form-wrapper input::placeholder {
+  font-size: 1em;
+  font-weight: lighter;
+  color: #fff;
+}
+
+.firstName,
+.email {
+  margin-right: 1%;
+}
+
+.firstName,
+.lastName,
+.email,
+.password,
+.password_again,
+.username,
+.login_password {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.firstName,
+.lastName,
+.email,
+.password {
+  width: 47%;
+}
+
+.lastName,
+.password {
+  margin-left: 18px;
+}
+
+.password_again,
+.username,
+.login_password {
+  width: 100%;
+}
+
+.createAccount {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.createAccount button {
+  background-color: #519a8a;
+  color: #fff;
+  border: 2px solid #519a8a;
+  width: 100%;
+  margin-top: 1em;
+  padding: 8px 0px;
+  font-size: 1em;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  margin-bottom: 0.25em;
+  border-radius: 10px;
+}
+
+.createAccount button:hover {
+  color: #519a8a;
+  background-color: #fff;
+  border: 2px solid #519a8a;
+}
+
+.sub {
+  margin-top: 20px;
+}
+
+.marketing-accounts i {
+  margin-right: 20px;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.footer-form .input-field input {
+  height: 30px !important;
+  border: none !important;
+  padding: 5px;
+  background-color: #fff !important;
+  border-radius: 10px !important;
+}
+
+.footer-form .btn {
+  margin-left: 10px !important;
+}
+
+.createAccount small {
+  color: black;
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.CalendarDay__selected_span {
+  background: #82e0aa; 
+  color: white; 
+  border: 1px solid light-red;
+}
+ 
+.CalendarDay__selected {
+  background: dark-red;
+  color: white;
+}
+ 
+.CalendarDay__selected:hover {
+  background: orange;
+  color: white;
+}
+ 
+.CalendarDay__hovered_span:hover,
+.CalendarDay__hovered_span {
+  background: brown;
+}
+
+/*-- Doctor Dashboard --*/
+.dashboard-content {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.patient-table h3 {
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+table {
+  margin-top: 20px;
+}
+
+table tbody tr .doctor-infor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+table tbody tr .doctor-infor p {
+  margin-top: 29px;
+}
+
+table tbody tr .doctor-infor-created {
+  display: flex;
+  flex-direction: row;
+}
+
+table tbody tr .doctor-infor-created p {
+  margin-top: 29px;
+  margin-left: 10px;
+}
+
+table tbody tr td img {
+  height: 80px;
+}
+
+.table-actions i {
+  margin-top: 10px;
+  padding-right: 10px;
+  color: #154360;
+}
+
+.dashboard-links {
+  width: 30%;
+  padding: 20px;
+}
+
+.dashboard-links .user-details {
+  text-align: center;
+  justify-content: center;
+}
+
+.dashboard-links .dashboard-link {
+  margin-top: 20px;
+}
+
+.dashboard-links .dashboard-link ul li {
+  margin-bottom: 15px;
+}
+
+.dashboard-links .dashboard-link ul li i {
+  font-size: 20px;
+  margin-top: 6px;
+  margin-right: 8px;
+}
+
+.dashboard-links .dashboard-link ul li a {
+  font-size: 20px;
+  color: black;
+}
+
+.dashboard-links .dashboard-link ul li h6 {
+  margin-top: 8px;
+  margin-left: 26%;
+  font-size: 13px;
+  text-align: center;
+  padding: 2px;
+  height: 19px;
+  width: 19px;
+  color: white;
+  border-radius: 100%;
+  background-color: #154360;
+  border: 1px solid #154360;
+}
+
+.notification-appoint {
+  margin-left: 10% !important;
+}
+
+.notification-time {
+  margin-left: 25% !important;
+}
+
+.notification-chats {
+  margin-left: 37% !important;
+}
+
+.notification-doctor-chats {
+  margin-left: 37% !important;
+}
+
+.notification-review {
+  margin-left: 26% !important;
+}
+
+.notification-doctor-review {
+  margin-left: 29% !important;
+}
+
+.notification-patients {
+  margin-left: 30.4% !important;
+}
+
+.notification-schedules {
+  margin-left: 23% !important;
+}
+
+.notification-doctor-payments {
+  margin-left: 24% !important;
+}
+
+.notification-payments {
+  margin-left: 22% !important;
+}
+
+.notification-receipts {
+  margin-left: 25% !important;
+}
+
+.notification-favorite {
+  margin-left: 30% !important;
+}
+
+.dashboard-main-content {
+  width: 70%;
+  padding: 20px;
+}
+
+/*-- Doctor's Appointment page --*/
+.dashboard-main-content .data-doctor h5 {
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+
+/*-- Doctor's Patient page --*/
+.patients {
+  text-align: left;
+  border: 1px solid #424949;
+  height: auto;
+  width: 100%;
+  font-size: 20px;
+  color: #fff;
+  padding: 20px;
+}
+
+.patients h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.patients p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.dashboard-main-content {
+  width: 100%;
+}
+
+.dashboard-main-content .patient-item {
+  width: 100%;
+}
+
+.dashboard-main-content .patient-item p span {
+  font-weight: bold;
+}
+
+.contact-details {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-details .rating-timer {
+  margin-right: 20px;
+}
+
+.dashboard-main-content .patient-item .btn {
+  margin-top: 10px;
+}
+
+/*-- Doctor's Schedule Page --*/
+.dashboard-main-content .time-slot h1 {
+  text-align: left;
+  font-size: 20px;
+  text-transform: capitalize;
+  margin: 0;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.dashboard-content form {
+  margin-bottom: 40px;
+}
+
+.dashboard-content form .btn {
+  margin-left: 8px;
+}
+
+.schedule-item {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 280px) {
+
+  .reasons {
+      width: 84%;
+      margin: 15px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .deals-infor div:last-child p {
+      font-size: 10px !important;
+  }
+
+  .deals-infor div:last-child {
+      padding: 2em !important;
+  }
+
+  .category-header {
+      height: 45vh !important;
+  }
+
+  .category-item {
+      height: 460px;
+      margin: 10px;
+  }
+
+  .top-category h1 {
+      text-align: center !important;
+  }
+
+  .top-category .category-action {
+      width: 195px;
+      top: 82.3% !important;
+      left: 8%;
+  }
+
+  .category-item-list .category-item {
+      margin: 10px !important;
+  }
+
+  .category-item-list .category-item .category-action {
+      width: 153px;
+      top: 82.5%;
+  }
+}
+
+@media screen and ( max-width: 320px ){
+
+  .deals-infor {
+      font-size: 2px !important;
+  }
+
+  .deals-infor div:last-child {
+      padding: 3em 1em;
+  }
+
+  .deals-infor div:first-child h1 {
+      font-size: 20px !important;
+  }
+
+  .deals-infor div:first-child p {
+      margin-bottom: 18px !important;
+  }
+
+  .deals-infor div:last-child p {
+      font-size: 16px !important;
+  }
+
+  .profile-right-side .results-btn .btn {
+      font-size: 10px !important;
+  }
+}
+
+@media screen and ( max-width: 360px ){
+  .deals-infor div:last-child p {
+      font-size: 23px !important;
+  }
+
+  .profile-right-side .results-btn .btn {
+      font-size: 10px !important;
+  }
+}
+
+@media screen and ( max-width: 375px ){
+  .deals-infor div:last-child p {
+      font-size: 23px !important;
+  }
+
+  .profile-right-side .results-btn .btn {
+      font-size: 10px !important;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .deals-infor {
+      margin-top: 20px !important;
+  }
+
+  .deals-infor div:last-child {
+      margin-left: 2em;
+      margin-right: 2em;
+      padding: 3em 1em;
+  }
+}
+
+@media screen and ( max-height: 450px ){
+  .special-offers {
+      padding-top: 5%;
+      height: 90vh;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .home {
+      height: 40vh;
+  }
+
+  .top-category .category-action {
+      width: 195px;
+      top: 82.3% !important;
+      left: 8%;
+      margin-bottom: 20px !important;
+  }
+
+  .category-header {
+      padding-top: 45px;
   }
 }
