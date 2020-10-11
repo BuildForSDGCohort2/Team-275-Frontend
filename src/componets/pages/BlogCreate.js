@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import * as firebase from 'firebase';
-//fo
+
 const BlogCreate = () => {
     const [fileUrl, setFileUrl] = useState(null);
     const [title, setTitle] = useState("");
