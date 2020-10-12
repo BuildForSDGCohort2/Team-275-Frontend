@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { useDispatch } from 'react-redux';
 import { createUser } from '../../actions/signin';
 import { Link, Redirect } from 'react-router-dom';
-import * as firebase from 'firebase';
+import firebase from '../../firebase/firebase';
 
 const Signin = () => {
     const [fileUrl, setFileUrl] = useState(null);

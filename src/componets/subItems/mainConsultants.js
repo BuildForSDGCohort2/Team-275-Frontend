@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import * as firebase from 'firebase';
+import firebaseConfig from '../../firebase/firebase';
 
 const MainConsultants = () => {
     const [doctorsList, setDoctorList] = useState();
 
     useEffect(() => {
-        const getDoctors = firebase.database().ref("Consultants");
+        const getDoctors = firebaseConfig.database.ref("Consultants");
 
         getDoctors.limitToFirst(3).on('value', (snapshot) => {
             const doctors = snapshot.val();
@@ -31,9 +31,9 @@ const MainConsultants = () => {
                                </div>
                             </div> 
                             <div className="row" name="doctorsList">
-                                {doctorsList ? doctorsList.map((doc) => (
-                                <div className="col m4">
-                                    <div className="card" key={doc.id}>
+                                {doctorsList ? doctorsList.map((doc, index) => (
+                                <div className="col m4" key={index}>
+                                    <div className="card" >
                                         <div className="overflow">
                                             <div className="card-image">
                                                 <img src={doc.profilePic} alt="pic here"/>

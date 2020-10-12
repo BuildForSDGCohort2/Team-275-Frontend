@@ -1,7 +1,6 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 import M from "materialize-css";
-import "materialize-css/dist/css/materialize.min.css";
-import * as firebase from 'firebase';
+import firebase from '../../firebase/firebase';
 import ReviewCreate from '../subItems/ReviewsCreate';
 import Reviews from '../subItems/profileReviews';
 import { Link } from 'react-router-dom';

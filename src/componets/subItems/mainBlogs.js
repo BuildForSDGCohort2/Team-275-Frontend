@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import * as firebase from 'firebase';
+import firebaseConfig from '../../firebase/firebase';
 
 const MainBlogs = () => {
     const [doctorsList, setDoctorList] = useState();
 
     useEffect(() => {
-        const getDoctors = firebase.database().ref("Blogs");
+        const getDoctors = firebaseConfig.database.ref("Blogs");
 
         getDoctors.limitToFirst(3).on('value', (snapshot) => {
             const doctors = snapshot.val();
@@ -14,7 +14,6 @@ const MainBlogs = () => {
             for (let id in doctors) {
                 doctorArray.push(doctors[id]);
             }
-            console.log(doctorArray);
             setDoctorList(doctorArray);
         });
     }, []);
@@ -32,9 +31,9 @@ const MainBlogs = () => {
                             </div> 
 
                             <div className="row" name="doctorsList">
-                                {doctorsList ? doctorsList.map((doc) => (
-                                <div className="col m4">
-                                   <div className="blog-item" key={doc.id}>
+                                {doctorsList ? doctorsList.map((doc, index) => (
+                                <div className="col m4" key={index}>
+                                   <div className="blog-item">
                                        <div className="blog-image">
                                            <img src={doc.profilePic} className="responsive-img" alt="pic here"/>
                                        </div>

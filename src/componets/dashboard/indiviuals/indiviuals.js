@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-import { Line } from 'react-chartjs-2'
+import React, { Component } from 'react';
+import { Line } from 'react-chartjs-2';
 import "materialize-css/dist/css/materialize.min.css";
 import M from "materialize-css";
-import * as firebase from 'firebase';
+import firebase from '../../../firebase/firebase';
 import { Link } from 'react-router-dom';
 
 class Doctor extends Component {
@@ -158,7 +158,7 @@ class Doctor extends Component {
                                     <li>
                                         <div className="rating-timer">
                                             <i className="small material-icons">share</i>
-                                            <a href='#'>Share</a>
+                                            <a href='#!'>Share</a>
                                         </div>
                                     </li>
                                     <li>

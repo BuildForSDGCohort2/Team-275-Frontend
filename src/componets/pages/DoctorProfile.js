@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import M from "materialize-css";
 import "materialize-css/dist/css/materialize.min.css";
 
-
 class DoctorProfile extends Component {
     state = {
         id: null

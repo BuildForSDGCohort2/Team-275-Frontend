@@ -6,12 +6,6 @@ import firebase from '../../firebase/firebase';
 
 const Nav = (props) => {
 
-    const M = window.M;
-    document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.sidenav');
-        var instances = M.Sidenav.init(elems);
-    });
-
     const loginSelector = useSelector((state) => state.logIn);
     const signinSelector = useSelector((state) => state.signIn);
     const [userState, setUserState] = useState(null);

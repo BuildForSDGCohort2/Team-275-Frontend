@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "materialize-css/dist/css/materialize.min.css";
-import * as firebase from 'firebase';
+import firebase from '../../firebase/firebase';
 import { Link } from 'react-router-dom';
 import DoctorScheduleUpdate from '../subItems/DoctorSchedule';
 

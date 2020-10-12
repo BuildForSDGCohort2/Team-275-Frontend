@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import * as firebase from 'firebase';
+import firebaseConfig from '../../firebase/firebase';
 
 const MainClinics = () => {
-    const [doctorsList, setDoctorList] = useState();
+    const [doctorsList, setDoctorList] = useState("");
 
     useEffect(() => {
-        const getDoctors = firebase.database().ref("Clinics");
-
-        getDoctors.orderByChild("clinicName").limitToFirst(3).on('value', (snapshot) => {
+        firebaseConfig.database.ref("Clinics").orderByChild("clinicName").limitToFirst(3).on('value', (snapshot) => {
             const doctors = snapshot.val();
             let doctorArray = [];
             
@@ -31,8 +29,8 @@ const MainClinics = () => {
                                </div>
                             </div> 
                             <div className="row" name="doctorsList">
-                                {doctorsList ? doctorsList.map((doc) => (
-                               <div className="col m4">
+                                {doctorsList ? doctorsList.map((doc, index) => (
+                               <div className="col m4" key={index}>
                                <div className="category-item" key={doc.id}>
                                    <div className="category-image">
                                        <img src={doc.profilePic} className="responsive-img" alt="pic here"/>

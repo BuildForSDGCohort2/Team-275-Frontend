@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import * as firebase from 'firebase';
+import firebase from '../../firebase/firebase';
 import { Link } from 'react-router-dom';
 
 class DoctorAppointments extends Component {
@@ -9,11 +9,6 @@ class DoctorAppointments extends Component {
     }
 
     componentDidMount() {
-        const M = window.M;
-        document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('.modal');
-            var instances = M.Modal.init(elems, {});
-        });
 
         let id = this.props.match.params.user_id;
 

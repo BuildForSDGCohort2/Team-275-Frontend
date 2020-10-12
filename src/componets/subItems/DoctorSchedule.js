@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import * as firebase from 'firebase';
+import firebase from '../../firebase/firebase';
 
 const DoctorScheduleUpdate = () => {
     const [startDate, setStartDay] = useState("");

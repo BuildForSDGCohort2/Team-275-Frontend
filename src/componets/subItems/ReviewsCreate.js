@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState} from 'react';
 import * as firebase from 'firebase';
 
 const ReviewCreate = (props) => {
@@ -9,7 +9,7 @@ const ReviewCreate = (props) => {
     const handleSubmit = async(e) => {
         e.preventDefault();
 
-        if (name !== "" && message!=="") {
+        if (name !== "" && message !=="") {
 
             firebase.database().ref("DoctorReview")
             .push({

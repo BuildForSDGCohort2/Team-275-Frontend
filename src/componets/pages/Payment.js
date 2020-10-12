@@ -32,11 +32,6 @@ class Payment extends Component {
     }
 
     componentDidMount() {
-        const M = window.M;
-        document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('.modal1');
-            var instances = M.Modal.init(elems, {});
-        });
     }
 
     render() {

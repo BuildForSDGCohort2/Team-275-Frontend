@@ -1,6 +1,4 @@
-import firebase from 'firebase/app';
-import 'firebase/auth';
-import 'firebase/firestore';
+import firebase from 'firebase';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDwfwfV7SZuvhgbhhWWYgN5QZ92mTSZtS4",
@@ -14,11 +12,12 @@ const firebaseConfig = {
 };
 
   // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
   class Firebase {
     constructor() {
-      firebase.initializeApp(firebaseConfig);
       this.auth = firebase.auth();
-      this.db = firebase.firestore();
+      this.database = firebase.database();
     }
 
     async signin(email, password) {

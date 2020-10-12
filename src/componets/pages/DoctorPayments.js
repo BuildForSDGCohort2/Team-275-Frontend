@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import * as firebase from 'firebase';
+import firebase from '../../firebase/firebase';
 import { Link } from 'react-router-dom';
 
 class DoctorPayments extends Component {

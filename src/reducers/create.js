@@ -3,7 +3,7 @@ const createSchedule = (
         post: {}
     },
     action) => {
-        if (action.type == "CREATE_SCHEDULE") {
+        if (action.type === "CREATE_SCHEDULE") {
             state = {...state, post: action.payload}
         }
         return state;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import M from "materialize-css";
-import * as firebase from 'firebase';
+import firebase from '../../../firebase/firebase';
 
 class Customer extends Component {
     state = {
